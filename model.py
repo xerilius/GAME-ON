@@ -24,8 +24,8 @@ class Game(db.Model):
     def __repr__(self):
         """Provide helpful representation when printed"""
 
-        return "<Game game_id={} title={} genre={} img_url={} description={} release_date={}>"
-                .format(self.game_id, self.title, self.genre, self.img_url,
+        return "<Game game_id={} title={} genre={} img_url={} description={} release_date={}>".format(
+            self.game_id, self.title, self.genre, self.img_url,
                         self.description, self.release_date)
 
 
@@ -66,7 +66,7 @@ class Review(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=True)
 
     # Define relationship to User
-    user = db.realtionship('User', backref=db.backref('reviews',
+    user = db.relationship('User', backref=db.backref('reviews',
                                                       order_by=review_id))
     # Define relationship to Game
     game = db.relationship('Game', backref=db.backref('games',
@@ -93,8 +93,8 @@ class User(db.Model):
     def __repr__(self):
         """Provies helpful representation when printed"""
 
-        return "<User user_id={} username={} password={} email={} register_date={}"
-                .format(self.user_id, self.username, self.password, self.email, 
+        return "<User user_id={} username={} password={} email={} register_date={}".format(
+            self.user_id, self.username, self.password, self.email, 
                         self.register_date)
 
 
@@ -124,3 +124,25 @@ class User(db.Model):
     # Define relationship to Game
 
     # Define relationship to User
+
+#########################################################################
+# Helper functions
+
+def connect_to_db(app):
+    """Connect the database to Flask app."""
+
+    # Configure to use our PostgreSQL database
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///gameon'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    db.app = app
+    db.init_app(app)
+
+
+if __name__ == '__main__':
+    # For convenience. if we run this module interactively,
+    # it will leave you in a state of being able to work with 
+    # the database directly.
+
+    from server import app
+    connect_to_db(app)
+    print('Connected to GameOn-Line Database')
