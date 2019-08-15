@@ -2,6 +2,3 @@ env/
 __pycache__/
 secrets.sh
 
-# QUESTION: whats the difference between *.pyc or *.py[cod] and __pycache__/ , 
-    # which is better to put in .gitignore?
-# *.py[cod] is wildcard notation in .gitignore

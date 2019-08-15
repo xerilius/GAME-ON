@@ -13,22 +13,36 @@ class Game(db.Model):
 
     __tablename__ = "games"
 
-    game_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    game_id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String, nullable=False)
+    slug = db.Column(db.String, nullable=False)
+
     genre = db.Column(db.String, nullable=False)
-    img_url = db.Column(db.String, nullable=False)
-    description = db.Column(db.String, nullable=False)
+    themes = db.Column(db.String, nullable = False, unique=True)
+    summary = db.Column(db.String, nullable=False)
+    storyline = db.Column(db.String, nullable=True)
     release_date = db.Column(db.DateTime, nullable=False)
+    popularity = db.Column(db.Integer, nullable=True)
+
+    similar_game = db.Column(db.String, nullable=False)
+    collection_name = db.Column(db.String, nullable=False)
+    franchise = db.Column(db.String, nullable=False)
+    
+    game_mode = db.Column(db.String(20), nullable=False)
+        
+    # artwork = db.Column(db.String, nullable=True)
+    # screenshot = db.Column(db.String, nullable=True)
     # developer = db.Column(db.String, nullable=False)
 
     def __repr__(self):
         """Provide helpful representation when printed"""
 
-        return "<Game game_id={} title={} genre={} img_url={} description={} release_date={}>".format(
-            self.game_id, self.title, self.genre, self.img_url,
+        return "<Game game_id={} title={} genre={} release_date={} game_mode={} popularity={}>".format(
+            self.game_id, self.title, self.genre,
                         self.description, self.release_date)
 
-
+# class GameMetadata(db.Model):
+#     """Metadata for game"""
 
 
 class Rating(db.Model):
@@ -40,6 +54,12 @@ class Rating(db.Model):
     game_id = db.Column(db.Integer, db.ForeignKey('games.games_id'), nullable=False)
     star_rating = db.Column(db.Integer)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
+
+    rating = db.Column(db.Integer, nullable=True)
+    aggregated_rating = db.Column(db.Integer, nullable=True)
+
+    rating_count = db.Column(db.Integer, nullable=True)
+    aggregated_rating_count = db.Column(db.Integer, nullable=True)
 
     # Define relationship to User
     user = db.relationship('User', backref=db.backref('ratings',

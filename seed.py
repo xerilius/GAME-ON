@@ -8,54 +8,45 @@ import requests
 import datetime
 from sqlalchemy import func
 
+from seed import get_game_data
 
 from model import connect_to_db, db
-from server import app 
-
-####################################################################
-
-# To get API key from secret.sh
-API_KEY = os.environ.get('IGDB_KEY')
-# Add this as a user-key parameter to your API calls to authenticate.
-URL = 'https://api-v3.igdb.com/games'
-
-headers = {'user-key': API_KEY, 'Accept': 'application/json'}
-payload = 'fields genres,url,name;'
-# .get() method which makes GET request and return jspon response-uses params keyword
-# .post() method which makes POST request - uses data keyword
-response = requests.post(URL, headers=headers, data=payload)
-data = response.json()
-
-# print(response.text)
+# from server import appp
 
 
-# converst data from JSON to python dictionary
-# use request.json() to convert data - data = reponse.json()
-
-##################################################################
-
-def loop_thru_data():
-# loop over all the values 
-    for game in data:
-        print(game)
-
-# and print it(replace with insert statement) with sql alchemy
-
-# offset to get the next set... limit ...
+def load_games(api_request):
+    """Transferring data into database"""
+    print("Games")
 
 
 
-if __name == '__main__':
+
+
+
+
+
+
+
+
+
+
+    # parse thru data 
+
+
+
+
+
+# if __name__ == '__main__':
 
     # To activate debugger toolbar
-    app.debug = True
+    # app.debug = True
 
-    connect_to_db(app)
+    # connect_to_db(app)
 
     # Use the DebugToolbar
-    DebugToolbar(app)
+    # DebugToolbar(app)
 
-    app.run(host='0.0.0.0')
+    # app.run(host='0.0.0.0')
 
     # step1 : create  flask requests to API
     # step2 : install all modules required (ex)pip3 install requests) 
