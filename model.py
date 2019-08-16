@@ -1,10 +1,12 @@
-"""Models and database functions"""
-from flask_sqlalchemy import SQLAlchemy
+"""Models and database functions for GameOn Review Site"""
 
+from flask_sqlalchemy import SQLAlchemy
 
 # This is the connection to the PostgreSQL database via Flask-SQLAlchemy to use session
 
 db = SQLAlchemy()
+
+#########################################################################
 
 # Model defintions
 
@@ -14,24 +16,26 @@ class Game(db.Model):
     __tablename__ = "games"
 
     game_id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String, nullable=False)
-    slug = db.Column(db.String, nullable=False)
+    title = db.Column(db.String, nullable=False,unique=True)
+    slug = db.Column(db.String, nullable=False, unique=True)
 
-    genre = db.Column(db.String, nullable=False)
-    themes = db.Column(db.String, nullable = False, unique=True)
+    genre = db.Column(db.String, nullable=False)        
+    game_mode = db.Column(db.String(20), nullable=False)
+    theme = db.Column(db.String, nullable = False)
     summary = db.Column(db.String, nullable=False)
-    storyline = db.Column(db.String, nullable=True)
-    release_date = db.Column(db.DateTime, nullable=False)
+    release_date = db.Column(db.String, nullable=False)
     popularity = db.Column(db.Integer, nullable=True)
 
     similar_game = db.Column(db.String, nullable=False)
-    collection_name = db.Column(db.String, nullable=False)
-    franchise = db.Column(db.String, nullable=False)
-    
-    game_mode = db.Column(db.String(20), nullable=False)
-        
-    # artwork = db.Column(db.String, nullable=True)
-    # screenshot = db.Column(db.String, nullable=True)
+    collection = db.Column(db.String, nullable=True)
+    franchise = db.Column(db.String, nullable=True)
+
+    artwork = db.Column(db.String, nullable=True)
+    artwork_id = db.Column(db.Integer, nullable=True)
+
+    screenshot = db.Column(db.String, nullable=True)
+    screenshot_id = db.Column(db.String, nullable=True)
+  
     # developer = db.Column(db.String, nullable=False)
 
     def __repr__(self):
@@ -56,11 +60,8 @@ class Rating(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
 
     rating = db.Column(db.Integer, nullable=True)
-    aggregated_rating = db.Column(db.Integer, nullable=True)
-
     rating_count = db.Column(db.Integer, nullable=True)
-    aggregated_rating_count = db.Column(db.Integer, nullable=True)
-
+    
     # Define relationship to User
     user = db.relationship('User', backref=db.backref('ratings',
                                                       order_by=rating_id))
