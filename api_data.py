@@ -37,7 +37,6 @@ def test_data():
         data = json.loads(r.text)
         # pprint(data)
 
-
         for json_dict in data:
             # game = whole jsonfile
             # print(game.keys()) >> ['id, aggregates, ..']
@@ -47,9 +46,15 @@ def test_data():
                 
             if 'franchise' in json_dict.keys():
                 franchise = json_dict['franchise']['name']
+                
             if 'similar_games' in json_dict.keys():
                 for i in range(len(json_dict['similar_games'])):
                     similar_games = json_dict['similar_games'][i]['name']
+
+            if 'themes' in json_dict.keys():
+                for i in range(len(json_dict['themes'])):
+                    theme = json_dict['themes'][i]['name']
+                    smlr_game_id = json_dict['themes'][i]['id']
         
             game_mode = json_dict['game_modes'][0]['name']
             # game_mode = game['game_modes'] >> [ {id:2, 'name': Multiplayer'] ]
@@ -59,6 +64,12 @@ def test_data():
             release_date = json_dict['release_dates'][0]['human']
             slug = json_dict['slug']
             summary = json_dict['summary']
+
+
+            
+
+        print(name, slug, igdb_id, popularity, release_date, summary, collection,
+                franchise, game_mode, theme, smlr_game_id)
 
 
 
