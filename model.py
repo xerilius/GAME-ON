@@ -7,55 +7,110 @@ from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
 
 #########################################################################
-
 # Model defintions
-
 class Game(db.Model):
     """Games on gaming website."""
 
     __tablename__ = "games"
 
-    game_id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String, nullable=False,unique=True)
-    slug = db.Column(db.String, nullable=False, unique=True)
+    game_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    igdb_id = db.Column(db.Integer, unique=True)
+    game_name = db.Column(db.String, nullable=False, unique=True)
+    slug = db.Column(db.String, nullable=False, unique=True) 
 
-    genre = db.Column(db.String, nullable=False)        
-    game_mode = db.Column(db.String(20), nullable=False)
-    theme = db.Column(db.String, nullable = False)
-    summary = db.Column(db.String, nullable=False)
-    release_date = db.Column(db.String, nullable=False)
-    popularity = db.Column(db.Integer, nullable=True)
+    # summary = db.Column(db.String, nullable=False)
+    # release_date = db.Column(db.String, nullable=False)
+    # popularity = db.Column(db.Integer, nullable=True)
 
-    similar_game = db.Column(db.String, nullable=False)
-    collection = db.Column(db.String, nullable=True)
-    franchise = db.Column(db.String, nullable=True)
+    # similar_game = db.Column(db.String, nullable=False)
+    # collection = db.Column(db.String, nullable=True)
+    # franchise = db.Column(db.String, nullable=True)
 
-    artwork = db.Column(db.String, nullable=True)
-    artwork_id = db.Column(db.Integer, nullable=True)
+    # artwork = db.Column(db.String, nullable=True)
+    # artwork_id = db.Column(db.Integer, nullable=True)
 
-    screenshot = db.Column(db.String, nullable=True)
-    screenshot_id = db.Column(db.String, nullable=True)
+    # screenshot = db.Column(db.String, nullable=True)
+    # screenshot_id = db.Column(db.String, nullable=True)
   
     # developer = db.Column(db.String, nullable=False)
 
     def __repr__(self):
         """Provide helpful representation when printed"""
 
-        return "<Game game_id={} title={} genre={} release_date={} game_mode={} popularity={}>".format(
-            self.game_id, self.title, self.genre,
-                        self.description, self.release_date)
+        return "<Game game_id={} title={} release_date={} game_mode={}>".format(
+            self.game_id, self.game_name, self.release_date, self.game_mode)
 
-# class GameMetadata(db.Model):
-#     """Metadata for game"""
+###################################
+class Mode(db.Model):
+    __tablename__ = "modes"
+    mode_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    game_mode = db.Column(db.String, nullable=False)
 
 
+class Genre(db.Model):
+
+    __tablename__ = "genres"
+    genre_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    genre =db.Column(db.String, nullable=False)
+
+    def __repr__(self):
+        return "<Genre genre_id={} genre_name={}>".format(
+        self.genre_id, self.genre_name)
+
+
+class Theme(db.Model):
+
+    __tablename__ = "themes"
+    theme_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    theme = db.Column(db.String, nullable=False)
+
+    def __repr__(self):
+        return "<Theme theme_id={} theme_name={}".format(
+                self.theme_id, self.theme_name)
+
+
+
+class GameMode(db.Model):
+    __tablename__ =  "game_modes"
+    game_id = db.Column(db.Integer, db.ForeignKey('games.game_id'), primary_key=True)
+    mode_id = db.Column(db.Integer, db.ForeignKey('modes.mode_id'), primary_key=True)
+
+
+
+class GameGenre(db.Model):
+    __tablename__ = "game_genres"
+    game_id= db.Column(db.Integer, db.ForeignKey('games.game_id'), primary_key=True)
+    genre_id = db.Column(db.Integer, db.ForeignKey('genres.genre_id'), primary_key=True)
+
+    def __repr__(self):
+        return"<GameGenre game_id={} genre_id={}>".format(
+            self.game_id, self.genre_id)
+
+
+class GameTheme(db.Model):
+
+    __tablename__ = "game_themes"
+    game_id = db.Column(db.Integer, db.ForeignKey('games.game_id'), primary_key=True)
+    theme_id = db.Column(db.Integer, db.ForeignKey('themes.theme_id'), primary_key=True) 
+
+    def __repr__(self):
+        return "<GameTheme game_id={} theme_id={}>".format(
+                self.game_id, self.theme_id)
+
+
+
+
+
+
+
+################################################################
 class Rating(db.Model):
     """Rating of game by a user."""
 
     __tablename__ = "ratings"
 
     rating_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    game_id = db.Column(db.Integer, db.ForeignKey('games.games_id'), nullable=False)
+    game_id = db.Column(db.Integer, db.ForeignKey('games.game_id'), nullable=False)
     star_rating = db.Column(db.Integer)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
 
@@ -75,7 +130,7 @@ class Rating(db.Model):
         return "<Rating rating_id={} game_id={} star_rating={}>".format(
                 self.rating_id, self.game_id, self.star_rating)
 
-
+################################################################
 class Review(db.Model):
     """User reviews"""
 
@@ -99,7 +154,7 @@ class Review(db.Model):
         return "<Review review_id={} game_id={} review={}>".format(
                 self.review_id, self.game_id, self.review)
 
-
+######################################################################
 class User(db.Model):
     """User of Gaming website."""
 
@@ -166,4 +221,4 @@ if __name__ == '__main__':
 
     from server import app
     connect_to_db(app)
-    print('Connected to GameOn-Line Database')
+    print("Connected to GameOn-Line Database")
