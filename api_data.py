@@ -18,80 +18,81 @@ headers= {'user-key': API_KEY, 'Accept': 'application/json'}
 payload = "f name, alternative..."
 
 
-def get_game_by_id(game_ids):
+# def get_game_by_id(game_ids):
 
     # for game in game_ids:
     #     ",".join(game)
 
-    game_id_cvs = ",".join(f'{id}' for id in game_ids)
+    # game_id_cvs = ",".join(f'{id}' for id in game_ids)
 
-    payload = ("f name, artworks, slug, genres.name, similar_games.name, status," 
-               "slug, parent_game, age_ratings, popularity, rating, aggregated_rating, collection.name,rating_count, aggregated_rating_count," 
-               "first_release_date, storyline, summary, themes.name;" 
-               "limit 1; w id = ({}); w release_dates.platform = 6; w themes != (42);".format(game_id_cvs))
-    # .get() method which makes GET request and return jspon response-uses params keyword
-    # .post() method which makes POST request - uses data keyword
-    print(payload)
+    # payload = ("f name, artworks, slug, genres.name, similar_games.name, status," 
+    #            "slug, parent_game, age_ratings, popularity, rating, aggregated_rating, collection.name,rating_count, aggregated_rating_count," 
+    #            "first_release_date, storyline, summary, themes.name;" 
+    #            "limit 1; w id = ({}); w release_dates.platform = 6; w themes != (42);".format(game_id_cvs))
+    # # .get() method which makes GET request and return jspon response-uses params keyword
+    # # .post() method which makes POST request - uses data keyword
+    # print(payload)
 
-    response = requests.post(URL, headers=headers, data=payload)
-    data = response.json()
-    print(response.text)
+    # response = requests.post(URL, headers=headers, data=payload)
+    # data = response.json()
+    # print(response.text)
 
 
 
 def test_data():
     """API request for games."""
 
-    loop_count = 0
-    position_num = 0
+    offsets = [0,50]
 
-    while loop_count < 5:
+    for offset in offsets:
 
-        loop_count += 1
-
-        if loop_count == 2:
-            position_num = 50
- 
-        if loop_count == 3:
-            position_num = 100
-
-        if loop_count == 4:
-            position_num = 150
-
-        if loop_count == 5:
-            position_num = 200
-
-        # if loop_count == 6:
-        #     position_num = 250
-
-        # if loop_count == 300:
-        #     position_num = 300
-    
-
+        # get game data
         payload = ("f name, artworks.url, slug, franchise.name, collection.name,"
                "game_modes.name, genres.name, similar_games.name," 
-               "slug, age_ratings, popularity," 
+               "slug, popularity," 
                "rating, aggregated_rating,"
                "rating_count, aggregated_rating_count," 
                "release_dates.human, storyline, summary, themes.name;" 
-               "limit 5; s popularity desc; w release_dates.platform = 6; w themes != (42); offset {};".format(position_num))
+               "limit 2; s popularity desc; w release_dates.platform = 6; w themes != (42); offset {};".format(offset))
         
-        print(payload)
-        print()
+        r = requests.post(URL, headers=headers, data=payload)
+        game_json = r.json()
 
-        response = requests.post(URL, headers=headers, data=payload)
-        data = json.loads(response.text) # data = response.json()
+        for i, game in enumerate(game_json):
+            game_id = game['id']
+
+            if game['collection']:
+                collection = game['collection']['name']
+            franchise = game['franchise']['name']
+            game_mode = game['game_modes'][i]['name']
+            genre = game['genres'][i]['name']
+            name = game['name']
+            popularity = game['popularity']
+            release_date = game['release_dates'][0]['human']
+            similar_games = game['similar_games'][i]['name']
+
+            print(game_id, collection)
 
 
 
-        pprint(data)
+        
+        # for i in range(results):
+        #     game_modes = game['gameInfo'][i].get('game_modes')
+        #     genres = game['gameInfo'][i].get('genres')
+        #     game_id = game['gameInfo'][i].get('id')
+        #     name = game['gameInfo'][i].get('name')
+        #     popularity =  game['gameInfo'][i].get('popularity')
+        #     rating = game['gameInfo'][i].get('rating')
+        #     rating_count = game['gameInfo'][i].get('rating_count')
+        #     release_dates = game['gameInfo'][i].get('release_dates')
+        #     similar_games = game['gameInfo'][i].get('similar_games')
+        #     slug = game['gameInfo'][i].get('slug')
+        #     summary = game['gameInfo'][i].get('summary')
+        #     themes = game['gameInfo'][i].get('themes')
 
-        print("game:", loop_count)
-        print("position:", position_num)
+        #     print(results.text)
 
-       
-        print("-"*100)
-    
+
 test_data()
 
 
