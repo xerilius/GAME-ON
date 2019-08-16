@@ -8,7 +8,7 @@ import requests
 import datetime
 from sqlalchemy import func
 
-from seed import get_game_data
+from api_data import get_game_data
 
 from model import connect_to_db, db
 # from server import appp
