@@ -1,115 +1,51 @@
+"""Utility file that makes requests to IGDB API"""
 from pprint import pprint
 import os
 # makes json file more readable
 import json
 # allows you to make requests to API
 import requests
-
-from model import connect_to_db, db
-
 ####################################################################
 # To get API key from secret.sh
 API_KEY = os.environ.get('IGDB_KEY')
 URL = 'https://api-v3.igdb.com/games'
-# Add this as a user-key parameter to your API calls to authenticate.
+# Add this as a user-key parameter to your API calls to authenticate
 headers= {'user-key': API_KEY, 'Accept': 'application/json'}
 
 
-def test_data():
-    """API request for games."""
-
-    offsets = [0]
+def get_game_data():
+    """Game data from API requests."""
+#######################################
+# >>>>> change limit values
+    offsets = [0, 50, 100, 150]
 
     for offset in offsets:
 
         # get game data
-        payload = ("f name, artworks.url, slug, franchise.name, collection.name,"
-               "game_modes.name, genres.name, similar_games.name," 
-               "slug, popularity," 
-               "rating, aggregated_rating,"
-               "rating_count, aggregated_rating_count," 
-               "release_dates.human, storyline, summary, themes.name;" 
-               "limit 5; s popularity desc; w release_dates.platform = 6; w themes != (42); offset {};".format(offset))
+        payload = ("f  artworks.url, collection.name, franchise.name, "
+               "game_modes.name, genres.name, name, popularity,"   
+               "rating, rating_count, release_dates.human, screenshots.url,"
+               "similar_games.name, slug, summary, themes.name;"      
+               "limit 5; s popularity desc; w release_dates.platform = 6;"
+               "w themes != (42); offset {};".format(offset))
         
         r = requests.post(URL, headers=headers, data=payload)
 
         # storing JSON response within variable
-        data = json.loads(r.text)
-        # pprint(data)
+        # use request.json() to convert data , data = reponse.json() ???????????
+        game_data = json.loads(r.text)
 
-        for json_dict in data:
-            # game = whole jsonfile
-            # print(game.keys()) >> ['id, aggregates, ..']
-           
-            if 'collection' in json_dict.keys():
-                collection = json_dict['collection']['name']
-                
-            if 'franchise' in json_dict.keys():
-                franchise = json_dict['franchise']['name']
-                
-            if 'similar_games' in json_dict.keys():
-                for i in range(len(json_dict['similar_games'])):
-                    similar_games = json_dict['similar_games'][i]['name']
+        return(game_data)
 
-            if 'themes' in json_dict.keys():
-                for i in range(len(json_dict['themes'])):
-                    theme = json_dict['themes'][i]['name']
-                    smlr_game_id = json_dict['themes'][i]['id']
-        
-            game_mode = json_dict['game_modes'][0]['name']
-            # game_mode = game['game_modes'] >> [ {id:2, 'name': Multiplayer'] ]
-            igdb_id = json_dict['id']
-            name = json_dict['name']
-            popularity = json_dict['popularity']
-            release_date = json_dict['release_dates'][0]['human']
-            slug = json_dict['slug']
-            summary = json_dict['summary']
+get_game_data()
 
-
-            
-
-        print(name, slug, igdb_id, popularity, release_date, summary, collection,
-                franchise, game_mode, theme, smlr_game_id)
-
-
-
-            
-            
-
-           
-            
-
-
-
-
-        # pretty printing json string back
-        # game_data = json.dumps(game_dict, indent=4, sort_keys=True)
-
-        
-        # for i in range(results):
-        #     game_modes = game['gameInfo'][i].get('game_modes')
-        #     genres = game['gameInfo'][i].get('genres')
-        #     game_id = game['gameInfo'][i].get('id')
-        #     name = game['gameInfo'][i].get('name')
-        #     popularity =  game['gameInfo'][i].get('popularity')
-        #     rating = game['gameInfo'][i].get('rating')
-        #     rating_count = game['gameInfo'][i].get('rating_count')
-        #     release_dates = game['gameInfo'][i].get('release_dates')
-        #     similar_games = game['gameInfo'][i].get('similar_games')
-        #     slug = game['gameInfo'][i].get('slug')
-        #     summary = game['gameInfo'][i].get('summary')
-        #     themes = game['gameInfo'][i].get('themes')
-
-        #     print(results.text)
-test_data()
-
-   
-        # # create new data_file.json file with write mode 
+     # create new data_file.json file with write mode 
         # with open('game_data.txt', 'w') as text_file:
         #     # write json data into file
         #     json.dump(game_data, text_file)
 
-# def get_game_by_id(game_ids):
+def get_game_by_id(game_ids):
+    pass
 
     # for game in game_ids:
     #     ",".join(game)
@@ -131,19 +67,15 @@ test_data()
 def get_game_img():
     pass
 
-# get_game_img()  
-
 def get_developer_info_for_game():
     """API request for game developer info"""
     # url3 = https://api-v3.igdb.com/companies
     # payload = "f name, developed, published, game; w game id"
     pass
+
 def get_age_rating_for_game():
     pass
 
-
-# convert data from JSON to python dictionary
-# use request.json() to convert data , data = reponse.json()
 
 ##################################################################
 # and print it(replace with insert statement) with sql alchemy
@@ -191,5 +123,3 @@ def get_age_rating_for_game():
     # step3 : pip3 freeze > requirements.txt
     # step4 : make model tables
     # step5 : parse data and insert with sql alchemy
-
-
