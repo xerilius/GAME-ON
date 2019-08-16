@@ -1,22 +1,102 @@
 from pprint import pprint
 import os
+# makes json file more readable
 import json
+# allows you to make requests to API
 import requests
 
 from model import connect_to_db, db
 
-# Raises error when silent error caused by undefined variable in Jinja2 
-# app.jinja_env.undefined = StrictUndefined
-
 ####################################################################
 # To get API key from secret.sh
 API_KEY = os.environ.get('IGDB_KEY')
-# Add this as a user-key parameter to your API calls to authenticate.
 URL = 'https://api-v3.igdb.com/games'
-
+# Add this as a user-key parameter to your API calls to authenticate.
 headers= {'user-key': API_KEY, 'Accept': 'application/json'}
-payload = "f name, alternative..."
 
+
+def test_data():
+    """API request for games."""
+
+    offsets = [0]
+
+    for offset in offsets:
+
+        # get game data
+        payload = ("f name, artworks.url, slug, franchise.name, collection.name,"
+               "game_modes.name, genres.name, similar_games.name," 
+               "slug, popularity," 
+               "rating, aggregated_rating,"
+               "rating_count, aggregated_rating_count," 
+               "release_dates.human, storyline, summary, themes.name;" 
+               "limit 5; s popularity desc; w release_dates.platform = 6; w themes != (42); offset {};".format(offset))
+        
+        r = requests.post(URL, headers=headers, data=payload)
+
+        # storing JSON response within variable
+        data = json.loads(r.text)
+        # pprint(data)
+
+
+        for json_dict in data:
+            # game = whole jsonfile
+            # print(game.keys()) >> ['id, aggregates, ..']
+           
+            if 'collection' in json_dict.keys():
+                collection = json_dict['collection']['name']
+                
+            if 'franchise' in json_dict.keys():
+                franchise = json_dict['franchise']['name']
+            if 'similar_games' in json_dict.keys():
+                for i in range(len(json_dict['similar_games'])):
+                    similar_games = json_dict['similar_games'][i]['name']
+        
+            game_mode = json_dict['game_modes'][0]['name']
+            # game_mode = game['game_modes'] >> [ {id:2, 'name': Multiplayer'] ]
+            igdb_id = json_dict['id']
+            name = json_dict['name']
+            popularity = json_dict['popularity']
+            release_date = json_dict['release_dates'][0]['human']
+            slug = json_dict['slug']
+            summary = json_dict['summary']
+
+
+
+            
+            
+
+           
+            
+
+
+
+
+        # pretty printing json string back
+        # game_data = json.dumps(game_dict, indent=4, sort_keys=True)
+
+        
+        # for i in range(results):
+        #     game_modes = game['gameInfo'][i].get('game_modes')
+        #     genres = game['gameInfo'][i].get('genres')
+        #     game_id = game['gameInfo'][i].get('id')
+        #     name = game['gameInfo'][i].get('name')
+        #     popularity =  game['gameInfo'][i].get('popularity')
+        #     rating = game['gameInfo'][i].get('rating')
+        #     rating_count = game['gameInfo'][i].get('rating_count')
+        #     release_dates = game['gameInfo'][i].get('release_dates')
+        #     similar_games = game['gameInfo'][i].get('similar_games')
+        #     slug = game['gameInfo'][i].get('slug')
+        #     summary = game['gameInfo'][i].get('summary')
+        #     themes = game['gameInfo'][i].get('themes')
+
+        #     print(results.text)
+test_data()
+
+   
+        # # create new data_file.json file with write mode 
+        # with open('game_data.txt', 'w') as text_file:
+        #     # write json data into file
+        #     json.dump(game_data, text_file)
 
 # def get_game_by_id(game_ids):
 
@@ -36,66 +116,6 @@ payload = "f name, alternative..."
     # response = requests.post(URL, headers=headers, data=payload)
     # data = response.json()
     # print(response.text)
-
-
-
-def test_data():
-    """API request for games."""
-
-    offsets = [0,50]
-
-    for offset in offsets:
-
-        # get game data
-        payload = ("f name, artworks.url, slug, franchise.name, collection.name,"
-               "game_modes.name, genres.name, similar_games.name," 
-               "slug, popularity," 
-               "rating, aggregated_rating,"
-               "rating_count, aggregated_rating_count," 
-               "release_dates.human, storyline, summary, themes.name;" 
-               "limit 2; s popularity desc; w release_dates.platform = 6; w themes != (42); offset {};".format(offset))
-        
-        r = requests.post(URL, headers=headers, data=payload)
-        game_json = r.json()
-
-        for i, game in enumerate(game_json):
-            game_id = game['id']
-
-            if game['collection']:
-                collection = game['collection']['name']
-            franchise = game['franchise']['name']
-            game_mode = game['game_modes'][i]['name']
-            genre = game['genres'][i]['name']
-            name = game['name']
-            popularity = game['popularity']
-            release_date = game['release_dates'][0]['human']
-            similar_games = game['similar_games'][i]['name']
-
-            print(game_id, collection)
-
-
-
-        
-        # for i in range(results):
-        #     game_modes = game['gameInfo'][i].get('game_modes')
-        #     genres = game['gameInfo'][i].get('genres')
-        #     game_id = game['gameInfo'][i].get('id')
-        #     name = game['gameInfo'][i].get('name')
-        #     popularity =  game['gameInfo'][i].get('popularity')
-        #     rating = game['gameInfo'][i].get('rating')
-        #     rating_count = game['gameInfo'][i].get('rating_count')
-        #     release_dates = game['gameInfo'][i].get('release_dates')
-        #     similar_games = game['gameInfo'][i].get('similar_games')
-        #     slug = game['gameInfo'][i].get('slug')
-        #     summary = game['gameInfo'][i].get('summary')
-        #     themes = game['gameInfo'][i].get('themes')
-
-        #     print(results.text)
-
-
-test_data()
-
-
 
 def get_game_img():
     pass
