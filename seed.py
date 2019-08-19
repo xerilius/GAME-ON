@@ -1,129 +1,172 @@
 """Utility file to seed gaming database DIRECTLY from IGDB API requests"""
+
 from pprint import pprint
-from datetime import date
+from datetime import datetime
 from sqlalchemy import func
-from model import connect_to_db, db, Game , Mode, Genre, Theme
+from model import connect_to_db, db, Game , Mode, Genre, Theme #Rating
+
 from server import app
 
 
-from api_data import get_game_data
+from api_data import get_game_data, get_game_data_w_offset
 import json
 
-data = get_game_data()
+connect_to_db(app)
+db.create_all()
+data = get_game_data_w_offset()
 # pprint(data)
+
+single_player = Mode(game_mode='single player')
+multi_player = Mode(game_mode='multiplayer')
+
+db.session.add_all([single_player, multi_player])
+db.session.commit()
+
+game_modes = {
+    'Single player': single_player,
+    'Multiplayer': multi_player
+}
+
+
+def create_game_json(json_dict):
+    game_info = {
+        'artworks': [],
+        'game_id': None,
+        'name': None, 
+        'game_modes': [],
+        'genres': [],
+        'popularity': None,
+        'release_date': None,
+        'screenshots': [],
+        'similar_games': [],
+        'slug': None,
+        'summary': None,
+        'themes': [],
+        'rating': None,
+        'rating_count': None,    
+    }
+    
+    # game = whole jsonfile
+    # print(game.keys()) >> ['id, aggregates, ..']
+
+    igdb_id = json_dict['id']
+    game_info['game_id'] = igdb_id
+
+    name = json_dict['name']
+    game_info['name'] = name
+
+    slug = json_dict['slug']
+    game_info['slug'] = slug
+
+    # Add popularity of the game to dictionary
+    popularity = json_dict['popularity']
+    game_info['popularity'] = popularity
+
+    # Add release date of game to dictionary
+    release_date = json_dict['release_dates'][0]['human']
+    game_info['release_dates'] = release_date
+
+    # Add rating to dictionary
+    if 'rating' in json_dict:
+        rating = game_info['rating'] 
+        game_info['rating'] = rating
+
+    # Add summary of game to dictionary
+    if 'summary' in json_dict:
+        summary = json_dict['summary']
+        game_info['summary'] = summary.strip('\n')
+
+
+    # Checks if genres exist for game and add it to game info dictionary
+    if 'genres' in json_dict:
+        # loop thru genre's list 
+        for genre in json_dict['genres']:
+            genre_name = genre['name']
+            # store genre to temp dictionary
+            game_info['genres'].append(genre_name)
+
+    # Add themes values to game_info dictionary
+    if 'themes' in json_dict:
+        for theme in json_dict['themes']:
+            theme_name = theme['name']
+            game_info['themes'].append(theme)
+
+    # Add game mode to dictionary
+    for mode in json_dict['game_modes']:
+        game_mode = mode['name']
+        game_info['game_modes'].append(game_mode)
+    # game_mode = game['game_modes'] >> [ {id:2, 'name': Multiplayer'] 
+    
+    # Add list of artworks URL to dictionary list
+    if 'artworks' in json_dict:
+        for artwork in json_dict['artworks']:
+            artwork_url = artwork['url']
+            game_info['artworks'].append(artwork_url)
+
+    # Add list of screenshot URLs to dictionary
+    if 'screenshots' in json_dict:
+        for screenshot in json_dict['screenshots']:
+            screenshot_url = screenshot['url']
+            game_info['screenshots'].append(screenshot_url)
+
+    # Add similar games to dictionary list
+    if 'similar_games' in json_dict:
+        for game in json_dict['similar_games']:
+            sim_game_id = game['id']
+            game_info['similar_games'].append(sim_game_id)
+
+    print(game_info)
+
+    return game_info
+
 
 def load_games(api_data):
     """Transferring data into database"""
     print("Games")
+
+    # Delete all rows in table, so if run this second time,
+        # we wont be trying to add duplicate data
+    Game.query.delete()
+
+
+    # store json values into temporary dictionary before transferring into DB
+    for game_data in api_data:
+        game_info = create_game_json(game_data) 
     
-    # store json values into temporary dictionary before transferring into DB 
-    game_info = {
-        'game_id': None,
-       'genres': [],
-        'themes': [],
-        'slug': None,
-        'name': None, 
-        'game_mode': []
-    }
-    
+        #############################################################
+        release_date = None
+        if game_info['release_date']:
+            release_date = datetime.strptime(game_info['release_date'], '%Y-%b-%d')
 
-    for json_dict in api_data:
-        # game = whole jsonfile
-        # print(game.keys()) >> ['id, aggregates, ..']
-
-        # check if genres exist for game and add it to game info dictionary
-        if 'genres' in json_dict.keys():
-            for i in range(len(json_dict['genres'])):
-                genre = json_dict['genres'][i]['name']
-                game_info['genres'].append(genre)
-
-        # add themes values to game_info dictionary
-        if 'themes' in json_dict.keys():
-            for i in range(len(json_dict['themes'])):
-                theme = json_dict['themes'][i]['name']
-                game_info['themes'].append(theme)
-
-        # add game id to dictionary
-        if 'id' in json_dict.keys():
-            igdb_id = json_dict['id']
-            game_info['game_id'] = igdb_id 
-
-        # add game mode to dictionary
-        game_mode = json_dict['game_modes'][0]['name']
-        game_info['game_mode'] = game_mode
-        # game_mode = game['game_modes'] >> [ {id:2, 'name': Multiplayer'] 
-        
-        # adding game name to dictionary
-        name = json_dict['name']
-        game_info['name'] = name
-
-        # Add slug to dictionary
-        slug = json_dict['slug']
-        game_info['slug'] = slug
-
-        
         # variables to add to game table
-        game = Game(igdb_id=game_info['game_id'], game_name=game_info['name'], 
-            slug=game_info['slug'])  
+        game = Game(
+            igdb_id=game_info['game_id'],
+            game_name=game_info['name'], 
+            slug=game_info['slug'],
+            artwork_urls=game_info['artworks'], 
+            popularity=game_info['popularity'],
+            screenshot_urls=game_info['screenshots'],
+            release_date=release_date) 
 
-        # variable to add to modes table
-        mode = Mode(game_mode=game_info['game_mode'])
+        for mode_name in game_info['game_modes']:
+            mode = game_modes[mode_name]
+            game.game_modes.append(mode)
 
-        # variable to add to theme table
-        theme = Theme(theme=game_info['themes'])
-
-        # variable to add to genre table
-        genre = Genre(genre=game_info['genres'])
-
-
-            
+        # variable to add to rating table
+        # rating = Rating(rating=game_info['rating'], rating_count=game_info['rating_count'])
+ 
         # Add to session or it won't be stored via .bulk_save_objects() for multi arguments
-        db.session.add(game)
-        db.session.add(theme)
-        db.session.add(genre)
-        db.session.add(mode)
         # db.session.bulk_save_objects([game, theme, genre, mode])
 
+        db.session.add(game)
+        # db.session.add(rating)
+        db.session.commit()
+        print(f'Created {game}!')
+      
     # Once done adding data to table, commit work to save progress
-    db.session.commit()
+    # db.session.commit()
 
- ################## ADD LATER ###########################
-        # if 'artworks.url' in json_dict.keys():
-        #     for i in range(len(json_dict['artworks.url'])):
-        #         artworks = json_dict['artworks'][i]['url']
-       
-        # if 'collection' in json_dict.keys():
-        #     collection = json_dict['collection']['name']
-            
-        # if 'franchise' in json_dict.keys():
-        #     franchise = json_dict['franchise']['name']
-
-
-        # if 'similar_games' in json_dict.keys():
-        #     for i in range(len(json_dict['similar_games'])):
-        #         similar_games = json_dict['similar_games'][i]['name']
-        #         smlr_game_id = json_dict['themes'][i]['id']
-        
-        # rating = 
-        # rating_count = 
-        # screenshots =
-     
-
-        # popularity = json_dict['popularity']
-        # game_info['popularity'] = popularity
-        # release_date = json_dict['release_dates'][0]['human']
-
-        # summary = json_dict['summary']
-##########################################################
-if __name__ == "__main__":
-    connect_to_db(app)
-
-    # In case tables haven't been created, create them via database connection (connect_to_db(app))
-    db.create_all()
-    # Call functions to import different types of data
-    load_games(data)
-
-
+load_games(data)
 
 
 #####################################################################
