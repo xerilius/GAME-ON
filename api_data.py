@@ -31,6 +31,10 @@ def get_game_data_w_offset(offset=0):
     # use request.json() to convert data , data = reponse.json() ???????????
     game_data = json.loads(r.text)
 
+    # # # copies json data into textfile
+    # with open('rating00.text', 'w') as outfile:
+    #   json.dump(game_data, outfile, indent=4, sort_keys=True)
+
     return(game_data)
 
 
@@ -79,3 +83,6 @@ def get_game_by_id(game_ids):
     # data = response.json()
     # print(response.text)
 
+def get_newsfeed_data():
+  pass
+  # https://api-v3.igdb.com/feeds
