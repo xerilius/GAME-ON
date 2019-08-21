@@ -22,7 +22,7 @@ def get_game_data_w_offset(offset=0):
     payload = ("f  artworks.url, game_modes.name, genres.name, name, popularity,"   
            "rating, rating_count, release_dates.human, screenshots.url,"
            "similar_games.name, slug, summary, themes.name;"      
-           "limit 5; s popularity desc; w release_dates.platform = 6;"
+           "limit 5; s popularity desc; w (platforms = [6]);"
            "w themes != (42); offset {};".format(offset))
     
     r = requests.post(URL, headers=headers, data=payload)

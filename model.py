@@ -15,7 +15,7 @@ class Game(db.Model):
 
     game_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     igdb_id = db.Column(db.Integer, unique=True)
-    game_name = db.Column(db.String, nullable=False, unique=True)
+    title = db.Column(db.String, nullable=False, unique=True)
     slug = db.Column(db.String, nullable=False, unique=True) 
 
 
@@ -31,37 +31,47 @@ class Game(db.Model):
     artwork_urls = db.Column(db.JSON, nullable=True)
     screenshot_urls = db.Column(db.JSON, nullable=True)
 
+    # Association relationships for modes, genres, themes
     game_modes = db.relationship("Mode", secondary="game_modes", backref="games")
     genres = db.relationship("Genre", secondary="game_genres", backref="games")
+    themes = db.relationship("Theme", secondary="game_themes", backref="games")
   
-    # developer = db.Column(db.String, nullable=False)
 
     def __repr__(self):
         """Provide helpful representation when printed"""
 
-        return "<Game game_id={} title={} release_date={}>".format(
-            self.game_id, self.game_name, self.release_date)
+        return "<Game game_id={} title={} release_date={} popularity={}>".format(
+            self.game_id, self.title, self.release_date, self.popularity)
 
 
 ###################################
 class Mode(db.Model):
-    """Game modes for each game"""
+    """Modes for each game"""
 
     __tablename__ = "modes"
     mode_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     game_mode = db.Column(db.String, nullable=False)
 
+    def __repr__(self):
+        return "<Mode mode_id={} game_mode={}>".format(
+                self.mode_id, self.game_mode)
+
 
 class GameMode(db.Model):
-    """ """
+    """Association table for Game & Mode"""
 
     __tablename__ =  "game_modes"
     game_id = db.Column(db.Integer, db.ForeignKey('games.game_id'), primary_key=True)
     mode_id = db.Column(db.Integer, db.ForeignKey('modes.mode_id'), primary_key=True)
 
+    def __repr__(self):
+        return "<GameMode game_id={} mode_id={}>".format(
+                    self.game_id, self.game_mode)
+
+######################
 
 class Genre(db.Model):
-    """ """
+    """Genre for each game"""
 
     __tablename__ = "genres"
     genre_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
@@ -73,7 +83,7 @@ class Genre(db.Model):
 
 
 class GameGenre(db.Model):
-    """ """
+    """Association table for Game & Genre"""
     __tablename__ = "game_genres"
     game_id= db.Column(db.Integer, db.ForeignKey('games.game_id'), primary_key=True)
     genre_id = db.Column(db.Integer, db.ForeignKey('genres.genre_id'), primary_key=True)
@@ -82,9 +92,10 @@ class GameGenre(db.Model):
         return"<GameGenre game_id={} genre_id={}>".format(
             self.game_id, self.genre_id)
 
+###########################
 
 class Theme(db.Model):
-    """ """
+    """Theme of each game """
 
     __tablename__ = "themes"
     theme_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
@@ -96,7 +107,7 @@ class Theme(db.Model):
 
 
 class GameTheme(db.Model):
-    """ """
+    """Association table for Game & Theme"""
 
     __tablename__ = "game_themes"
     game_id = db.Column(db.Integer, db.ForeignKey('games.game_id'), primary_key=True)

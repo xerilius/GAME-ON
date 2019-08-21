@@ -1,27 +1,33 @@
+
 """Utility file to seed gaming database DIRECTLY from IGDB API requests"""
 
 from pprint import pprint
-from datetime import datetime
+import datetime
 from sqlalchemy import func
 from model import connect_to_db, db, Game , Mode, Genre, Theme #Rating
 
 from server import app
 
-
 from api_data import get_game_data, get_game_data_w_offset
 import json
 
+# connect and create db
 connect_to_db(app)
 db.create_all()
+
+# API request
 data = get_game_data_w_offset()
 # pprint(data)
 
+# manually adding modes and adding it to Mode table under game_mode field
 single_player = Mode(game_mode='single player')
 multi_player = Mode(game_mode='multiplayer')
 
+# add all variables to db
 db.session.add_all([single_player, multi_player])
 db.session.commit()
 
+# set the game_mode for each game to single player , multiplayer if in game_modes dict
 game_modes = {
     'Single player': single_player,
     'Multiplayer': multi_player
@@ -63,8 +69,11 @@ def create_game_json(json_dict):
     game_info['popularity'] = popularity
 
     # Add release date of game to dictionary
+    
     release_date = json_dict['release_dates'][0]['human']
-    game_info['release_dates'] = release_date
+    game_info['release_date'] = release_date
+    release_date = date.strptime(game_info['release_date'], '%Y-%b-%d').date()
+ 
 
     # Add rating to dictionary
     if 'rating' in json_dict:
@@ -93,9 +102,11 @@ def create_game_json(json_dict):
 
     # Add game mode to dictionary
     for mode in json_dict['game_modes']:
+        print("mode", mode)
         game_mode = mode['name']
+        print("game_mode" , game_mode)
         game_info['game_modes'].append(game_mode)
-    # game_mode = game['game_modes'] >> [ {id:2, 'name': Multiplayer'] 
+ 
     
     # Add list of artworks URL to dictionary list
     if 'artworks' in json_dict:
@@ -128,20 +139,18 @@ def load_games(api_data):
         # we wont be trying to add duplicate data
     Game.query.delete()
 
-
     # store json values into temporary dictionary before transferring into DB
     for game_data in api_data:
         game_info = create_game_json(game_data) 
-    
-        #############################################################
-        release_date = None
+
+       
         if game_info['release_date']:
             release_date = datetime.strptime(game_info['release_date'], '%Y-%b-%d')
 
         # variables to add to game table
         game = Game(
             igdb_id=game_info['game_id'],
-            game_name=game_info['name'], 
+            title=game_info['name'], 
             slug=game_info['slug'],
             artwork_urls=game_info['artworks'], 
             popularity=game_info['popularity'],
@@ -152,13 +161,15 @@ def load_games(api_data):
             mode = game_modes[mode_name]
             game.game_modes.append(mode)
 
-        # variable to add to rating table
-        # rating = Rating(rating=game_info['rating'], rating_count=game_info['rating_count'])
- 
-        # Add to session or it won't be stored via .bulk_save_objects() for multi arguments
-        # db.session.bulk_save_objects([game, theme, genre, mode])
+        #################################################3
+        # for genre_name in game_info['game_genres']:
+        #     genre = game_genres[genre_name]
+        #     game.game_genres.append(genre)
+
+
 
         db.session.add(game)
+
         # db.session.add(rating)
         db.session.commit()
         print(f'Created {game}!')
