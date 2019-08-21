@@ -20,7 +20,7 @@ class Game(db.Model):
 
 
     summary = db.Column(db.String, nullable=True)
-    release_date = db.Column(db.DateTime, nullable=True)
+    release_date = db.Column(db.Date, nullable=True)
     popularity = db.Column(db.Float, nullable=True)
 
     # similar_games = db.Column(db.String, nullable=False)

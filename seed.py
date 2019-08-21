@@ -2,7 +2,7 @@
 """Utility file to seed gaming database DIRECTLY from IGDB API requests"""
 
 from pprint import pprint
-import datetime
+from datetime import datetime
 from sqlalchemy import func
 from model import connect_to_db, db, Game , Mode, Genre, Theme #Rating
 
@@ -72,7 +72,7 @@ def create_game_json(json_dict):
     
     release_date = json_dict['release_dates'][0]['human']
     game_info['release_date'] = release_date
-    release_date = date.strptime(game_info['release_date'], '%Y-%b-%d').date()
+    release_date = datetime.strptime(game_info['release_date'], '%Y-%b-%d').date()
  
 
     # Add rating to dictionary
