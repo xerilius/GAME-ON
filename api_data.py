@@ -14,7 +14,7 @@ URL = 'https://api-v3.igdb.com/games'
 headers= {'user-key': API_KEY, 'Accept': 'application/json'}
 
 
-def get_game_data_w_offset(offset=0):
+def get_game_data_w_offset0():
     """Game data from API requests."""
 #######################################
 # >>>>> change limit values
@@ -23,45 +23,73 @@ def get_game_data_w_offset(offset=0):
            "rating, rating_count, release_dates.human, screenshots.url,"
            "similar_games.name, slug, summary, themes.name;"      
            "limit 50; s popularity desc; w (platforms = [6]);"
-           "w themes != (42); offset {};".format(offset))
+           "w themes != (42); offset {};".format(0))
     
-    r = requests.post(URL, headers=headers, data=payload)
 
-    # storing JSON response within variable
-    # use request.json() to convert data , data = reponse.json() ???????????
-    game_data = json.loads(r.text)
+    r1 = requests.post(URL, headers=headers, data=payload)
 
-    # # # copies json data into textfile
-    # with open('rating00.txt', 'w') as outfile:
-    #   json.dump(game_data, outfile, indent=4, sort_keys=True)
-
+    game_data = json.loads(r1.text)
+   
     return(game_data)
 
-
-def get_game_data():
+def get_game_data_w_offset50():
     """Game data from API requests."""
 #######################################
 # >>>>> change limit values
-    offsets = [0, 50, 100, 150]
 
-    for offset in offsets:
+    payload = ("f  artworks.url, game_modes.name, genres.name, name, popularity,"   
+           "rating, rating_count, release_dates.human, screenshots.url,"
+           "similar_games.name, slug, summary, themes.name;"      
+           "limit 50; s popularity desc; w (platforms = [6]);"
+           "w themes != (42); offset {};".format(50))
+    
 
-        # get game data
-        payload = ("f  artworks.url, game_modes.name, genres.name, name, popularity,"   
-               "rating, rating_count, release_dates.human, screenshots.url,"
-               "similar_games.name, slug, summary, themes.name;"      
-               "limit 50; s popularity desc; w (platforms = [6]);"
-               "w themes != (42); offset {};".format(offset))
-        
-        r = requests.post(URL, headers=headers, data=payload)
+    r2 = requests.post(URL, headers=headers, data=payload)
 
-        # storing JSON response within variable
-        # use request.json() to convert data , data = reponse.json() ???????????
-        game_data = json.loads(r.text)
+    game_data = json.loads(r2.text)
+   
+    return(game_data)
 
-        return(game_data)
+def get_game_data_w_offset100():
+    """Game data from API requests."""
+#######################################
+# >>>>> change limit values
 
-# get_game_data()
+    payload = ("f  artworks.url, game_modes.name, genres.name, name, popularity,"   
+           "rating, rating_count, release_dates.human, screenshots.url,"
+           "similar_games.name, slug, summary, themes.name;"      
+           "limit 50; s popularity desc; w (platforms = [6]);"
+           "w themes != (42); offset {};".format(100))
+    
+
+    r3 = requests.post(URL, headers=headers, data=payload)
+
+    game_data = json.loads(r3.text)
+   
+    return(game_data)
+
+def get_game_data_w_offset150():
+    """Game data from API requests."""
+#######################################
+# >>>>> change limit values
+
+    payload = ("f  artworks.url, game_modes.name, genres.name, name, popularity,"   
+           "rating, rating_count, release_dates.human, screenshots.url,"
+           "similar_games.name, slug, summary, themes.name;"      
+           "limit 50; s popularity desc; w (platforms = [6]);"
+           "w themes != (42); offset {};".format(150))
+    
+
+    r4 = requests.post(URL, headers=headers, data=payload)
+
+    game_data = json.loads(r4.text)
+   
+    return(game_data)
+
+
+
+
+
 
 
 def get_game_by_id(game_ids):

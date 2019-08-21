@@ -7,7 +7,8 @@ from sqlalchemy import func
 from model import connect_to_db, db, Game , Mode
 from server import app
 
-from api_data import get_game_data, get_game_data_w_offset
+from api_data import get_game_data_w_offset0, get_game_data_w_offset50
+from api_data import get_game_data_w_offset100, get_game_data_w_offset150 
 import json
 
 # connect and create db
@@ -15,10 +16,10 @@ connect_to_db(app)
 db.create_all()
 
 # API request
-data = get_game_data_w_offset()
-
-# loop thru api request with offsets 0-150
-# data = get_game_data()
+data1 = get_game_data_w_offset0()
+data2 = get_game_data_w_offset50()
+data3 = get_game_data_w_offset100()
+data4 = get_game_data_w_offset150()
 # pprint(data)
 
 # manually adding modes and adding it to Mode table under game_mode field
@@ -26,9 +27,10 @@ single_player = Mode(game_mode='Single player')
 multi_player = Mode(game_mode='Multiplayer')
 co_op = Mode(game_mode='Co-op')
 mmo = Mode(game_mode='MMO')
+split_screen = Mode(game_mode='Split screen')
 
 # add all variables to db
-db.session.add_all([single_player, multi_player, co_op, mmo])
+db.session.add_all([single_player, multi_player, co_op, mmo, split_screen])
 db.session.commit()
 
 # hard code game modes for game_mode field in modes table
@@ -37,6 +39,7 @@ game_modes = {
     'Multiplayer': multi_player,
     'Co-operative': co_op,
     'Massively Multiplayer Online (MMO)': mmo,
+    'Split screen': split_screen
 }
 
 
@@ -107,11 +110,13 @@ def create_game_json(json_dict):
     #         game_info['themes'].append(theme)
 
     # Add game mode to dictionary
-    for mode in json_dict['game_modes']:
-        print("mode", mode)
-        game_mode = mode['name']
-        print("game_mode" , game_mode)
-        game_info['game_modes'].append(game_mode.strip())
+
+    if 'game_modes' in json_dict:
+        for mode in json_dict['game_modes']:
+            print("mode", mode)
+            game_mode = mode['name']
+            print("game_mode" , game_mode)
+            game_info['game_modes'].append(game_mode)
  
     
     # Add list of artworks URL to dictionary list
@@ -141,20 +146,19 @@ def load_games(api_data):
     """Transferring data into database"""
     print("Games")
 
-    # Delete all rows in table, so if run this second time,
-        # we wont be trying to add duplicate data
-    Game.query.delete()
-
     # store json values into temporary dictionary before transferring into DB
     for game_data in api_data:
         game_info = create_game_json(game_data) 
 
          # Add release date of game to dictionary
         if game_info['release_date']:
-            if len(game_info['release_date']) <= 5:
+            if len(game_info['release_date']) == 3:
+                release_date=None
+            elif len(game_info['release_date']) <= 5:
                 release_date = datetime.strptime(game_info['release_date'], '%Y')
             elif len(game_info['release_date']) >=10: 
                 release_date = datetime.strptime(game_info['release_date'], '%Y-%b-%d')
+
 
 
 
@@ -172,9 +176,10 @@ def load_games(api_data):
             release_date=release_date,
             summary=game_info['summary']) 
 
-        for mode_name in game_info['game_modes']:
-            mode = game_modes[mode_name]
-            game.game_modes.append(mode)
+        if game_info['game_modes']:
+            for mode_name in game_info['game_modes']:
+                mode = game_modes[mode_name]
+                game.game_modes.append(mode)
 
         # #################################################3
         # for genre_name in game_info['genres']:
@@ -192,7 +197,10 @@ def load_games(api_data):
     # Once done adding data to table, commit work to save progress
     # db.session.commit()
 
-load_games(data)
+load_games(data1)
+load_games(data2)
+load_games(data3)
+load_games(data4)
 
 
 #####################################################################
