@@ -15,8 +15,10 @@ connect_to_db(app)
 db.create_all()
 
 # API request
-# data = get_game_data_w_offset()
-data = get_game_data()
+data = get_game_data_w_offset()
+
+# loop thru api request with offsets 0-150
+# data = get_game_data()
 # pprint(data)
 
 # manually adding modes and adding it to Mode table under game_mode field
@@ -72,13 +74,13 @@ def create_game_json(json_dict):
     popularity = json_dict['popularity']
     game_info['popularity'] = popularity
 
-    # Add release date of game to dictionary
     
-    release_date = json_dict['release_dates'][0]['human']
-    game_info['release_date'] = release_date
+    # Add release date of game to dictionary 
+    if 'release_dates' in json_dict:
+        release_date = json_dict['release_dates'][0]['human']
+        game_info['release_date'] = release_date
+            
     
- 
-
     # # Add rating to dictionary
     # if 'rating' in json_dict:
     #     rating = game_info['rating'] 
@@ -116,13 +118,13 @@ def create_game_json(json_dict):
     if 'artworks' in json_dict:
         for artwork in json_dict['artworks']:
             artwork_url = artwork['url']
-            game_info['artworks'].append(artwork_url.strip())
+            game_info['artworks'].append(artwork_url)
 
     # Add list of screenshot URLs to dictionary
     if 'screenshots' in json_dict:
         for screenshot in json_dict['screenshots']:
             screenshot_url = screenshot['url']
-            game_info['screenshots'].append(screenshot_url.strip())
+            game_info['screenshots'].append(screenshot_url)
 
     # # Add similar games to dictionary list
     # if 'similar_games' in json_dict:
@@ -147,10 +149,17 @@ def load_games(api_data):
     for game_data in api_data:
         game_info = create_game_json(game_data) 
 
-       
+         # Add release date of game to dictionary
         if game_info['release_date']:
-            release_date = datetime.strptime(game_info['release_date'], '%Y-%b-%d').date()
- 
+            if len(game_info['release_date']) <= 5:
+                release_date = datetime.strptime(game_info['release_date'], '%Y')
+            elif len(game_info['release_date']) >=10: 
+                release_date = datetime.strptime(game_info['release_date'], '%Y-%b-%d')
+
+
+
+        # if game_info['release_date']:
+        #     release_date = datetime.strptime(game_info['release_date'], '%Y-%b-%d')
 
         # variables to add to game table
         game = Game(

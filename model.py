@@ -18,18 +18,17 @@ class Game(db.Model):
     title = db.Column(db.String, nullable=False, unique=True)
     slug = db.Column(db.String, nullable=False, unique=True) 
 
-
     summary = db.Column(db.String, nullable=True)
     release_date = db.Column(db.Date, nullable=True)
     popularity = db.Column(db.Float, nullable=True)
+
+    artwork_urls = db.Column(db.JSON, nullable=True)
+    screenshot_urls = db.Column(db.JSON, nullable=True)
 
     # similar_games = db.Column(db.String, nullable=False)
     # sim_game_igdb_id = db.Column(db.Integer, unique=True)
     # collection = db.Column(db.String, nullable=True)
     # franchise = db.Column(db.String, nullable=True)
-
-    artwork_urls = db.Column(db.JSON, nullable=True)
-    screenshot_urls = db.Column(db.JSON, nullable=True)
 
     # Association relationships for modes, genres, themes
     game_modes = db.relationship("Mode", secondary="game_modes", backref="games")
