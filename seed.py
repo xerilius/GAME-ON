@@ -15,21 +15,26 @@ connect_to_db(app)
 db.create_all()
 
 # API request
-data = get_game_data_w_offset()
+# data = get_game_data_w_offset()
+data = get_game_data()
 # pprint(data)
 
 # manually adding modes and adding it to Mode table under game_mode field
-single_player = Mode(game_mode='single player')
-multi_player = Mode(game_mode='multiplayer')
+single_player = Mode(game_mode='Single player')
+multi_player = Mode(game_mode='Multiplayer')
+co_op = Mode(game_mode='Co-op')
+mmo = Mode(game_mode='MMO')
 
 # add all variables to db
-db.session.add_all([single_player, multi_player])
+db.session.add_all([single_player, multi_player, co_op, mmo])
 db.session.commit()
 
-# set the game_mode for each game to single player , multiplayer if in game_modes dict
+# hard code game modes for game_mode field in modes table
 game_modes = {
     'Single player': single_player,
-    'Multiplayer': multi_player
+    'Multiplayer': multi_player,
+    'Co-operative': co_op,
+    'Massively Multiplayer Online (MMO)': mmo,
 }
 
 
