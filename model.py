@@ -33,8 +33,8 @@ class Game(db.Model):
 
     # Association relationships for modes, genres, themes
     game_modes = db.relationship("Mode", secondary="game_modes", backref="games")
-    genres = db.relationship("Genre", secondary="game_genres", backref="games")
-    themes = db.relationship("Theme", secondary="game_themes", backref="games")
+    # genres = db.relationship("Genre", secondary="game_genres", backref="games")
+    # themes = db.relationship("Theme", secondary="game_themes", backref="games")
   
 
     def __repr__(self):
@@ -70,52 +70,52 @@ class GameMode(db.Model):
 
 ######################
 
-class Genre(db.Model):
-    """Genre for each game"""
+# class Genre(db.Model):
+#     """Genre for each game"""
 
-    __tablename__ = "genres"
-    genre_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    genre = db.Column(db.String, nullable=False)
+#     __tablename__ = "genres"
+#     genre_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+#     genre = db.Column(db.String, nullable=False)
 
-    def __repr__(self):
-        return "<Genre genre_id={} genre_name={}>".format(
-        self.genre_id, self.genre_name)
-
-
-class GameGenre(db.Model):
-    """Association table for Game & Genre"""
-    __tablename__ = "game_genres"
-    game_id= db.Column(db.Integer, db.ForeignKey('games.game_id'), primary_key=True)
-    genre_id = db.Column(db.Integer, db.ForeignKey('genres.genre_id'), primary_key=True)
-
-    def __repr__(self):
-        return"<GameGenre game_id={} genre_id={}>".format(
-            self.game_id, self.genre_id)
-
-###########################
-
-class Theme(db.Model):
-    """Theme of each game """
-
-    __tablename__ = "themes"
-    theme_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    theme = db.Column(db.String, nullable=False)
-
-    def __repr__(self):
-        return "<Theme theme_id={} theme_name={}>".format(
-                self.theme_id, self.theme_name)
+#     def __repr__(self):
+#         return "<Genre genre_id={} genre_name={}>".format(
+#         self.genre_id, self.genre_name)
 
 
-class GameTheme(db.Model):
-    """Association table for Game & Theme"""
+# class GameGenre(db.Model):
+#     """Association table for Game & Genre"""
+#     __tablename__ = "game_genres"
+#     game_id= db.Column(db.Integer, db.ForeignKey('games.game_id'), primary_key=True)
+#     genre_id = db.Column(db.Integer, db.ForeignKey('genres.genre_id'), primary_key=True)
 
-    __tablename__ = "game_themes"
-    game_id = db.Column(db.Integer, db.ForeignKey('games.game_id'), primary_key=True)
-    theme_id = db.Column(db.Integer, db.ForeignKey('themes.theme_id'), primary_key=True) 
+#     def __repr__(self):
+#         return"<GameGenre game_id={} genre_id={}>".format(
+#             self.game_id, self.genre_id)
 
-    def __repr__(self):
-        return "<GameTheme game_id={} theme_id={}>".format(
-                self.game_id, self.theme_id)
+# ###########################
+
+# class Theme(db.Model):
+#     """Theme of each game """
+
+#     __tablename__ = "themes"
+#     theme_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+#     theme = db.Column(db.String, nullable=False)
+
+#     def __repr__(self):
+#         return "<Theme theme_id={} theme_name={}>".format(
+#                 self.theme_id, self.theme_name)
+
+
+# class GameTheme(db.Model):
+#     """Association table for Game & Theme"""
+
+#     __tablename__ = "game_themes"
+#     game_id = db.Column(db.Integer, db.ForeignKey('games.game_id'), primary_key=True)
+#     theme_id = db.Column(db.Integer, db.ForeignKey('themes.theme_id'), primary_key=True) 
+
+#     def __repr__(self):
+#         return "<GameTheme game_id={} theme_id={}>".format(
+#                 self.game_id, self.theme_id)
 
 
 ################################################################
