@@ -32,7 +32,7 @@ def get_game_data_w_offset(offset=0):
     game_data = json.loads(r.text)
 
     # # # copies json data into textfile
-    # with open('rating00.text', 'w') as outfile:
+    # with open('rating00.txt', 'w') as outfile:
     #   json.dump(game_data, outfile, indent=4, sort_keys=True)
 
     return(game_data)
