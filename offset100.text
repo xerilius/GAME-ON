@@ -1,0 +1,6236 @@
+[
+    {
+        "artworks": [
+            {
+                "id": 1992,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/kkhdwge97hazinrir7x5.jpg"
+            }
+        ],
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 12,
+                "name": "Role-playing (RPG)"
+            }
+        ],
+        "id": 99118,
+        "name": "Dragalia Lost",
+        "popularity": 95.96945918380521,
+        "rating": 90.0,
+        "rating_count": 3,
+        "release_dates": [
+            {
+                "human": "2018-Sep-27",
+                "id": 157737
+            },
+            {
+                "human": "2018-Sep-27",
+                "id": 157738
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 261676,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5lws.jpg"
+            },
+            {
+                "id": 261677,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5lwt.jpg"
+            },
+            {
+                "id": 261678,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5lwu.jpg"
+            },
+            {
+                "id": 261679,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5lwv.jpg"
+            },
+            {
+                "id": 261680,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5lww.jpg"
+            },
+            {
+                "id": 261681,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5lwx.jpg"
+            },
+            {
+                "id": 261682,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5lwy.jpg"
+            },
+            {
+                "id": 261683,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5lwz.jpg"
+            },
+            {
+                "id": 261684,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5lx0.jpg"
+            },
+            {
+                "id": 261685,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5lx1.jpg"
+            },
+            {
+                "id": 261686,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5lx2.jpg"
+            },
+            {
+                "id": 261687,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5lx3.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 19127,
+                "name": "Monster Hero"
+            },
+            {
+                "id": 22790,
+                "name": "Project Awakening"
+            },
+            {
+                "id": 54775,
+                "name": "Shadows: Awakening"
+            },
+            {
+                "id": 57033,
+                "name": "The Legend of Sword and Fairy 5"
+            },
+            {
+                "id": 69007,
+                "name": "AION: Legions of War"
+            },
+            {
+                "id": 103303,
+                "name": "The Elder Scrolls: Blades"
+            },
+            {
+                "id": 106987,
+                "name": "Torchlight Frontiers"
+            },
+            {
+                "id": 112191,
+                "name": "Epic Seven"
+            },
+            {
+                "id": 113636,
+                "name": "Rangers of Oblivion"
+            },
+            {
+                "id": 113910,
+                "name": "Forged Fantasy"
+            }
+        ],
+        "slug": "dragalia-lost",
+        "summary": "Dragalia Lost is a swipe-controlled action RPG about the bonds shared between humans and dragons. Conquer your enemies using an array of powerful attacks and special skills and even by transforming into a dragon yourself!",
+        "themes": [
+            {
+                "id": 17,
+                "name": "Fantasy"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 12,
+                "name": "Role-playing (RPG)"
+            },
+            {
+                "id": 13,
+                "name": "Simulator"
+            },
+            {
+                "id": 15,
+                "name": "Strategy"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            },
+            {
+                "id": 32,
+                "name": "Indie"
+            }
+        ],
+        "id": 24765,
+        "name": "Dead Age",
+        "popularity": 95.08807209161212,
+        "rating": 80.0,
+        "rating_count": 2,
+        "release_dates": [
+            {
+                "human": "2016-Nov-04",
+                "id": 60427
+            },
+            {
+                "human": "2016-Nov-04",
+                "id": 60428
+            },
+            {
+                "human": "2016-Nov-04",
+                "id": 60429
+            },
+            {
+                "human": "2016-Nov-04",
+                "id": 60430
+            },
+            {
+                "human": "2018-Sep-07",
+                "id": 157537
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 85842,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/qt6gpor3ue3lv7nujg74.jpg"
+            },
+            {
+                "id": 85843,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/d9icnhn1qwk1hy6yaess.jpg"
+            },
+            {
+                "id": 85844,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/quewvmelzgp1xfwsqt4l.jpg"
+            },
+            {
+                "id": 85845,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/pkqrtmswtvvl7lgjdunn.jpg"
+            },
+            {
+                "id": 85846,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/vmzkckztzfo8zspwhnce.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 17379,
+                "name": "Miscreated"
+            },
+            {
+                "id": 25311,
+                "name": "Star Control: Origins"
+            },
+            {
+                "id": 26145,
+                "name": "Impact Winter"
+            },
+            {
+                "id": 26574,
+                "name": "Force of Nature"
+            },
+            {
+                "id": 29173,
+                "name": "Startup Company"
+            },
+            {
+                "id": 29348,
+                "name": "Weapon Shop Fantasy"
+            },
+            {
+                "id": 33153,
+                "name": "Judgment: Apocalypse Survival Simulation"
+            },
+            {
+                "id": 35994,
+                "name": "Survivalist"
+            },
+            {
+                "id": 44076,
+                "name": "Last Day on Earth: Survival"
+            },
+            {
+                "id": 55590,
+                "name": "Mashinky"
+            }
+        ],
+        "slug": "dead-age",
+        "summary": "Survive the zombie apocalypse with a \u201cFinal Fantasy\u201d turn-based combat and permanent death! Manage survivors, craft materials, and make difficult decisions. Defend your camp against hordes of the undead to prevail in this non-linear rogue-lite (comparable to FTL). Innovative Indie Survival-RPG!",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            },
+            {
+                "id": 19,
+                "name": "Horror"
+            },
+            {
+                "id": 21,
+                "name": "Survival"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 2,
+                "name": "Point-and-click"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            },
+            {
+                "id": 32,
+                "name": "Indie"
+            }
+        ],
+        "id": 13189,
+        "name": "Masochisia",
+        "popularity": 94.86772531856386,
+        "rating": 52.08194670706899,
+        "rating_count": 7,
+        "release_dates": [
+            {
+                "human": "2015-Oct-09",
+                "id": 38187
+            },
+            {
+                "human": "2015-Oct-09",
+                "id": 38188
+            },
+            {
+                "human": "2015-Oct-09",
+                "id": 38189
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 80448,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/bpdjgsf95escq6zzkku2.jpg"
+            },
+            {
+                "id": 80449,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/jycoypp4aqf2vr70vedf.jpg"
+            },
+            {
+                "id": 80450,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/dghetbqvsgrnwcqd7ooj.jpg"
+            },
+            {
+                "id": 80451,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/uwwuwilnfjzlob0hppmz.jpg"
+            },
+            {
+                "id": 80452,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sooytuocpokwtngmquvs.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 18011,
+                "name": "Rusty Lake Hotel"
+            },
+            {
+                "id": 19817,
+                "name": "Scorn"
+            },
+            {
+                "id": 25222,
+                "name": "Rusty Lake: Roots"
+            },
+            {
+                "id": 25646,
+                "name": "Don't Knock Twice"
+            },
+            {
+                "id": 27266,
+                "name": "House of Caravan"
+            },
+            {
+                "id": 55282,
+                "name": "Infliction"
+            },
+            {
+                "id": 56033,
+                "name": "Dream Alone"
+            },
+            {
+                "id": 60931,
+                "name": "Paranormal Syndrome"
+            },
+            {
+                "id": 81275,
+                "name": "Unforeseen Incidents"
+            },
+            {
+                "id": 111130,
+                "name": "Apsulov: End of Gods"
+            }
+        ],
+        "slug": "masochisia",
+        "summary": "A young man discovers through a series of hallucinations that he will grow up to become a violent psychopath. How will he respond to these revelations? Can he change his fate? Can you even... change fate...",
+        "themes": [
+            {
+                "id": 19,
+                "name": "Horror"
+            }
+        ]
+    },
+    {
+        "genres": [
+            {
+                "id": 14,
+                "name": "Sport"
+            }
+        ],
+        "id": 114287,
+        "name": "FIFA 20",
+        "popularity": 94.4270317724673,
+        "release_dates": [
+            {
+                "human": "2019-Sep-27",
+                "id": 170915
+            },
+            {
+                "human": "2019-Sep-27",
+                "id": 170916
+            },
+            {
+                "human": "2019-Sep-27",
+                "id": 170917
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 307564,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6lbg.jpg"
+            },
+            {
+                "id": 307565,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6lbh.jpg"
+            },
+            {
+                "id": 307566,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6lbi.jpg"
+            },
+            {
+                "id": 307567,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6lbj.jpg"
+            },
+            {
+                "id": 307568,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6lbk.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 701,
+                "name": "FIFA Football 2002"
+            },
+            {
+                "id": 2484,
+                "name": "Pro Evolution Soccer 6"
+            },
+            {
+                "id": 15851,
+                "name": "Score! Hero"
+            },
+            {
+                "id": 18681,
+                "name": "ISS Pro Evolution Soccer 2"
+            },
+            {
+                "id": 57738,
+                "name": "Cartoon Network Superstar Soccer: Goal!!!"
+            },
+            {
+                "id": 100359,
+                "name": "Pro Evolution Soccer 2019"
+            },
+            {
+                "id": 103377,
+                "name": "FIFA 19: Champions Edition"
+            },
+            {
+                "id": 106814,
+                "name": "Club Soccer Director 2019"
+            },
+            {
+                "id": 114286,
+                "name": "Madden NFL 20"
+            },
+            {
+                "id": 119422,
+                "name": "eFootball PES 2020"
+            }
+        ],
+        "slug": "fifa-20",
+        "summary": "Powered by Frostbite\u2122, EA SPORTS\u2122 FIFA 20 for PC brings two sides of The World\u2019s Game to life - the prestige of the professional stage and an all-new, authentic street football experience in EA SPORTS VOLTA. FIFA 20 innovates across the game, FOOTBALL INTELLIGENCE unlocks an unprecedented platform for gameplay realism, FIFA Ultimate Team\u2122 offers more ways to build your dream squad and EA SPORTS VOLTA returns the game to the street with an authentic form of small-sided football.",
+        "themes": [
+            {
+                "id": 32,
+                "name": "Non-fiction"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            },
+            {
+                "id": 2,
+                "name": "Multiplayer"
+            }
+        ],
+        "genres": [
+            {
+                "id": 13,
+                "name": "Simulator"
+            },
+            {
+                "id": 15,
+                "name": "Strategy"
+            }
+        ],
+        "id": 36258,
+        "name": "Order of Battle: World War II",
+        "popularity": 93.32529790722594,
+        "rating": 80.0,
+        "rating_count": 2,
+        "release_dates": [
+            {
+                "human": "2015-Apr-30",
+                "id": 83105
+            },
+            {
+                "human": "2015-Apr-30",
+                "id": 83106
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 93778,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/cmqq4asjhvxgaayp1gsp.jpg"
+            },
+            {
+                "id": 93779,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/il9mee4jcre0gzuedxgl.jpg"
+            },
+            {
+                "id": 93780,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/tpsjar92hf23tjw44y3c.jpg"
+            },
+            {
+                "id": 93781,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/fy3mhjtplhuq4v4yrywn.jpg"
+            },
+            {
+                "id": 93782,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/zcukserhlsfhykigz8lx.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 17613,
+                "name": "Sovereignty: Crown of Kings"
+            },
+            {
+                "id": 33603,
+                "name": "Tavern Tycoon"
+            },
+            {
+                "id": 36962,
+                "name": "Starship Theory"
+            },
+            {
+                "id": 51577,
+                "name": "Rise of Industry"
+            },
+            {
+                "id": 55888,
+                "name": "Computer Tycoon"
+            },
+            {
+                "id": 65827,
+                "name": "Bronze Age"
+            },
+            {
+                "id": 76340,
+                "name": "SuperPuzzleGalaxy"
+            },
+            {
+                "id": 79134,
+                "name": "Ancient Cities"
+            },
+            {
+                "id": 109339,
+                "name": "CHANGE: A Homeless Survival Experience"
+            },
+            {
+                "id": 112754,
+                "name": "Business Magnate"
+            }
+        ],
+        "slug": "order-of-battle-world-war-ii",
+        "summary": "Order of Battle: World War II is breath of fresh air for all strategy fans. It is a game that takes wargaming to a new level by upgrading every single game element and rebooting the genre for a new generation of players."
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 5,
+                "name": "Shooter"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            }
+        ],
+        "id": 19561,
+        "name": "Days Gone",
+        "popularity": 93.32529790722594,
+        "rating": 83.83461338363149,
+        "rating_count": 33,
+        "release_dates": [
+            {
+                "human": "2019-Apr-26",
+                "id": 160154
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 44402,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/kjrtfpaex7mwrjazwv1m.jpg"
+            },
+            {
+                "id": 44403,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/r5mn9rt7aqvf5nrn8dqq.jpg"
+            },
+            {
+                "id": 44404,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/msmuubbmqkosdwinh54f.jpg"
+            },
+            {
+                "id": 44405,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ukzjmwiud0hdn8jk5fkb.jpg"
+            },
+            {
+                "id": 44406,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/zpddyocposjq6qm3ntek.jpg"
+            },
+            {
+                "id": 212323,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/netptvmanlolewudyw45.jpg"
+            },
+            {
+                "id": 212324,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/eqd6kktmq9dva0cd5clc.jpg"
+            },
+            {
+                "id": 212326,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/jwayyepmsjnqoscmodjv.jpg"
+            },
+            {
+                "id": 212327,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/tesebvw0eadixciqfalo.jpg"
+            },
+            {
+                "id": 212328,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/kd9mk48xev3eisdev4sz.jpg"
+            },
+            {
+                "id": 212329,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/kxgcsxrg5yeumz50ozg5.jpg"
+            },
+            {
+                "id": 213661,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/tbueqwnebwlbax8dxgyv.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 10776,
+                "name": "Rising World"
+            },
+            {
+                "id": 13210,
+                "name": "How to Survive 2"
+            },
+            {
+                "id": 17379,
+                "name": "Miscreated"
+            },
+            {
+                "id": 18225,
+                "name": "The Sinking City"
+            },
+            {
+                "id": 19164,
+                "name": "Borderlands 3"
+            },
+            {
+                "id": 19541,
+                "name": "State of Decay 2"
+            },
+            {
+                "id": 26574,
+                "name": "Force of Nature"
+            },
+            {
+                "id": 28168,
+                "name": "Code Vein"
+            },
+            {
+                "id": 37016,
+                "name": "Metro Exodus"
+            },
+            {
+                "id": 102584,
+                "name": "Dying Light 2"
+            }
+        ],
+        "slug": "days-gone",
+        "summary": "Days Gone is an open-world action-adventure game set in a harsh wilderness two years after a devastating global pandemic. Play as Deacon St. John, a Drifter and bounty hunter who rides the broken road, fighting to survive while searching for a reason to live. \n \nAt its core, Days Gone is about survivors and what makes them human: desperation, loss, madness, betrayal, friendship, brotherhood, regret, love \u2013 and hope. It\u2019s about how even when confronted with such enormous tragedy they find a reason to live. Hope never dies.",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            },
+            {
+                "id": 19,
+                "name": "Horror"
+            },
+            {
+                "id": 21,
+                "name": "Survival"
+            },
+            {
+                "id": 33,
+                "name": "Sandbox"
+            },
+            {
+                "id": 38,
+                "name": "Open world"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 2,
+                "name": "Multiplayer"
+            },
+            {
+                "id": 5,
+                "name": "Massively Multiplayer Online (MMO)"
+            }
+        ],
+        "genres": [
+            {
+                "id": 12,
+                "name": "Role-playing (RPG)"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            }
+        ],
+        "id": 34155,
+        "name": "The Black Death",
+        "popularity": 93.10495113417767,
+        "rating": 50.0,
+        "rating_count": 1,
+        "release_dates": [
+            {
+                "human": "2016-Apr-19",
+                "id": 79212
+            },
+            {
+                "human": "2016-Apr-19",
+                "id": 117459
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 103838,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/gbwcmciddwxvvlbn3dkr.jpg"
+            },
+            {
+                "id": 103839,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/a1mxndpo1natez1jvtfh.jpg"
+            },
+            {
+                "id": 103840,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/rynsrpjlpxinewnythbb.jpg"
+            },
+            {
+                "id": 103841,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/qabtj6n5tephq4rkdadf.jpg"
+            },
+            {
+                "id": 103842,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/w1wta1lglgl6ohqfxvuo.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 28309,
+                "name": "Tanzia"
+            },
+            {
+                "id": 30245,
+                "name": "Wanderlust Adventures"
+            },
+            {
+                "id": 32195,
+                "name": "Zezenia Online"
+            },
+            {
+                "id": 35994,
+                "name": "Survivalist"
+            },
+            {
+                "id": 55038,
+                "name": "Immortal: Unchained"
+            },
+            {
+                "id": 55199,
+                "name": "Dragon: Marked for Death"
+            },
+            {
+                "id": 78632,
+                "name": "Untitled Danganronpa Game"
+            },
+            {
+                "id": 96217,
+                "name": "Eternity: The Last Unicorn"
+            },
+            {
+                "id": 105049,
+                "name": "Remnant: From the Ashes"
+            },
+            {
+                "id": 106987,
+                "name": "Torchlight Frontiers"
+            }
+        ],
+        "slug": "the-black-death",
+        "summary": "The Black Death is a dark multiplayer survival game set during a plague-ridden medieval era.",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            },
+            {
+                "id": 22,
+                "name": "Historical"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            },
+            {
+                "id": 2,
+                "name": "Multiplayer"
+            }
+        ],
+        "genres": [
+            {
+                "id": 5,
+                "name": "Shooter"
+            },
+            {
+                "id": 24,
+                "name": "Tactical"
+            }
+        ],
+        "id": 564,
+        "name": "Rogue Warrior",
+        "popularity": 90.90148340369495,
+        "rating": 64.65778051405661,
+        "rating_count": 11,
+        "release_dates": [
+            {
+                "human": "2009-Dec-01",
+                "id": 27871
+            },
+            {
+                "human": "2009-Dec-01",
+                "id": 27873
+            },
+            {
+                "human": "2009-Nov-26",
+                "id": 27874
+            },
+            {
+                "human": "2009-Nov-26",
+                "id": 27875
+            },
+            {
+                "human": "2009-Nov-26",
+                "id": 27876
+            },
+            {
+                "human": "2009-Nov-27",
+                "id": 27877
+            },
+            {
+                "human": "2009-Nov-27",
+                "id": 27879
+            },
+            {
+                "human": "2009-Dec-01",
+                "id": 27880
+            },
+            {
+                "human": "2009-Dec-02",
+                "id": 27881
+            },
+            {
+                "human": "2009-Dec-01",
+                "id": 105339
+            },
+            {
+                "human": "2009-Nov-27",
+                "id": 105340
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 8937,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/wcdmxtd20sucdn9mbakk.jpg"
+            },
+            {
+                "id": 8938,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/vw3taw5xvw6hs4l3frf2.jpg"
+            },
+            {
+                "id": 8939,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/kouvmsxqzj4ozjm3o6ab.jpg"
+            },
+            {
+                "id": 8940,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/dyuju3uakrtopctvxjnp.jpg"
+            },
+            {
+                "id": 8941,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/glshwewdrtsrx4kwbxgv.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 356,
+                "name": "Quake 4"
+            },
+            {
+                "id": 495,
+                "name": "Metro 2033"
+            },
+            {
+                "id": 569,
+                "name": "Wolfenstein"
+            },
+            {
+                "id": 571,
+                "name": "Singularity"
+            },
+            {
+                "id": 1006,
+                "name": "Syndicate"
+            },
+            {
+                "id": 2031,
+                "name": "Wolfenstein: The New Order"
+            },
+            {
+                "id": 5647,
+                "name": "Enemy Front"
+            },
+            {
+                "id": 7020,
+                "name": "Inversion"
+            },
+            {
+                "id": 8744,
+                "name": "Global Operations"
+            },
+            {
+                "id": 19441,
+                "name": "Watch Dogs 2"
+            }
+        ],
+        "slug": "rogue-warrior",
+        "summary": "Rogue Warrior is a character-driven, first-person-shooter, featuring Richard Demo Dick Marcinko\u00b4s explosive personality in an action-packed single player campaign, and intense multiplayer combat.",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            },
+            {
+                "id": 23,
+                "name": "Stealth"
+            },
+            {
+                "id": 33,
+                "name": "Sandbox"
+            }
+        ]
+    },
+    {
+        "artworks": [
+            {
+                "id": 4991,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/bmikwoqio6bk78pmdbqq.jpg"
+            },
+            {
+                "id": 7628,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar5vw.jpg"
+            },
+            {
+                "id": 7629,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar5vx.jpg"
+            },
+            {
+                "id": 7630,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar5vy.jpg"
+            }
+        ],
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            },
+            {
+                "id": 3,
+                "name": "Co-operative"
+            }
+        ],
+        "genres": [
+            {
+                "id": 12,
+                "name": "Role-playing (RPG)"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            }
+        ],
+        "id": 102584,
+        "name": "Dying Light 2",
+        "popularity": 90.24044308455014,
+        "release_dates": [
+            {
+                "human": "2020-Q2",
+                "id": 170911
+            },
+            {
+                "human": "2020-Q2",
+                "id": 170912
+            },
+            {
+                "human": "2020-Q2",
+                "id": 170913
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 213778,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/pncwkkatkhnsq9agmq0b.jpg"
+            },
+            {
+                "id": 213779,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/vrakmntz5m2rbeyszrmu.jpg"
+            },
+            {
+                "id": 213781,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/zbsvh9atisiqi7w6lbsq.jpg"
+            },
+            {
+                "id": 213782,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/l0agiyjcdhbwqvk6pgbk.jpg"
+            },
+            {
+                "id": 214624,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/smx8uo7qp3iida9wojkw.jpg"
+            },
+            {
+                "id": 214625,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/oqlpxzmjrshqpevef52k.jpg"
+            },
+            {
+                "id": 214626,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/qkndspkxbfjvgsuwehky.jpg"
+            },
+            {
+                "id": 315189,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6r79.jpg"
+            },
+            {
+                "id": 315190,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6r7a.jpg"
+            },
+            {
+                "id": 315191,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6r7b.jpg"
+            },
+            {
+                "id": 315192,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6r7c.jpg"
+            },
+            {
+                "id": 315193,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6r7d.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 13210,
+                "name": "How to Survive 2"
+            },
+            {
+                "id": 18225,
+                "name": "The Sinking City"
+            },
+            {
+                "id": 25300,
+                "name": "Sky Break"
+            },
+            {
+                "id": 26574,
+                "name": "Force of Nature"
+            },
+            {
+                "id": 44076,
+                "name": "Last Day on Earth: Survival"
+            },
+            {
+                "id": 81249,
+                "name": "The Elder Scrolls VI"
+            },
+            {
+                "id": 96217,
+                "name": "Eternity: The Last Unicorn"
+            },
+            {
+                "id": 105049,
+                "name": "Remnant: From the Ashes"
+            },
+            {
+                "id": 106987,
+                "name": "Torchlight Frontiers"
+            },
+            {
+                "id": 115653,
+                "name": "Pok\u00e9mon Shield"
+            }
+        ],
+        "slug": "dying-light-2",
+        "summary": "The last great human settlement exists within an unforgiving, infected world. Exceptional agility and combat skills make you a powerful ally and a valuable commodity. With your unique abilities you have the power to be an agent of change within this decaying metropolis. Use it wisely.",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            },
+            {
+                "id": 19,
+                "name": "Horror"
+            },
+            {
+                "id": 21,
+                "name": "Survival"
+            },
+            {
+                "id": 38,
+                "name": "Open world"
+            }
+        ]
+    },
+    {
+        "artworks": [
+            {
+                "id": 7644,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar5wc.jpg"
+            }
+        ],
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 2,
+                "name": "Point-and-click"
+            },
+            {
+                "id": 9,
+                "name": "Puzzle"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            },
+            {
+                "id": 32,
+                "name": "Indie"
+            }
+        ],
+        "id": 18011,
+        "name": "Rusty Lake Hotel",
+        "popularity": 89.57940276540532,
+        "rating": 60.3202487754465,
+        "rating_count": 20,
+        "release_dates": [
+            {
+                "human": "2016-Jan-29",
+                "id": 47106
+            },
+            {
+                "human": "2016-Jan-29",
+                "id": 64000
+            },
+            {
+                "human": "2015-Dec-14",
+                "id": 147511
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 20653,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/yxrs05s95yvrhgmv6zx2.jpg"
+            },
+            {
+                "id": 20654,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/lgbt59qiz2oerjwlkuru.jpg"
+            },
+            {
+                "id": 20655,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/r7uikpgfh3chbezmrj4j.jpg"
+            },
+            {
+                "id": 20656,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ckd3dsi728dwz6ckaln7.jpg"
+            },
+            {
+                "id": 20657,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/m7sk4kr8gulgzwcs17q7.jpg"
+            },
+            {
+                "id": 188106,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/wmfgqqxdwxbqqpi2okoc.jpg"
+            },
+            {
+                "id": 188107,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/p1ys2xrt13ohhmypcprb.jpg"
+            },
+            {
+                "id": 188108,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/yrrmv3w70zleubb2npex.jpg"
+            },
+            {
+                "id": 188109,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/aknfks8knw4fdlr0b0ob.jpg"
+            },
+            {
+                "id": 188110,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/qgajm5rqhgp0u8ovxvys.jpg"
+            },
+            {
+                "id": 188111,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/dn5gw2dlsjnluhvdgjjy.jpg"
+            },
+            {
+                "id": 188112,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ighokdgzrqenkjj8y8uf.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 9835,
+                "name": "Draugen"
+            },
+            {
+                "id": 13189,
+                "name": "Masochisia"
+            },
+            {
+                "id": 19817,
+                "name": "Scorn"
+            },
+            {
+                "id": 20342,
+                "name": "Toby: The Secret Mine"
+            },
+            {
+                "id": 24426,
+                "name": "Forgotton Anne"
+            },
+            {
+                "id": 25222,
+                "name": "Rusty Lake: Roots"
+            },
+            {
+                "id": 25646,
+                "name": "Don't Knock Twice"
+            },
+            {
+                "id": 27266,
+                "name": "House of Caravan"
+            },
+            {
+                "id": 54678,
+                "name": "Rusty Lake Paradise"
+            },
+            {
+                "id": 56033,
+                "name": "Dream Alone"
+            }
+        ],
+        "slug": "rusty-lake-hotel",
+        "summary": "Welcome our guests to the Rusty Lake Hotel and make sure they will have a pleasant stay. There will be 5 dinners this week. Make sure every dinner is worth dying for. \n \nRusty Lake Hotel is a mysterious point and click game developed by the creators of the intriguing Cube Escape series.",
+        "themes": [
+            {
+                "id": 19,
+                "name": "Horror"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            },
+            {
+                "id": 2,
+                "name": "Multiplayer"
+            }
+        ],
+        "genres": [
+            {
+                "id": 15,
+                "name": "Strategy"
+            },
+            {
+                "id": 16,
+                "name": "Turn-based strategy (TBS)"
+            },
+            {
+                "id": 24,
+                "name": "Tactical"
+            }
+        ],
+        "id": 102057,
+        "name": "Age of Wonders: Planetfall",
+        "popularity": 89.26555576935412,
+        "rating": 80.0,
+        "rating_count": 0,
+        "release_dates": [
+            {
+                "human": "2019-Aug-06",
+                "id": 165440
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 212597,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/bpyn3rwecv9opnzjps7u.jpg"
+            },
+            {
+                "id": 212598,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/mkny5yws08e8b6q2gqhu.jpg"
+            },
+            {
+                "id": 212599,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/rpniewymxmtnqdcjqvsd.jpg"
+            },
+            {
+                "id": 212600,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/swah6otgksgscheojrqh.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 68,
+                "name": "Master of Orion II: Battle at Antares"
+            },
+            {
+                "id": 902,
+                "name": "Sid Meier's Civilization"
+            },
+            {
+                "id": 11550,
+                "name": "Endless Space 2"
+            },
+            {
+                "id": 13196,
+                "name": "Tears of Avia"
+            },
+            {
+                "id": 13660,
+                "name": "StarDrive 2"
+            },
+            {
+                "id": 25311,
+                "name": "Star Control: Origins"
+            },
+            {
+                "id": 26845,
+                "name": "Fire Emblem: Three Houses"
+            },
+            {
+                "id": 27747,
+                "name": "Shardbound"
+            },
+            {
+                "id": 88461,
+                "name": "Warhammer 40,000: Mechanicus"
+            },
+            {
+                "id": 117417,
+                "name": "Clans to Kingdoms"
+            }
+        ],
+        "slug": "age-of-wonders-planetfall",
+        "summary": "\"Age of Wonders: Planetfall is the new strategy game from Triumph Studios, creators of the critically acclaimed Age of Wonders and Overlord series, bringing all the exciting tactical-turn based combat and in-depth 4X empire building of its predecessors to space in an all-new sci-fi setting. \n \nEmerge from the cosmic dark age of a fallen galactic empire to craft a new future for your people. Explore the planetary ruins and encounter other surviving factions that have each evolved in their own way, as you unravel the history of a shattered civilization. Fight, build, negotiate and technologically advance your way to utopia, in a deep single player campaign, on random maps and against friends in multiplayer.\"",
+        "themes": [
+            {
+                "id": 18,
+                "name": "Science fiction"
+            },
+            {
+                "id": 41,
+                "name": "4X (explore, expand, exploit, and exterminate)"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 13,
+                "name": "Simulator"
+            },
+            {
+                "id": 15,
+                "name": "Strategy"
+            },
+            {
+                "id": 32,
+                "name": "Indie"
+            }
+        ],
+        "id": 34823,
+        "name": "Sol 0: Mars Colonization",
+        "popularity": 88.98532832815361,
+        "rating": 60.0,
+        "rating_count": 2,
+        "release_dates": [
+            {
+                "human": "2016-Jan-15",
+                "id": 80185
+            },
+            {
+                "human": "2016-Jan-15",
+                "id": 80186
+            },
+            {
+                "human": "2016-Jan-15",
+                "id": 80187
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 81744,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/qvm2mxixsbg51wr2u6yf.jpg"
+            },
+            {
+                "id": 81745,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sztvtt7j1rf4cc0r2nas.jpg"
+            },
+            {
+                "id": 81746,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/rzy75luelkobba8umghy.jpg"
+            },
+            {
+                "id": 81747,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/aifbpzvlkyvno31ztrxm.jpg"
+            },
+            {
+                "id": 81748,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/teocldwpkhp5uknvmy2l.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 13200,
+                "name": "Planetbase"
+            },
+            {
+                "id": 13660,
+                "name": "StarDrive 2"
+            },
+            {
+                "id": 16806,
+                "name": "Distant Worlds: Universe"
+            },
+            {
+                "id": 17130,
+                "name": "Unclaimed World"
+            },
+            {
+                "id": 24620,
+                "name": "Polaris Sector"
+            },
+            {
+                "id": 29173,
+                "name": "Startup Company"
+            },
+            {
+                "id": 31515,
+                "name": "Another Brick in the Mall"
+            },
+            {
+                "id": 33646,
+                "name": "Earth Space Colonies"
+            },
+            {
+                "id": 36269,
+                "name": "Supreme Ruler Ultimate"
+            },
+            {
+                "id": 55590,
+                "name": "Mashinky"
+            }
+        ],
+        "slug": "sol-0-mars-colonization",
+        "summary": "Sol 0 is a real time strategy game where you establish the first Martian colony. From the first human footprints on Martian soil to a thriving and self-sustaining colony, Sol 0 imagines a near future using technology that could be available within the next few decades. Make use of minerals and resources across the Martian surface to expand from the first exploratory rover to an independent frontier.",
+        "themes": [
+            {
+                "id": 18,
+                "name": "Science fiction"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            },
+            {
+                "id": 2,
+                "name": "Multiplayer"
+            }
+        ],
+        "genres": [
+            {
+                "id": 11,
+                "name": "Real Time Strategy (RTS)"
+            },
+            {
+                "id": 13,
+                "name": "Simulator"
+            },
+            {
+                "id": 15,
+                "name": "Strategy"
+            }
+        ],
+        "id": 3700,
+        "name": "The Settlers: Rise of an Empire",
+        "popularity": 88.03697535406742,
+        "rating": 79.8508390304537,
+        "rating_count": 4,
+        "release_dates": [
+            {
+                "human": "2007-Sep-25",
+                "id": 8405
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 22970,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/kqzn3btcbaj4af45ert5.jpg"
+            },
+            {
+                "id": 22971,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/yru2ylfnui1ryiywfjkg.jpg"
+            },
+            {
+                "id": 22972,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/msekhdu1pw876hjwvipu.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 9058,
+                "name": "Praetorians"
+            },
+            {
+                "id": 11582,
+                "name": "Stellaris"
+            },
+            {
+                "id": 18623,
+                "name": "Villagers"
+            },
+            {
+                "id": 23345,
+                "name": "Life is Feudal: Forest Village"
+            },
+            {
+                "id": 28794,
+                "name": "Ancestors Legacy"
+            },
+            {
+                "id": 30229,
+                "name": "Bannermen"
+            },
+            {
+                "id": 36553,
+                "name": "Medieval Kingdom Wars"
+            },
+            {
+                "id": 55036,
+                "name": "Anno 1800"
+            },
+            {
+                "id": 78550,
+                "name": "Bad North"
+            },
+            {
+                "id": 79134,
+                "name": "Ancient Cities"
+            }
+        ],
+        "slug": "the-settlers-rise-of-an-empire",
+        "summary": "In The Settlers - Rise of an Empire, players build lively, bustling towns in a medieval world. Everything in this richly detailed, realistic world is visible and lovingly animated. Each Settler figure has his or her own daily routine, with a range of different actions and behaviors that can be observed at all times. The ultimate objective of the game is to expand your empire and become a legendary ruler. \nSpur your settlers on to ever greater efforts, develop a flourishing economy, satisfy the needs of your citizens, and protect your people from danger!",
+        "themes": [
+            {
+                "id": 22,
+                "name": "Historical"
+            },
+            {
+                "id": 41,
+                "name": "4X (explore, expand, exploit, and exterminate)"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            },
+            {
+                "id": 2,
+                "name": "Multiplayer"
+            }
+        ],
+        "genres": [
+            {
+                "id": 10,
+                "name": "Racing"
+            },
+            {
+                "id": 32,
+                "name": "Indie"
+            }
+        ],
+        "id": 119207,
+        "name": "Aquapark.io",
+        "popularity": 87.81662858101915,
+        "rating": 76.061293984109,
+        "rating_count": 54,
+        "release_dates": [
+            {
+                "human": "2019-Feb-26",
+                "id": 170491
+            },
+            {
+                "human": "TBD",
+                "id": 170492
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 81275,
+                "name": "Unforeseen Incidents"
+            },
+            {
+                "id": 96476,
+                "name": "Horizon Chase Turbo"
+            },
+            {
+                "id": 105011,
+                "name": "Dude Simulator 2"
+            },
+            {
+                "id": 106295,
+                "name": "Naruto x Boruto Project: Tri"
+            },
+            {
+                "id": 111130,
+                "name": "Apsulov: End of Gods"
+            },
+            {
+                "id": 113895,
+                "name": "Havocado"
+            },
+            {
+                "id": 118311,
+                "name": "Flappy Fighter"
+            },
+            {
+                "id": 119199,
+                "name": "Bottle Flip 3D"
+            },
+            {
+                "id": 119213,
+                "name": "SSC 2019"
+            },
+            {
+                "id": 119579,
+                "name": "LEGO Tower"
+            }
+        ],
+        "slug": "aquapark-dot-io",
+        "summary": "Reach to the end of the water slide, try to be the first. Bump other players during the race and have fun playing this colorful and sunny water slide game."
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            },
+            {
+                "id": 2,
+                "name": "Multiplayer"
+            }
+        ],
+        "genres": [
+            {
+                "id": 10,
+                "name": "Racing"
+            }
+        ],
+        "id": 78511,
+        "name": "Forza Motorsport 8",
+        "popularity": 87.3759350349226,
+        "release_dates": [
+            {
+                "human": "2020-Q4",
+                "id": 171162
+            },
+            {
+                "human": "2020-Q4",
+                "id": 171163
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 23314,
+                "name": "Asphalt 9: Legends"
+            },
+            {
+                "id": 27378,
+                "name": "RISE: Race The Future"
+            },
+            {
+                "id": 44178,
+                "name": "Drive Isle"
+            },
+            {
+                "id": 80382,
+                "name": "Option Tuning Car Battle Spec-R"
+            },
+            {
+                "id": 82090,
+                "name": "Forza Horizon 4"
+            },
+            {
+                "id": 103018,
+                "name": "Team Sonic Racing"
+            },
+            {
+                "id": 107196,
+                "name": "Gear.Club Unlimited 2"
+            },
+            {
+                "id": 107215,
+                "name": "MudRunner 2"
+            },
+            {
+                "id": 109292,
+                "name": "Super Street: The Game"
+            },
+            {
+                "id": 116667,
+                "name": "F1 2019"
+            }
+        ],
+        "slug": "forza-motorsport-8",
+        "summary": "The 8th entry in the Forza Motorsport series."
+    },
+    {
+        "artworks": [
+            {
+                "id": 3249,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/bam8ethlavzjjhnqbbmi.jpg"
+            }
+        ],
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            },
+            {
+                "id": 2,
+                "name": "Multiplayer"
+            }
+        ],
+        "genres": [
+            {
+                "id": 11,
+                "name": "Real Time Strategy (RTS)"
+            },
+            {
+                "id": 13,
+                "name": "Simulator"
+            },
+            {
+                "id": 15,
+                "name": "Strategy"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            }
+        ],
+        "id": 8773,
+        "name": "Homeworld: Remastered Collection",
+        "popularity": 86.49454794272951,
+        "rating": 99.21014632762439,
+        "rating_count": 31,
+        "release_dates": [
+            {
+                "human": "2015-Feb-25",
+                "id": 26190
+            },
+            {
+                "human": "2015-Feb-25",
+                "id": 118958
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 100364,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/bii8epoivbj955bejawp.jpg"
+            },
+            {
+                "id": 100365,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/vxjrtex9evopc3zccbyt.jpg"
+            },
+            {
+                "id": 100366,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/slddjl2g8sujnguf4d8c.jpg"
+            },
+            {
+                "id": 100367,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/weycavsm1rmp2iuogza8.jpg"
+            },
+            {
+                "id": 100368,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/iaybehp2qoxmcj0g9b6q.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 9789,
+                "name": "RimWorld"
+            },
+            {
+                "id": 11666,
+                "name": "Ashes of the Singularity"
+            },
+            {
+                "id": 13200,
+                "name": "Planetbase"
+            },
+            {
+                "id": 16806,
+                "name": "Distant Worlds: Universe"
+            },
+            {
+                "id": 17130,
+                "name": "Unclaimed World"
+            },
+            {
+                "id": 24620,
+                "name": "Polaris Sector"
+            },
+            {
+                "id": 25311,
+                "name": "Star Control: Origins"
+            },
+            {
+                "id": 34823,
+                "name": "Sol 0: Mars Colonization"
+            },
+            {
+                "id": 55029,
+                "name": "Age of Empires IV"
+            },
+            {
+                "id": 78550,
+                "name": "Bad North"
+            }
+        ],
+        "slug": "homeworld-remastered-collection",
+        "summary": "Homeworld Remastered Collection updates and introduces the landmark space strategy games to modern audiences. The collection includes Homeworld and Homeworld 2, painstakingly remastered by Gearbox in cooperation with key members of the original development team and members of the series\u2019 passionate fan community. As a free bonus, this collection also includes the original versions of Homeworld and Homeworld 2 with compatibility updates, preserving the purest form of the original releases. Anyone who purchases Homeworld Remastered Collection will also receive free access to the Homeworld Remastered Steam Multiplayer Beta when the collection releases on February 25, 2015. \n \nThe Homeworld series has a long legacy and is regarded by many as one of the best strategy series of all time. Following its release in 1999 by publisher Sierra and developer Relic Entertainment, Homeworld received several Game of the Year awards and redefined the RTS genre. Its sequel, Homeworld 2, launched in 2003, and was similarly praised by critics for its innovative controls and changes to multiplayer. Brian Martel, Gearbox Software's Chief Creative Officer, has great love and respect for Relic's brilliant, fun and innovative franchise and personally spearheaded Gearbox Software\u2019s acquisition of Homeworld from THQ in 2013.",
+        "themes": [
+            {
+                "id": 18,
+                "name": "Science fiction"
+            },
+            {
+                "id": 39,
+                "name": "Warfare"
+            }
+        ]
+    },
+    {
+        "artworks": [
+            {
+                "id": 7445,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar5qt.jpg"
+            }
+        ],
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 5,
+                "name": "Shooter"
+            },
+            {
+                "id": 12,
+                "name": "Role-playing (RPG)"
+            }
+        ],
+        "id": 113114,
+        "name": "The Outer Worlds",
+        "popularity": 84.51142698529507,
+        "release_dates": [
+            {
+                "human": "2019-Oct-25",
+                "id": 170788
+            },
+            {
+                "human": "2019-Oct-25",
+                "id": 170789
+            },
+            {
+                "human": "2019-Oct-25",
+                "id": 170790
+            },
+            {
+                "human": "TBD",
+                "id": 173569
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 268571,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5r8b.jpg"
+            },
+            {
+                "id": 291448,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc68vs.jpg"
+            },
+            {
+                "id": 291449,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc68vt.jpg"
+            },
+            {
+                "id": 291450,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc68vu.jpg"
+            },
+            {
+                "id": 291451,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc68vv.jpg"
+            },
+            {
+                "id": 291452,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc68vw.jpg"
+            },
+            {
+                "id": 291453,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc68vx.jpg"
+            },
+            {
+                "id": 291454,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc68vy.jpg"
+            },
+            {
+                "id": 291455,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc68vz.jpg"
+            },
+            {
+                "id": 291456,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc68w0.jpg"
+            },
+            {
+                "id": 291457,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc68w1.jpg"
+            },
+            {
+                "id": 291458,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc68w2.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 19164,
+                "name": "Borderlands 3"
+            },
+            {
+                "id": 55038,
+                "name": "Immortal: Unchained"
+            },
+            {
+                "id": 81249,
+                "name": "The Elder Scrolls VI"
+            },
+            {
+                "id": 90099,
+                "name": "Tom Clancy's The Division 2"
+            },
+            {
+                "id": 101211,
+                "name": "RAGE 2"
+            },
+            {
+                "id": 103276,
+                "name": "Anthem: Legion of Dawn Edition"
+            },
+            {
+                "id": 105049,
+                "name": "Remnant: From the Ashes"
+            },
+            {
+                "id": 105269,
+                "name": "Gene Rain"
+            },
+            {
+                "id": 113362,
+                "name": "PlanetSide Arena"
+            },
+            {
+                "id": 115653,
+                "name": "Pok\u00e9mon Shield"
+            }
+        ],
+        "slug": "the-outer-worlds",
+        "summary": "In The Outer Worlds, you awake from hibernation on a colonist ship that was lost in transit to Halcyon, the furthest colony from Earth located at the edge of the galaxy, only to find yourself in the midst of a deep conspiracy threatening to destroy it. As you explore the furthest reaches of space and encounter various factions, all vying for power, the character you decide to become will determine how this player-driven story unfolds. In the corporate equation for the colony, you are the unplanned variable.",
+        "themes": [
+            {
+                "id": 18,
+                "name": "Science fiction"
+            },
+            {
+                "id": 38,
+                "name": "Open world"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            },
+            {
+                "id": 2,
+                "name": "Multiplayer"
+            }
+        ],
+        "id": 46745,
+        "name": "Minecraft: Pocket Edition",
+        "popularity": 83.63003989310198,
+        "rating": 70.4153001395998,
+        "rating_count": 9,
+        "release_dates": [
+            {
+                "human": "2011-Aug-16",
+                "id": 169382
+            },
+            {
+                "human": "2019-Nov-17",
+                "id": 169383
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 310225,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6ndd.jpg"
+            },
+            {
+                "id": 310226,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6nde.jpg"
+            },
+            {
+                "id": 310227,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6ndf.jpg"
+            },
+            {
+                "id": 310228,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6ndg.jpg"
+            },
+            {
+                "id": 310229,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6ndh.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 2655,
+                "name": "Animal Crossing"
+            },
+            {
+                "id": 25268,
+                "name": "Saints Row: The Third - The Full Package"
+            },
+            {
+                "id": 47200,
+                "name": "Final Test Cartridge"
+            },
+            {
+                "id": 49557,
+                "name": "Cinnamoroll FuwaFuwa Daibouken"
+            },
+            {
+                "id": 50307,
+                "name": "Disney's Magic Artist Deluxe"
+            },
+            {
+                "id": 51281,
+                "name": "Disney's Magic Artist Studio"
+            },
+            {
+                "id": 82090,
+                "name": "Forza Horizon 4"
+            },
+            {
+                "id": 98279,
+                "name": "IMVU"
+            },
+            {
+                "id": 113360,
+                "name": "Hytale"
+            },
+            {
+                "id": 117717,
+                "name": "Planet Zoo"
+            }
+        ],
+        "slug": "minecraft-pocket-edition",
+        "summary": "Minecraft is a sandbox video game originally created by Swedish programmer Markus \"Notch\" Persson and later developed and published by Mojang. The creative and building aspects of Minecraft enable players to build constructions out of textured cubes in a 3D procedurally generated world. Other activities in the game include exploration, resource gathering, crafting, and combat. Multiple gameplay modes are available, including survival mode where the player must acquire resources to build the world and maintain health, a creative mode where players have unlimited resources to build with and the ability to fly, an adventure mode where players play custom maps created by other players and a spectator mode. The PC version of the game is renowned for its third-party mods, which add various new items, characters, and quests to the game. \n \nThe alpha version was publicly released for PC on May 17, 2009, and after gradual updates, the full version was released on November 18, 2011. A version for Android was released a month earlier on October 7, and an iOS version was released on November 17, 2011. The game was released on the Xbox 360 as an Xbox Live Arcade game on May 9, 2012; on the PlayStation 3 on December 17, 2013; on the PlayStation 4 on September 4, 2014; on the Xbox One the next day; on the PlayStation Vita on October 14, 2014; and is scheduled for release on the Wii U on December 17, 2015. On December 10, 2014, a Windows Phone version was released.[12] All versions of Minecraft receive periodic updates, with the console editions being co-developed by 4J Studios. \n \nMinecraft received five awards during the 2011 Game Developers Conference. Of the Game Developers Choice Awards, it won the Innovation Award, Best Downloadable Game Award, and Best Debut Game Award; from the Independent Games Festival, it won the Audience Award and the Seumas McNally Grand Prize. In 2012, Minecraft was awarded a Golden Joystick Award in the category Best Downloadable Game. As of June 2015, over 70 million copies had been sold, including 20 million between the Xbox 360 and Xbox One and 20 million on PC,[13] making it the best-selling PC game to date and the third best-selling video game of all time. On September 15, 2014, Microsoft announced a deal to buy Mojang and the ownership of the Minecraft intellectual property for US$2.5 billion; the acquisition was completed on November 6, 2014.[14][15][16][17]",
+        "themes": [
+            {
+                "id": 33,
+                "name": "Sandbox"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 31,
+                "name": "Adventure"
+            },
+            {
+                "id": 32,
+                "name": "Indie"
+            }
+        ],
+        "id": 19817,
+        "name": "Scorn",
+        "popularity": 83.18934634700544,
+        "release_dates": [
+            {
+                "human": "2019",
+                "id": 159272
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 25630,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/h0bl6le6rqd2rmi2ebfn.jpg"
+            },
+            {
+                "id": 25631,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/uyqvqq7sreuce3mfq927.jpg"
+            },
+            {
+                "id": 25632,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/fmyt3ahdungh6ngyqiqe.jpg"
+            },
+            {
+                "id": 25633,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ezq5wfc1nj3jmiyhdvu4.jpg"
+            },
+            {
+                "id": 25634,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/vgpnyascxdbuoomvyd18.jpg"
+            },
+            {
+                "id": 269793,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5s69.jpg"
+            },
+            {
+                "id": 269794,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5s6a.jpg"
+            },
+            {
+                "id": 269795,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5s6b.jpg"
+            },
+            {
+                "id": 269796,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5s6c.jpg"
+            },
+            {
+                "id": 269797,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5s6d.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 11668,
+                "name": "Dollhouse"
+            },
+            {
+                "id": 13189,
+                "name": "Masochisia"
+            },
+            {
+                "id": 18225,
+                "name": "The Sinking City"
+            },
+            {
+                "id": 25646,
+                "name": "Don't Knock Twice"
+            },
+            {
+                "id": 27266,
+                "name": "House of Caravan"
+            },
+            {
+                "id": 37419,
+                "name": "Dude Simulator"
+            },
+            {
+                "id": 55282,
+                "name": "Infliction"
+            },
+            {
+                "id": 96217,
+                "name": "Eternity: The Last Unicorn"
+            },
+            {
+                "id": 111130,
+                "name": "Apsulov: End of Gods"
+            },
+            {
+                "id": 114455,
+                "name": "Pacify"
+            }
+        ],
+        "slug": "scorn",
+        "summary": "Scorn is an atmospheric first person horror adventure game set in a nightmarish universe of odd forms and somber tapestry. It is designed around an idea of \"being thrown into the world\". Isolated and lost inside this dream-like world you will explore different interconnected regions in a non-linear fashion. The unsettling environment is a character itself. Every location contains its own theme (story), puzzles and characters that are integral in creating a cohesive lived in world. Throughout the game you will open up new areas, acquire different skill sets, weapons, various items and try to comprehend the sights presented to you.",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            },
+            {
+                "id": 19,
+                "name": "Horror"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 12,
+                "name": "Role-playing (RPG)"
+            },
+            {
+                "id": 15,
+                "name": "Strategy"
+            },
+            {
+                "id": 24,
+                "name": "Tactical"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            }
+        ],
+        "id": 9938,
+        "name": "Aarklash: Legacy",
+        "popularity": 82.30795925481235,
+        "rating": 73.6315545243042,
+        "rating_count": 5,
+        "release_dates": [
+            {
+                "human": "2013-Sep-12",
+                "id": 52236
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 31018,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/fczv4eqvgceawm9bohay.jpg"
+            },
+            {
+                "id": 31019,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/yhv9rhevref3sjcz5kvv.jpg"
+            },
+            {
+                "id": 31020,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ncagwqx0oy2jvn6lnhvh.jpg"
+            },
+            {
+                "id": 31021,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ftnpygtvdqmeigzdu1mk.jpg"
+            },
+            {
+                "id": 31022,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/btqk2jtxsezmzhfgoi0d.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 660,
+                "name": "Darkstone"
+            },
+            {
+                "id": 2365,
+                "name": "Battle for Wesnoth"
+            },
+            {
+                "id": 5652,
+                "name": "Age of Wonders III"
+            },
+            {
+                "id": 9278,
+                "name": "Endless Legend"
+            },
+            {
+                "id": 10297,
+                "name": "Fallen Enchantress"
+            },
+            {
+                "id": 10388,
+                "name": "Legends of Eisenwald"
+            },
+            {
+                "id": 11646,
+                "name": "Ziggurat"
+            },
+            {
+                "id": 14394,
+                "name": "Battle Brothers"
+            },
+            {
+                "id": 22387,
+                "name": "Legrand Legacy"
+            },
+            {
+                "id": 26845,
+                "name": "Fire Emblem: Three Houses"
+            }
+        ],
+        "slug": "aarklash-legacy",
+        "summary": "In Aarklash: Legacy take command of a mercenary squad in search of truth and guide it through countless battles.",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            },
+            {
+                "id": 17,
+                "name": "Fantasy"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 10,
+                "name": "Racing"
+            },
+            {
+                "id": 13,
+                "name": "Simulator"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            },
+            {
+                "id": 32,
+                "name": "Indie"
+            }
+        ],
+        "id": 105011,
+        "name": "Dude Simulator 2",
+        "popularity": 81.8672657087158,
+        "rating": 40.0,
+        "rating_count": 0,
+        "release_dates": [
+            {
+                "human": "2018-Jun-28",
+                "id": 170574
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 236064,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/izhoqljckuf64aq09ajy.jpg"
+            },
+            {
+                "id": 236065,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/fdt8hbacgjtuqirmyrzq.jpg"
+            },
+            {
+                "id": 236066,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/jvzg8a5frmje1siphuux.jpg"
+            },
+            {
+                "id": 236067,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/pozgjqcmr15n3bwgtgdu.jpg"
+            },
+            {
+                "id": 236068,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ha4xvcophsabciz7lrkn.jpg"
+            },
+            {
+                "id": 236069,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/kqup1i0lieevr9t0ukgx.jpg"
+            },
+            {
+                "id": 236070,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/nnjyhpmrnsqovheg6d54.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 25311,
+                "name": "Star Control: Origins"
+            },
+            {
+                "id": 28277,
+                "name": "The Last Journey"
+            },
+            {
+                "id": 37419,
+                "name": "Dude Simulator"
+            },
+            {
+                "id": 76263,
+                "name": "Contraband Police"
+            },
+            {
+                "id": 81680,
+                "name": "Mr. Prepper"
+            },
+            {
+                "id": 87975,
+                "name": "Tech Support: Error Unknown"
+            },
+            {
+                "id": 96217,
+                "name": "Eternity: The Last Unicorn"
+            },
+            {
+                "id": 103295,
+                "name": "Secret Neighbor"
+            },
+            {
+                "id": 111130,
+                "name": "Apsulov: End of Gods"
+            },
+            {
+                "id": 113360,
+                "name": "Hytale"
+            }
+        ],
+        "slug": "dude-simulator-2",
+        "summary": "Dude Simulator 2 is an open world sandbox game. This is a life simulator. The main objective is to enjoy what you are doing.",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 12,
+                "name": "Role-playing (RPG)"
+            },
+            {
+                "id": 15,
+                "name": "Strategy"
+            },
+            {
+                "id": 32,
+                "name": "Indie"
+            }
+        ],
+        "id": 10297,
+        "name": "Fallen Enchantress",
+        "popularity": 81.8672657087158,
+        "release_dates": [
+            {
+                "human": "2012-Oct-23",
+                "id": 68401
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 30344,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/zx5emmlqsdz2hxcipptp.jpg"
+            },
+            {
+                "id": 41818,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ov4onhvh8hu29hxvbeww.jpg"
+            },
+            {
+                "id": 41819,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/a1q4ngnnsbfj0mbteeci.jpg"
+            },
+            {
+                "id": 41820,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/yght3ofvuf4kfc1rpvsp.jpg"
+            },
+            {
+                "id": 41821,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/gy7cei3ackbmcudopxdh.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 2365,
+                "name": "Battle for Wesnoth"
+            },
+            {
+                "id": 7027,
+                "name": "Spellforce: The Order of Dawn"
+            },
+            {
+                "id": 7615,
+                "name": "Might & Magic Heroes VII"
+            },
+            {
+                "id": 9278,
+                "name": "Endless Legend"
+            },
+            {
+                "id": 10388,
+                "name": "Legends of Eisenwald"
+            },
+            {
+                "id": 14394,
+                "name": "Battle Brothers"
+            },
+            {
+                "id": 19404,
+                "name": "Eador: Imperium"
+            },
+            {
+                "id": 22387,
+                "name": "Legrand Legacy"
+            },
+            {
+                "id": 28182,
+                "name": "Reverse Crawl"
+            },
+            {
+                "id": 40477,
+                "name": "Slay the Spire"
+            }
+        ],
+        "slug": "fallen-enchantress",
+        "summary": "A World to Build\u2026 or Destroy. \u201cA war is coming\u2026 a war between East and West - between Kingdoms and Empires, between man and Fallen. A future of blood and death, of chaos and destruction.\u201d \u2013 the Oracle Ceresa.",
+        "themes": [
+            {
+                "id": 17,
+                "name": "Fantasy"
+            },
+            {
+                "id": 41,
+                "name": "4X (explore, expand, exploit, and exterminate)"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 9,
+                "name": "Puzzle"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            },
+            {
+                "id": 32,
+                "name": "Indie"
+            }
+        ],
+        "id": 27266,
+        "name": "House of Caravan",
+        "popularity": 80.98587861652271,
+        "rating": 50.0,
+        "rating_count": 2,
+        "release_dates": [
+            {
+                "human": "2015-Apr-16",
+                "id": 168674
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 87569,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/tq40bxrpytlfw0naaqjc.jpg"
+            },
+            {
+                "id": 87570,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/nqssj92bs2xtjjakpeee.jpg"
+            },
+            {
+                "id": 87571,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/uajwgnkz0lkxkewnv0pg.jpg"
+            },
+            {
+                "id": 87572,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/pcdgcov2nvs7vhllzgnm.jpg"
+            },
+            {
+                "id": 87573,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/omwijptsnuzexr7v3fe1.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 18011,
+                "name": "Rusty Lake Hotel"
+            },
+            {
+                "id": 25222,
+                "name": "Rusty Lake: Roots"
+            },
+            {
+                "id": 25646,
+                "name": "Don't Knock Twice"
+            },
+            {
+                "id": 55282,
+                "name": "Infliction"
+            },
+            {
+                "id": 81275,
+                "name": "Unforeseen Incidents"
+            },
+            {
+                "id": 104786,
+                "name": "Devotion"
+            },
+            {
+                "id": 106992,
+                "name": "A Fisherman's Tale"
+            },
+            {
+                "id": 107614,
+                "name": "Hello Neighbor: Hide and Seek"
+            },
+            {
+                "id": 109129,
+                "name": "Iris.Fall"
+            },
+            {
+                "id": 110503,
+                "name": "Degrees of Separation"
+            }
+        ],
+        "slug": "house-of-caravan",
+        "summary": "Taking place in a single mansion in Candlewood, northeast USA, in the early 20th Century, House of Caravan is a sinister adventure filled with dark secrets and vexing puzzles.",
+        "themes": [
+            {
+                "id": 19,
+                "name": "Horror"
+            }
+        ]
+    },
+    {
+        "artworks": [
+            {
+                "id": 1035,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/mknszfnaifmhssbrmkpl.jpg"
+            },
+            {
+                "id": 1036,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/hsmqoanieausaehauyk7.jpg"
+            },
+            {
+                "id": 2560,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/m8vl75f1aunebleaa0zj.jpg"
+            },
+            {
+                "id": 2561,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/mzbexcviowvtbsgivzib.jpg"
+            },
+            {
+                "id": 2562,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/vpr6s4gboxxmnhkdmqdg.jpg"
+            },
+            {
+                "id": 2563,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/vmfdwfd36lh9eqiwtbtj.jpg"
+            },
+            {
+                "id": 2564,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/qk1zy9aqzgd3zovlsjmu.jpg"
+            },
+            {
+                "id": 2565,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ye6iswk51xxnhkzt9xt7.jpg"
+            },
+            {
+                "id": 2566,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/loxt6mwmxy1ax5wby1yc.jpg"
+            },
+            {
+                "id": 2567,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/tvl9vif6lw8sckkqyaj7.jpg"
+            },
+            {
+                "id": 2568,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/thhohfsqjs1x77gyjg7b.jpg"
+            }
+        ],
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 12,
+                "name": "Role-playing (RPG)"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            }
+        ],
+        "id": 19560,
+        "name": "God of War",
+        "popularity": 79.40960041049324,
+        "rating": 95.6766850733078,
+        "rating_count": 640,
+        "release_dates": [
+            {
+                "human": "2018-Apr-20",
+                "id": 136684
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 25153,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/qseegzssgetrybgbplrv.jpg"
+            },
+            {
+                "id": 25154,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/rm35ytrytuka9qkylqyk.jpg"
+            },
+            {
+                "id": 25155,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ywrkjcrbeemmb51flsfj.jpg"
+            },
+            {
+                "id": 44388,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/jvdoaxza3cawklvof1sl.jpg"
+            },
+            {
+                "id": 44389,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/gpt3d0gpue5mat4kkso6.jpg"
+            },
+            {
+                "id": 208194,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/mzg7f3xx57sf8rt7tja8.jpg"
+            },
+            {
+                "id": 208195,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/nee23o7rtpaqbu8g7byx.jpg"
+            },
+            {
+                "id": 208196,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/o4mg2wvhlcikaogvvzqe.jpg"
+            },
+            {
+                "id": 208197,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/w5eazrrf4wdxjl4idfya.jpg"
+            },
+            {
+                "id": 208198,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/s2zdtxopibrfjbxvpj5h.jpg"
+            },
+            {
+                "id": 208199,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/wunlbofh23trw0u67gms.jpg"
+            },
+            {
+                "id": 208200,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/r7hpzsqic1bjwyzn1bnq.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 19564,
+                "name": "Death Stranding"
+            },
+            {
+                "id": 19565,
+                "name": "Marvel's Spider-Man"
+            },
+            {
+                "id": 22387,
+                "name": "Legrand Legacy"
+            },
+            {
+                "id": 25076,
+                "name": "Red Dead Redemption 2"
+            },
+            {
+                "id": 26845,
+                "name": "Fire Emblem: Three Houses"
+            },
+            {
+                "id": 28168,
+                "name": "Code Vein"
+            },
+            {
+                "id": 47823,
+                "name": "Citadel: Forged With Fire"
+            },
+            {
+                "id": 55199,
+                "name": "Dragon: Marked for Death"
+            },
+            {
+                "id": 96217,
+                "name": "Eternity: The Last Unicorn"
+            },
+            {
+                "id": 106987,
+                "name": "Torchlight Frontiers"
+            }
+        ],
+        "slug": "god-of-war--1",
+        "summary": "\"It is a new beginning for Kratos. Living as a man, outside the shadow of the gods, he seeks solitude in the unfamiliar lands of Norse mythology. With new purpose and his son at his side, Kratos must fight for survival as powerful forces threaten to disrupt the new life he has created...\"",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            },
+            {
+                "id": 17,
+                "name": "Fantasy"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 31,
+                "name": "Adventure"
+            },
+            {
+                "id": 32,
+                "name": "Indie"
+            }
+        ],
+        "id": 18869,
+        "name": "Mages of Mystralia",
+        "popularity": 78.56206411299172,
+        "rating": 80.0,
+        "rating_count": 4,
+        "release_dates": [
+            {
+                "human": "2017-May-18",
+                "id": 112254
+            },
+            {
+                "human": "2017-Aug-25",
+                "id": 137009
+            },
+            {
+                "human": "2019-Jan-29",
+                "id": 162200
+            },
+            {
+                "human": "2017-Aug-22",
+                "id": 164309
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 76606,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/lfxhoumjwfzcnrbfbwc0.jpg"
+            },
+            {
+                "id": 76607,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/qd6pgrgz9j26ur3l6tx9.jpg"
+            },
+            {
+                "id": 76608,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/oum2zwape7lyaylhygua.jpg"
+            },
+            {
+                "id": 76609,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/eerx8ry8xeq2tqcnxwre.jpg"
+            },
+            {
+                "id": 76610,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/jkkdun4xu50qeavfmmce.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 22387,
+                "name": "Legrand Legacy"
+            },
+            {
+                "id": 23733,
+                "name": "Tunic"
+            },
+            {
+                "id": 26226,
+                "name": "Celeste"
+            },
+            {
+                "id": 31194,
+                "name": "Just Shapes & Beats"
+            },
+            {
+                "id": 36198,
+                "name": "Children of Morta"
+            },
+            {
+                "id": 47823,
+                "name": "Citadel: Forged With Fire"
+            },
+            {
+                "id": 55092,
+                "name": "Secret of Mana"
+            },
+            {
+                "id": 55190,
+                "name": "Pikuniku"
+            },
+            {
+                "id": 56033,
+                "name": "Dream Alone"
+            },
+            {
+                "id": 80916,
+                "name": "Omensight"
+            }
+        ],
+        "slug": "mages-of-mystralia",
+        "summary": "Accompany Zia as she strikes off to train and learn to control her magical abilities that had her exiled. Journey across the lands to meet other exiled mages and uncover runes with magical properties that can be combined into millions of different possibilities, letting you come up with completely new and incredible spells!",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            },
+            {
+                "id": 17,
+                "name": "Fantasy"
+            }
+        ]
+    },
+    {
+        "artworks": [
+            {
+                "id": 1046,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/rn8yyki9o0jh7ossq898.jpg"
+            },
+            {
+                "id": 7452,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar5r0.jpg"
+            },
+            {
+                "id": 7491,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar5s3.jpg"
+            },
+            {
+                "id": 7492,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar5s4.jpg"
+            },
+            {
+                "id": 7493,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar5s5.jpg"
+            },
+            {
+                "id": 7494,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar5s6.jpg"
+            }
+        ],
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 12,
+                "name": "Role-playing (RPG)"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            }
+        ],
+        "id": 11169,
+        "name": "Final Fantasy VII Remake",
+        "popularity": 77.43169935576981,
+        "release_dates": [
+            {
+                "human": "2020-Mar-03",
+                "id": 170874
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 41358,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/kosugq04dbbqedpfgosv.jpg"
+            },
+            {
+                "id": 41359,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/lb4ld2p4uqy5xdpmf7pc.jpg"
+            },
+            {
+                "id": 41360,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/f1rsy5dsvmye2lnsk8al.jpg"
+            },
+            {
+                "id": 41361,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/vyukxxzgg2shzxo6pimd.jpg"
+            },
+            {
+                "id": 320792,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6viw.jpg"
+            },
+            {
+                "id": 320793,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6vix.jpg"
+            },
+            {
+                "id": 320794,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6viy.jpg"
+            },
+            {
+                "id": 320795,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6viz.jpg"
+            },
+            {
+                "id": 320796,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6vj0.jpg"
+            },
+            {
+                "id": 320797,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6vj1.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 26845,
+                "name": "Fire Emblem: Three Houses"
+            },
+            {
+                "id": 28168,
+                "name": "Code Vein"
+            },
+            {
+                "id": 28309,
+                "name": "Tanzia"
+            },
+            {
+                "id": 35994,
+                "name": "Survivalist"
+            },
+            {
+                "id": 36198,
+                "name": "Children of Morta"
+            },
+            {
+                "id": 55038,
+                "name": "Immortal: Unchained"
+            },
+            {
+                "id": 55092,
+                "name": "Secret of Mana"
+            },
+            {
+                "id": 55199,
+                "name": "Dragon: Marked for Death"
+            },
+            {
+                "id": 96217,
+                "name": "Eternity: The Last Unicorn"
+            },
+            {
+                "id": 106987,
+                "name": "Torchlight Frontiers"
+            }
+        ],
+        "slug": "final-fantasy-vii-remake",
+        "summary": "SQUARE ENIX\u00ae announced that it has begun production on the full remake of FINAL FANTASY\u00ae VII for the PlayStation\u00ae4 computer entertainment system.",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            },
+            {
+                "id": 17,
+                "name": "Fantasy"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 2,
+                "name": "Point-and-click"
+            },
+            {
+                "id": 9,
+                "name": "Puzzle"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            }
+        ],
+        "id": 27725,
+        "name": "The Room: Old Sins",
+        "popularity": 77.2399834747021,
+        "rating": 96.2037910712322,
+        "rating_count": 6,
+        "release_dates": [
+            {
+                "human": "2018-Jan-25",
+                "id": 129119
+            },
+            {
+                "human": "2018-Apr-19",
+                "id": 150342
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 148989,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/mycrlwpaxat0gyc7zzrp.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 236,
+                "name": "Myst"
+            },
+            {
+                "id": 18011,
+                "name": "Rusty Lake Hotel"
+            },
+            {
+                "id": 25222,
+                "name": "Rusty Lake: Roots"
+            },
+            {
+                "id": 26223,
+                "name": "Quern - Undying Thoughts"
+            },
+            {
+                "id": 27266,
+                "name": "House of Caravan"
+            },
+            {
+                "id": 51528,
+                "name": "Telling Lies"
+            },
+            {
+                "id": 106992,
+                "name": "A Fisherman's Tale"
+            },
+            {
+                "id": 107614,
+                "name": "Hello Neighbor: Hide and Seek"
+            },
+            {
+                "id": 109129,
+                "name": "Iris.Fall"
+            },
+            {
+                "id": 121763,
+                "name": "Syberia: The world before"
+            }
+        ],
+        "slug": "the-room-old-sins",
+        "summary": "Enter The Room: Old Sins and be transported to a place where tactile exploration meets challenging puzzles and a captivating story. \nThe sudden disappearance of an ambitious engineer and his high-society wife provokes the hunt for a precious artefact. The trail leads to the attic of their home, and the discovery of an old, peculiar dollhouse\u2026\nExplore unsettling locations, follow obscure clues and manipulate bizarre contraptions as you uncover the mysteries within Waldegrave Manor.\n\nTHE ULTIMATE PUZZLE BOX\nExplore a deviously complex dollhouse which transforms at your fingertips. Each intricate room is a portal to a new, stunning environment. \n \nPICK-UP-AND-PLAY DESIGN\nEasy to begin yet hard to put down, enjoy a unique mix of intriguing puzzles with a simple user interface. \n\nINTUITIVE TOUCH CONTROLS\nA tactile experience so natural you can almost feel the surface of each object. \n\nINTRICATE OBJECTS\nExamine dozens of detailed objects to discover which of them conceal hidden mechanisms. \n\nATMOSPHERIC AUDIO\nA haunting soundtrack coupled with dynamic sound effects create an unforgettable soundscape. \n\niCLOUD & GAMECENTER SUPPORTED\nShare your progress between multiple devices and unlock achievements. \n\nMULTI LANGUAGE SUPPORT\nAvailable in English, French, Italian, German, Spanish, Brazilian Portuguese, Turkish and Russian.\n\n\nFireproof Games is an independent studio from Guildford, United Kingdom.\nFind out more at fireproofgames.com\nFollow us @Fireproof_Games\nFind us on Facebook",
+        "themes": [
+            {
+                "id": 43,
+                "name": "Mystery"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 13,
+                "name": "Simulator"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            },
+            {
+                "id": 32,
+                "name": "Indie"
+            }
+        ],
+        "id": 28277,
+        "name": "The Last Journey",
+        "popularity": 77.01963670165382,
+        "release_dates": [
+            {
+                "human": "2017-Apr-25",
+                "id": 68473
+            },
+            {
+                "human": "TBD",
+                "id": 159925
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 42268,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/qqznttijhbb9orymvwsl.jpg"
+            },
+            {
+                "id": 42269,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/vocksytaztqn2kjqhvmh.jpg"
+            },
+            {
+                "id": 42270,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ypjw9vxnnsxr3rjz6rtc.jpg"
+            },
+            {
+                "id": 42271,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/x0wythvvkblzkgafgajj.jpg"
+            },
+            {
+                "id": 42272,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ealn5pvrrwpqgoyxqzhl.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 37419,
+                "name": "Dude Simulator"
+            },
+            {
+                "id": 65827,
+                "name": "Bronze Age"
+            },
+            {
+                "id": 81275,
+                "name": "Unforeseen Incidents"
+            },
+            {
+                "id": 81680,
+                "name": "Mr. Prepper"
+            },
+            {
+                "id": 87975,
+                "name": "Tech Support: Error Unknown"
+            },
+            {
+                "id": 105011,
+                "name": "Dude Simulator 2"
+            },
+            {
+                "id": 106992,
+                "name": "A Fisherman's Tale"
+            },
+            {
+                "id": 108778,
+                "name": "Little Misfortune"
+            },
+            {
+                "id": 111130,
+                "name": "Apsulov: End of Gods"
+            },
+            {
+                "id": 119304,
+                "name": "Spiritfarer"
+            }
+        ],
+        "slug": "the-last-journey",
+        "summary": "The Last Journey is an ultimate post-nuclear exploration game in which you travel the universe to find a new planet suitable for mankind to live on after the Earth was destroyed in a nuclear war."
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            },
+            {
+                "id": 2,
+                "name": "Multiplayer"
+            },
+            {
+                "id": 3,
+                "name": "Co-operative"
+            }
+        ],
+        "genres": [
+            {
+                "id": 13,
+                "name": "Simulator"
+            },
+            {
+                "id": 15,
+                "name": "Strategy"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            },
+            {
+                "id": 32,
+                "name": "Indie"
+            }
+        ],
+        "id": 51945,
+        "name": "Ratty Catty",
+        "popularity": 76.57894315555728,
+        "rating": 79.6078431372549,
+        "rating_count": 12,
+        "release_dates": [
+            {
+                "human": "2017-Jul-21",
+                "id": 100373
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 113587,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/gmrcbd3oftjhy1jpp3ds.jpg"
+            },
+            {
+                "id": 113588,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/daxi0e1pezfpbiuksrgp.jpg"
+            },
+            {
+                "id": 113589,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/uswhluf25y9qzrmpju2t.jpg"
+            },
+            {
+                "id": 113590,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/yupdihhscpdlen7ougcd.jpg"
+            },
+            {
+                "id": 113591,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/wdtzsy9eefmpkdxyszet.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 17130,
+                "name": "Unclaimed World"
+            },
+            {
+                "id": 17548,
+                "name": "Savage Lands"
+            },
+            {
+                "id": 19376,
+                "name": "Basement"
+            },
+            {
+                "id": 25311,
+                "name": "Star Control: Origins"
+            },
+            {
+                "id": 26145,
+                "name": "Impact Winter"
+            },
+            {
+                "id": 26574,
+                "name": "Force of Nature"
+            },
+            {
+                "id": 29173,
+                "name": "Startup Company"
+            },
+            {
+                "id": 35371,
+                "name": "Colony Survival"
+            },
+            {
+                "id": 35994,
+                "name": "Survivalist"
+            },
+            {
+                "id": 55590,
+                "name": "Mashinky"
+            }
+        ],
+        "slug": "ratty-catty",
+        "summary": "Ratty Catty is a Multiplayer / CO-OP hide & seek game, the game is about the adventures of domestic cat Catty and hazel mouse Ratty who eats the foods in the house, feeds its babies and lives in a little rat nest.[/b]",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            },
+            {
+                "id": 2,
+                "name": "Multiplayer"
+            },
+            {
+                "id": 3,
+                "name": "Co-operative"
+            }
+        ],
+        "genres": [
+            {
+                "id": 13,
+                "name": "Simulator"
+            },
+            {
+                "id": 15,
+                "name": "Strategy"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            },
+            {
+                "id": 32,
+                "name": "Indie"
+            }
+        ],
+        "id": 35371,
+        "name": "Colony Survival",
+        "popularity": 75.91790283641247,
+        "rating": 80.8666301413705,
+        "rating_count": 6,
+        "release_dates": [
+            {
+                "human": "2017-Jun-16",
+                "id": 131125
+            },
+            {
+                "human": "2017-Jun-16",
+                "id": 131126
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 85318,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/al3tefzzb0l3qrjeayje.jpg"
+            },
+            {
+                "id": 85319,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/wdoajjut2whyusddw0ia.jpg"
+            },
+            {
+                "id": 85320,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/bh4hfzncrtvjdpghhkxp.jpg"
+            },
+            {
+                "id": 85321,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/gwozlpfdaxlnoj8tgddx.jpg"
+            },
+            {
+                "id": 85322,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/kcnpwr9tblfapfnzljlk.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 17548,
+                "name": "Savage Lands"
+            },
+            {
+                "id": 18623,
+                "name": "Villagers"
+            },
+            {
+                "id": 25311,
+                "name": "Star Control: Origins"
+            },
+            {
+                "id": 28309,
+                "name": "Tanzia"
+            },
+            {
+                "id": 29173,
+                "name": "Startup Company"
+            },
+            {
+                "id": 31515,
+                "name": "Another Brick in the Mall"
+            },
+            {
+                "id": 35994,
+                "name": "Survivalist"
+            },
+            {
+                "id": 36553,
+                "name": "Medieval Kingdom Wars"
+            },
+            {
+                "id": 55590,
+                "name": "Mashinky"
+            },
+            {
+                "id": 80916,
+                "name": "Omensight"
+            }
+        ],
+        "slug": "colony-survival",
+        "summary": "Colony Survival is a voxel RTS developed by a two-man team. Build your own colony in a voxel world. Command guards, farmers, miners and other colonists. Defend your colony against the monsters that attack every night.",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            },
+            {
+                "id": 22,
+                "name": "Historical"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 31,
+                "name": "Adventure"
+            },
+            {
+                "id": 32,
+                "name": "Indie"
+            }
+        ],
+        "id": 9727,
+        "name": "SOMA",
+        "popularity": 74.81616897117111,
+        "rating": 87.5246859535298,
+        "rating_count": 197,
+        "release_dates": [
+            {
+                "human": "2015-Sep-22",
+                "id": 105651
+            },
+            {
+                "human": "2015-Sep-22",
+                "id": 105652
+            },
+            {
+                "human": "2015-Sep-22",
+                "id": 128980
+            },
+            {
+                "human": "2015-Sep-22",
+                "id": 128981
+            },
+            {
+                "human": "2015-Sep-22",
+                "id": 128982
+            },
+            {
+                "human": "2015-Sep-22",
+                "id": 128983
+            },
+            {
+                "human": "2015-Sep-22",
+                "id": 128984
+            },
+            {
+                "human": "2017-Dec-01",
+                "id": 128985
+            },
+            {
+                "human": "2017-Dec-01",
+                "id": 128986
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 14739,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ymjl0reys3osxukaaef1.jpg"
+            },
+            {
+                "id": 15173,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/iu5eydbppndxe4hz7xht.jpg"
+            },
+            {
+                "id": 15174,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/lwcp5uxzztypel1m5auz.jpg"
+            },
+            {
+                "id": 15175,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/mtarkrsb2pshigoogx16.jpg"
+            },
+            {
+                "id": 15176,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/xlfhw5nokrdxjkqip8bx.jpg"
+            },
+            {
+                "id": 258204,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5j8c.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 1882,
+                "name": "Amnesia: A Machine for Pigs"
+            },
+            {
+                "id": 1906,
+                "name": "Gone Home"
+            },
+            {
+                "id": 1910,
+                "name": "Outlast"
+            },
+            {
+                "id": 2939,
+                "name": "The Vanishing of Ethan Carter"
+            },
+            {
+                "id": 3042,
+                "name": "Dying Light"
+            },
+            {
+                "id": 3188,
+                "name": "Murdered: Soul Suspect"
+            },
+            {
+                "id": 9498,
+                "name": "Deus Ex: Mankind Divided"
+            },
+            {
+                "id": 9730,
+                "name": "Firewatch"
+            },
+            {
+                "id": 11270,
+                "name": "The Cat Lady"
+            },
+            {
+                "id": 19531,
+                "name": "Prey"
+            }
+        ],
+        "slug": "soma--1",
+        "summary": "SOMA is a sci-fi horror game from Frictional Games, creators of the groundbreaking Amnesia and Penumbra series. \n \nThe radio is dead, food is running out, and the machines have started to think they are people. Underwater facility PATHOS-II has suffered an intolerable isolation and we\u2019re going to have to make some tough decisions. What can be done? What makes sense? What is left to fight for? SOMA is a sci-fi horror game from Frictional Games, the creators of Amnesia: The Dark Descent. It is an unsettling story about identity, consciousness, and what it means to be human.",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            },
+            {
+                "id": 18,
+                "name": "Science fiction"
+            },
+            {
+                "id": 19,
+                "name": "Horror"
+            }
+        ]
+    },
+    {
+        "artworks": [
+            {
+                "id": 5948,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar4l8.jpg"
+            }
+        ],
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            },
+            {
+                "id": 2,
+                "name": "Multiplayer"
+            },
+            {
+                "id": 3,
+                "name": "Co-operative"
+            }
+        ],
+        "genres": [
+            {
+                "id": 12,
+                "name": "Role-playing (RPG)"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            },
+            {
+                "id": 32,
+                "name": "Indie"
+            }
+        ],
+        "id": 30245,
+        "name": "Wanderlust Adventures",
+        "popularity": 74.15512865202629,
+        "rating": 50.0,
+        "rating_count": 0,
+        "release_dates": [
+            {
+                "human": "2015-Aug-10",
+                "id": 71849
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 100554,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/vlggljiguqofhbuxzyox.jpg"
+            },
+            {
+                "id": 100555,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ulhqkgoeryxhmeh3m9kb.jpg"
+            },
+            {
+                "id": 100556,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/iztbgz8sdh1swgfymrex.jpg"
+            },
+            {
+                "id": 100557,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/witnqr5tjnlswniqrzvi.jpg"
+            },
+            {
+                "id": 100558,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/yv7vv6bnk7nvn9pxxknh.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 10776,
+                "name": "Rising World"
+            },
+            {
+                "id": 28309,
+                "name": "Tanzia"
+            },
+            {
+                "id": 29348,
+                "name": "Weapon Shop Fantasy"
+            },
+            {
+                "id": 35994,
+                "name": "Survivalist"
+            },
+            {
+                "id": 36198,
+                "name": "Children of Morta"
+            },
+            {
+                "id": 47823,
+                "name": "Citadel: Forged With Fire"
+            },
+            {
+                "id": 55092,
+                "name": "Secret of Mana"
+            },
+            {
+                "id": 55199,
+                "name": "Dragon: Marked for Death"
+            },
+            {
+                "id": 80916,
+                "name": "Omensight"
+            },
+            {
+                "id": 96217,
+                "name": "Eternity: The Last Unicorn"
+            }
+        ],
+        "slug": "wanderlust-adventures",
+        "summary": "Wanderlust Adventures is an online, free-roaming, open world, action adventure RPG. Join fellow heroes online, explore vast and deadly landscapes, and capture companions to aid you in your quest. Forge powerful items, salvage artifacts, and crush the souls of menacing foes!",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 4,
+                "name": "Fighting"
+            },
+            {
+                "id": 25,
+                "name": "Hack and slash/Beat 'em up"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            }
+        ],
+        "id": 4755,
+        "name": "The Amazing Spider-Man 2",
+        "popularity": 72.98799590485297,
+        "rating": 53.6354885301772,
+        "rating_count": 38,
+        "release_dates": [
+            {
+                "human": "2014-Apr-29",
+                "id": 16514
+            },
+            {
+                "human": "2014-Apr-29",
+                "id": 16515
+            },
+            {
+                "human": "2014-Apr-29",
+                "id": 16516
+            },
+            {
+                "human": "2014-Apr-29",
+                "id": 16518
+            },
+            {
+                "human": "2014-Apr-29",
+                "id": 16519
+            },
+            {
+                "human": "2014-Apr-29",
+                "id": 106100
+            },
+            {
+                "human": "2014-May-02",
+                "id": 106101
+            },
+            {
+                "human": "2014-May-02",
+                "id": 134210
+            },
+            {
+                "human": "2014-May-02",
+                "id": 144090
+            },
+            {
+                "human": "2014-Apr-18",
+                "id": 147500
+            },
+            {
+                "human": "2014-May-12",
+                "id": 151061
+            },
+            {
+                "human": "2014-Apr-17",
+                "id": 151062
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 116960,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/uvgidyn66rnno4rv5elw.jpg"
+            },
+            {
+                "id": 116961,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/p2pr3mhflfj5v1hwjnci.jpg"
+            },
+            {
+                "id": 116962,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/thgqwwetispgbjomiufi.jpg"
+            },
+            {
+                "id": 116963,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/jufjblwqffratftyn4t3.jpg"
+            },
+            {
+                "id": 116964,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/owa8ajvyktotifp1wdrv.jpg"
+            },
+            {
+                "id": 175826,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ytwsdj9la6hntss7qr9y.jpg"
+            },
+            {
+                "id": 175827,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/k4dpgvtrhkmv8wtcpwo3.jpg"
+            },
+            {
+                "id": 175828,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/jkuliugrpcbyy4ogntuc.jpg"
+            },
+            {
+                "id": 175829,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/xturezpbna8p6qbzjsdo.jpg"
+            },
+            {
+                "id": 175830,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/uwd59xh0fu6d0xqot94w.jpg"
+            },
+            {
+                "id": 175831,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sh5oqsfasmnwrxv1xbrm.jpg"
+            },
+            {
+                "id": 175832,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/d63lr6gbz0flvh07yupj.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 501,
+                "name": "Batman: Arkham City"
+            },
+            {
+                "id": 1376,
+                "name": "The Amazing Spider-Man"
+            },
+            {
+                "id": 4225,
+                "name": "Ultimate Spider-Man"
+            },
+            {
+                "id": 5181,
+                "name": "Spider-Man: Web of Shadows"
+            },
+            {
+                "id": 5503,
+                "name": "Batman: Arkham Knight"
+            },
+            {
+                "id": 6285,
+                "name": "Spider-Man 2"
+            },
+            {
+                "id": 18225,
+                "name": "The Sinking City"
+            },
+            {
+                "id": 19565,
+                "name": "Marvel's Spider-Man"
+            },
+            {
+                "id": 26950,
+                "name": "Marvel's Avengers"
+            },
+            {
+                "id": 36198,
+                "name": "Children of Morta"
+            }
+        ],
+        "slug": "the-amazing-spider-man-2",
+        "summary": "2 years after the death of Ben Parker, Peter Parker his nephew gains special Spider like powers to become Spider-man. But now with the rise of enemies like Harry Osborn, kingpin, And the Russian Mob, Spider-man is in one of his biggest battles yet. Though he is not the only one hunting Villains.",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            },
+            {
+                "id": 2,
+                "name": "Multiplayer"
+            },
+            {
+                "id": 3,
+                "name": "Co-operative"
+            }
+        ],
+        "genres": [
+            {
+                "id": 5,
+                "name": "Shooter"
+            }
+        ],
+        "id": 1006,
+        "name": "Syndicate",
+        "popularity": 72.54362555976128,
+        "rating": 74.11406791871511,
+        "rating_count": 45,
+        "release_dates": [
+            {
+                "human": "2012-Feb-21",
+                "id": 2827
+            },
+            {
+                "human": "2012-Feb-21",
+                "id": 2828
+            },
+            {
+                "human": "2012-Feb-21",
+                "id": 2829
+            },
+            {
+                "human": "2012-Feb-21",
+                "id": 106010
+            },
+            {
+                "human": "2012-Feb-24",
+                "id": 106011
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 340,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/kdygmtzzbdawihrf9d6j.jpg"
+            },
+            {
+                "id": 341,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/xn0asbi8uribbiap2cvt.jpg"
+            },
+            {
+                "id": 342,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/lhsh1ubeih3cwunmkz16.jpg"
+            },
+            {
+                "id": 343,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/tnhcgder2l6l7ftqjt7m.jpg"
+            },
+            {
+                "id": 344,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/fqc3efqkhruvellwpexm.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 430,
+                "name": "Call Of Juarez: Bound In Blood"
+            },
+            {
+                "id": 494,
+                "name": "Bulletstorm"
+            },
+            {
+                "id": 495,
+                "name": "Metro 2033"
+            },
+            {
+                "id": 514,
+                "name": "F.E.A.R. 3"
+            },
+            {
+                "id": 547,
+                "name": "Gears of War"
+            },
+            {
+                "id": 564,
+                "name": "Rogue Warrior"
+            },
+            {
+                "id": 569,
+                "name": "Wolfenstein"
+            },
+            {
+                "id": 571,
+                "name": "Singularity"
+            },
+            {
+                "id": 2031,
+                "name": "Wolfenstein: The New Order"
+            },
+            {
+                "id": 7020,
+                "name": "Inversion"
+            }
+        ],
+        "slug": "syndicate--3",
+        "summary": "Set in 2069, Syndicate takes players into a dark, Machiavellian world run without government oversight with many syndicates vying for total dominance of their local market place. With no one to question their intentions or actions, three mega corporations - Eurocorp, Cayman Global, and Aspari - are at the forefront of this brutal war for control of the pivotal American market. In the world of Syndicate, everything is digitally connected, including the people. Players aren't limited to the weapons in their hands. Through DART 6 bio-chip technology implanted in their head, players can slow down time and breach the digital world around them to take down their foes using a variety of upgradable hacking mechanics. Syndicate's blend of fast-paced, futuristic, action shooter settings and story combined with innovative chip breach gameplay instantly immerses players in a unique digital world.",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            },
+            {
+                "id": 18,
+                "name": "Science fiction"
+            }
+        ]
+    },
+    {
+        "artworks": [
+            {
+                "id": 6526,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar51a.jpg"
+            },
+            {
+                "id": 6527,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar51b.jpg"
+            },
+            {
+                "id": 7352,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar5o8.jpg"
+            }
+        ],
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 12,
+                "name": "Role-playing (RPG)"
+            },
+            {
+                "id": 25,
+                "name": "Hack and slash/Beat 'em up"
+            }
+        ],
+        "id": 103168,
+        "name": "Warhammer: Chaosbane",
+        "popularity": 72.40092104419216,
+        "rating": 60.1792931051683,
+        "rating_count": 5,
+        "release_dates": [
+            {
+                "human": "2019-May-31",
+                "id": 171400
+            },
+            {
+                "human": "2019-May-31",
+                "id": 171401
+            },
+            {
+                "human": "2019-May-31",
+                "id": 171402
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 213279,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/keui3puimwid4ujrktli.jpg"
+            },
+            {
+                "id": 213280,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ggquhwmw2hxh9s6cim2c.jpg"
+            },
+            {
+                "id": 258966,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5jti.jpg"
+            },
+            {
+                "id": 258967,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5jtj.jpg"
+            },
+            {
+                "id": 258968,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5jtk.jpg"
+            },
+            {
+                "id": 258969,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5jtl.jpg"
+            },
+            {
+                "id": 258970,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5jtm.jpg"
+            },
+            {
+                "id": 296613,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6cv9.jpg"
+            },
+            {
+                "id": 296614,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6cva.jpg"
+            },
+            {
+                "id": 296615,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6cvb.jpg"
+            },
+            {
+                "id": 296616,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6cvc.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 28010,
+                "name": "God Eater 3"
+            },
+            {
+                "id": 54775,
+                "name": "Shadows: Awakening"
+            },
+            {
+                "id": 81249,
+                "name": "The Elder Scrolls VI"
+            },
+            {
+                "id": 96217,
+                "name": "Eternity: The Last Unicorn"
+            },
+            {
+                "id": 101608,
+                "name": "ANIMA: GATE OF MEMORIES - THE NAMELESS CHRONICLES"
+            },
+            {
+                "id": 103303,
+                "name": "The Elder Scrolls: Blades"
+            },
+            {
+                "id": 106987,
+                "name": "Torchlight Frontiers"
+            },
+            {
+                "id": 113109,
+                "name": "Marvel Ultimate Alliance 3: The Black Order"
+            },
+            {
+                "id": 115278,
+                "name": "Rune Factory 4 Special"
+            },
+            {
+                "id": 119171,
+                "name": "Baldur's Gate III"
+            }
+        ],
+        "slug": "warhammer-chaosbane",
+        "summary": "In Warhammer: Chaosbane, the player will be plunged into the middle of Old World history as they embody a human, a high elf, a wood elf, or a dwarf and discover several iconic locations such as the cursed city of Praag, or Nuln, the old capital of the Empire. \n \nThis adaptation of the franchise will be the first Action-RPG to take place in the Warhammer Fantasy world. The game takes place in the Old World, a dark and bloody continent devastated by wars against Chaos.",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            },
+            {
+                "id": 17,
+                "name": "Fantasy"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 2,
+                "name": "Multiplayer"
+            },
+            {
+                "id": 5,
+                "name": "Massively Multiplayer Online (MMO)"
+            }
+        ],
+        "genres": [
+            {
+                "id": 12,
+                "name": "Role-playing (RPG)"
+            }
+        ],
+        "id": 57372,
+        "name": "Soulworker",
+        "popularity": 72.17200769459184,
+        "release_dates": [
+            {
+                "human": "2016-Apr-06",
+                "id": 173033
+            },
+            {
+                "human": "2018-Feb-26",
+                "id": 173034
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 199343,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/nda3tbiljgrfhnsm5zrp.jpg"
+            },
+            {
+                "id": 199344,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/obmceftvnhseflmooxct.jpg"
+            },
+            {
+                "id": 199345,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/wqckbdujrgsednrywmzu.jpg"
+            },
+            {
+                "id": 199346,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ldt52ei9nc8c30tl61zd.jpg"
+            },
+            {
+                "id": 199347,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/jln77zlslxyc7j1fwdzb.jpg"
+            },
+            {
+                "id": 199348,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/coyvuwqudkbdxj2lzpmt.jpg"
+            },
+            {
+                "id": 199349,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/owlthmgxvbmqdzr6jhqx.jpg"
+            },
+            {
+                "id": 199351,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/kcygqjpkdfsev7xruoyg.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 16391,
+                "name": "ROSE Online"
+            },
+            {
+                "id": 19567,
+                "name": "Twin Saga"
+            },
+            {
+                "id": 26900,
+                "name": "Dragomon Hunter"
+            },
+            {
+                "id": 28010,
+                "name": "God Eater 3"
+            },
+            {
+                "id": 34155,
+                "name": "The Black Death"
+            },
+            {
+                "id": 59427,
+                "name": "Fairy Tail Online"
+            },
+            {
+                "id": 79255,
+                "name": "Naruto Mobile"
+            },
+            {
+                "id": 103303,
+                "name": "The Elder Scrolls: Blades"
+            },
+            {
+                "id": 106987,
+                "name": "Torchlight Frontiers"
+            },
+            {
+                "id": 115278,
+                "name": "Rune Factory 4 Special"
+            }
+        ],
+        "slug": "soulworker",
+        "summary": "Soulworker is an anime action MMORPG which takes place in the Cloudrealm, a now vacant city which only harbors the psychics and a horde of monsters. Players will learn about the fate of the city and the reason for the disappearance of all inhabitants through the course of the game, as well as possibly finding a way to reverse this catastrophe.",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 9,
+                "name": "Puzzle"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            },
+            {
+                "id": 32,
+                "name": "Indie"
+            }
+        ],
+        "id": 26223,
+        "name": "Quern - Undying Thoughts",
+        "popularity": 71.51096737544702,
+        "rating": 81.4135077325016,
+        "rating_count": 10,
+        "release_dates": [
+            {
+                "human": "2016-Nov-28",
+                "id": 61849
+            },
+            {
+                "human": "2016-Nov-28",
+                "id": 61850
+            },
+            {
+                "human": "2016-Nov-28",
+                "id": 61851
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 49801,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/zacchnfkzmghlcopie7j.jpg"
+            },
+            {
+                "id": 49802,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/fmpkzaishugywvucskwz.jpg"
+            },
+            {
+                "id": 49803,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/y4xxjgrhbf1uhyb9ekme.jpg"
+            },
+            {
+                "id": 49804,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/hgm5gjquxjyeg03wqzwa.jpg"
+            },
+            {
+                "id": 49805,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/lhhzosnoh1qsyivt0qug.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 11367,
+                "name": "Anna's Quest"
+            },
+            {
+                "id": 18011,
+                "name": "Rusty Lake Hotel"
+            },
+            {
+                "id": 24426,
+                "name": "Forgotton Anne"
+            },
+            {
+                "id": 25222,
+                "name": "Rusty Lake: Roots"
+            },
+            {
+                "id": 27266,
+                "name": "House of Caravan"
+            },
+            {
+                "id": 27725,
+                "name": "The Room: Old Sins"
+            },
+            {
+                "id": 55190,
+                "name": "Pikuniku"
+            },
+            {
+                "id": 56033,
+                "name": "Dream Alone"
+            },
+            {
+                "id": 106992,
+                "name": "A Fisherman's Tale"
+            },
+            {
+                "id": 109129,
+                "name": "Iris.Fall"
+            }
+        ],
+        "slug": "quern-undying-thoughts",
+        "summary": "Quern is a first person puzzle adventure with captivating story and beautiful graphics. Quern refreshes the genre with flexible gameplay and reuseable puzzle mechanics. The visuals and the music combine traditional and modern elements providing a unique mood for the game.\n\nOne of the specialities of Quern is that the tasks to be solved are not managed as separate, individual and sequential units, but as a complex entity, amongst which the players may wander and experiment freely. Often a bad or seemingly irrational result may bring the player closer to the final solution, if those are reconsidered and thought over again later, in the possession of the knowledge gained during the game.",
+        "themes": [
+            {
+                "id": 43,
+                "name": "Mystery"
+            }
+        ]
+    },
+    {
+        "artworks": [
+            {
+                "id": 6198,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar4s6.jpg"
+            }
+        ],
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 5,
+                "name": "Shooter"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            }
+        ],
+        "id": 26192,
+        "name": "The Last of Us: Part II",
+        "popularity": 71.07027382935048,
+        "release_dates": [
+            {
+                "human": "TBD",
+                "id": 157722
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 34673,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/oh8a5shtmdbqx73cv765.jpg"
+            },
+            {
+                "id": 34674,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/rqr5dxxw97zikyhdn2tq.jpg"
+            },
+            {
+                "id": 34675,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/mobc8z5fnxljhadccvy6.jpg"
+            },
+            {
+                "id": 34676,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/vlhzdqayyne2j3cjvpag.jpg"
+            },
+            {
+                "id": 34677,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/kazgjykzu18dhqjpspko.jpg"
+            },
+            {
+                "id": 214555,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/rdonk4uvyh8ijanrbs46.jpg"
+            },
+            {
+                "id": 214556,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/dbqn4wax78tgvplrpf1m.jpg"
+            },
+            {
+                "id": 214557,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/mmenctgbvassqs1uepax.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 6036,
+                "name": "The Last of Us Remastered"
+            },
+            {
+                "id": 13210,
+                "name": "How to Survive 2"
+            },
+            {
+                "id": 19564,
+                "name": "Death Stranding"
+            },
+            {
+                "id": 19565,
+                "name": "Marvel's Spider-Man"
+            },
+            {
+                "id": 37016,
+                "name": "Metro Exodus"
+            },
+            {
+                "id": 44076,
+                "name": "Last Day on Earth: Survival"
+            },
+            {
+                "id": 76882,
+                "name": "Sekiro: Shadows Die Twice"
+            },
+            {
+                "id": 102584,
+                "name": "Dying Light 2"
+            },
+            {
+                "id": 105049,
+                "name": "Remnant: From the Ashes"
+            },
+            {
+                "id": 105269,
+                "name": "Gene Rain"
+            }
+        ],
+        "slug": "the-last-of-us-part-ii",
+        "summary": "Set 5 years after the events of The Last of Us, Joel and Ellie return on their journey through the ruined cities of America, their path ahead of them will be unfold.",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            },
+            {
+                "id": 19,
+                "name": "Horror"
+            },
+            {
+                "id": 21,
+                "name": "Survival"
+            },
+            {
+                "id": 23,
+                "name": "Stealth"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 12,
+                "name": "Role-playing (RPG)"
+            }
+        ],
+        "id": 5867,
+        "name": "Jade Empire",
+        "popularity": 71.07027382935048,
+        "rating": 76.637958830064,
+        "rating_count": 44,
+        "release_dates": [
+            {
+                "human": "2005-Apr-12",
+                "id": 14365
+            },
+            {
+                "human": "2005-Apr-12",
+                "id": 14366
+            },
+            {
+                "human": "2005-Apr-12",
+                "id": 14367
+            },
+            {
+                "human": "2005-Apr-12",
+                "id": 14368
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 147534,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/hf0jaw02nwgqu71wyb3v.jpg"
+            },
+            {
+                "id": 147535,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/iedodd5uaztjr74qnddg.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 41,
+                "name": "Deus Ex"
+            },
+            {
+                "id": 80,
+                "name": "The Witcher"
+            },
+            {
+                "id": 116,
+                "name": "Star Wars: Knights of the Old Republic"
+            },
+            {
+                "id": 660,
+                "name": "Darkstone"
+            },
+            {
+                "id": 832,
+                "name": "Planescape: Torment"
+            },
+            {
+                "id": 1593,
+                "name": "Pillars of Eternity"
+            },
+            {
+                "id": 1887,
+                "name": "Dragon Age: Inquisition"
+            },
+            {
+                "id": 1942,
+                "name": "The Witcher 3: Wild Hunt"
+            },
+            {
+                "id": 3025,
+                "name": "Middle-earth: Shadow of Mordor"
+            },
+            {
+                "id": 9938,
+                "name": "Aarklash: Legacy"
+            }
+        ],
+        "slug": "jade-empire",
+        "summary": "Set in an ancient world inspired by mythical China, Jade Empire lets you train under your master's watchful eye as you learn powerful martial arts and mystical powers. When danger threatens, you'll travel across the world, from the harsh mountains of the Land of Howling Spirits to the lush gardens of the Imperial City. In your adventures, you must face powerful human and supernatural foes, learn the exotic and magical martial arts, and discover the darkest secrets of the world. Practice the greatest fighting styles and defeat the most powerful enemies to become a master of martial arts. \n \nAlso Available \nJade Empire: Limited Edition",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 5,
+                "name": "Massively Multiplayer Online (MMO)"
+            }
+        ],
+        "genres": [
+            {
+                "id": 12,
+                "name": "Role-playing (RPG)"
+            }
+        ],
+        "id": 59427,
+        "name": "Fairy Tail Online",
+        "popularity": 70.8499270563022,
+        "similar_games": [
+            {
+                "id": 16391,
+                "name": "ROSE Online"
+            },
+            {
+                "id": 17350,
+                "name": "Eldevin"
+            },
+            {
+                "id": 19698,
+                "name": "Albion Online"
+            },
+            {
+                "id": 23651,
+                "name": "Echo of Soul"
+            },
+            {
+                "id": 26900,
+                "name": "Dragomon Hunter"
+            },
+            {
+                "id": 35450,
+                "name": "Tree of Life"
+            },
+            {
+                "id": 54775,
+                "name": "Shadows: Awakening"
+            },
+            {
+                "id": 64061,
+                "name": "Kando World"
+            },
+            {
+                "id": 65209,
+                "name": "Kabod Online"
+            },
+            {
+                "id": 68393,
+                "name": "Legends of Equestria"
+            }
+        ],
+        "slug": "fairy-tail-online",
+        "summary": "Fight through the world of Fairy Tail in this mobile MMORPG app by O4games"
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 13,
+                "name": "Simulator"
+            },
+            {
+                "id": 15,
+                "name": "Strategy"
+            },
+            {
+                "id": 32,
+                "name": "Indie"
+            }
+        ],
+        "id": 55689,
+        "name": "Academia: School Simulator",
+        "popularity": 70.62958028325393,
+        "rating": 80.0,
+        "rating_count": 2,
+        "release_dates": [
+            {
+                "human": "2017-Sep-08",
+                "id": 111768
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 121543,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/yito1r1borotprsauzbz.jpg"
+            },
+            {
+                "id": 121544,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/f1i0wlae0s263ewirfeq.jpg"
+            },
+            {
+                "id": 121545,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/fdeu1phppuoft4nj6gec.jpg"
+            },
+            {
+                "id": 121546,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/rkkzpu4ntkphrsilexip.jpg"
+            },
+            {
+                "id": 121547,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/boqizhswuabaomaatcdn.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 17130,
+                "name": "Unclaimed World"
+            },
+            {
+                "id": 17519,
+                "name": "Project Aura"
+            },
+            {
+                "id": 18623,
+                "name": "Villagers"
+            },
+            {
+                "id": 29173,
+                "name": "Startup Company"
+            },
+            {
+                "id": 31515,
+                "name": "Another Brick in the Mall"
+            },
+            {
+                "id": 32457,
+                "name": "Hardware Engineers"
+            },
+            {
+                "id": 35463,
+                "name": "Software Inc."
+            },
+            {
+                "id": 36269,
+                "name": "Supreme Ruler Ultimate"
+            },
+            {
+                "id": 36346,
+                "name": "TransOcean: The Shipping Company"
+            },
+            {
+                "id": 55590,
+                "name": "Mashinky"
+            }
+        ],
+        "slug": "academia-school-simulator",
+        "summary": "Academia : School Simulator is a management game that lets you design, construct, and manage the high school of your dreams! As the school Principal, watch your students as they get bullied, find love, flunk exams, and basically just try to get through the roller-coaster ride that is high school. Will you offer the best teachers and facilities or cheap out and build giant classrooms with a 1:100 student to teacher ratio? It's all up to you!"
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            },
+            {
+                "id": 2,
+                "name": "Multiplayer"
+            },
+            {
+                "id": 3,
+                "name": "Co-operative"
+            }
+        ],
+        "genres": [
+            {
+                "id": 5,
+                "name": "Shooter"
+            }
+        ],
+        "id": 5647,
+        "name": "Enemy Front",
+        "popularity": 70.18888673715739,
+        "rating": 52.7786919887167,
+        "rating_count": 11,
+        "release_dates": [
+            {
+                "human": "2014-Jun-10",
+                "id": 28199
+            },
+            {
+                "human": "2014-Jun-12",
+                "id": 28200
+            },
+            {
+                "human": "2014-Jun-13",
+                "id": 28201
+            },
+            {
+                "human": "2014-Jun-10",
+                "id": 28202
+            },
+            {
+                "human": "2014-Jun-12",
+                "id": 28203
+            },
+            {
+                "human": "2014-Jun-13",
+                "id": 28204
+            },
+            {
+                "human": "2014-Jun-10",
+                "id": 28205
+            },
+            {
+                "human": "2014-Jun-12",
+                "id": 28206
+            },
+            {
+                "human": "2014-Jun-10",
+                "id": 28208
+            },
+            {
+                "human": "2014-Jun-12",
+                "id": 28209
+            },
+            {
+                "human": "2014-Jun-13",
+                "id": 28210
+            },
+            {
+                "human": "2014-Jun-14",
+                "id": 102862
+            },
+            {
+                "human": "2014-Jun-10",
+                "id": 102863
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 5639,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/slo9u5lkrh7hljmrwzp1.jpg"
+            },
+            {
+                "id": 5640,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/dghdiz627tcrnmpe46hv.jpg"
+            },
+            {
+                "id": 5641,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ljfml0soyy8jqejurluc.jpg"
+            },
+            {
+                "id": 5642,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/zesleludpd7hyquywkgy.jpg"
+            },
+            {
+                "id": 5643,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/aw8oeomamdgrpeluh9hd.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 533,
+                "name": "Dishonored"
+            },
+            {
+                "id": 539,
+                "name": "Metro: Last Light"
+            },
+            {
+                "id": 564,
+                "name": "Rogue Warrior"
+            },
+            {
+                "id": 621,
+                "name": "Call of Duty"
+            },
+            {
+                "id": 960,
+                "name": "Max Payne 3"
+            },
+            {
+                "id": 1377,
+                "name": "Spec Ops: The Line"
+            },
+            {
+                "id": 2031,
+                "name": "Wolfenstein: The New Order"
+            },
+            {
+                "id": 2033,
+                "name": "Call of Duty: Ghosts"
+            },
+            {
+                "id": 3042,
+                "name": "Dying Light"
+            },
+            {
+                "id": 11270,
+                "name": "The Cat Lady"
+            }
+        ],
+        "slug": "enemy-front",
+        "summary": "You\u2019re Robert Hawkins, an American stuck deep in Nazi controlled territory during the height of WWII. It\u2019s up to you whether to fight your enemies face to face, snipe them from afar, or sneak past and sabotage their positions. Join the fight against the evil Third Reich in open-ended missions across war torn Europe.",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            },
+            {
+                "id": 23,
+                "name": "Stealth"
+            },
+            {
+                "id": 39,
+                "name": "Warfare"
+            }
+        ]
+    },
+    {
+        "artworks": [
+            {
+                "id": 5330,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/hzaj3aqkbxmb6hd7k7lc.jpg"
+            },
+            {
+                "id": 5332,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/cuzmozb8widfr9aj8trf.jpg"
+            },
+            {
+                "id": 5333,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/asdntchzmz1kf3k0t79l.jpg"
+            },
+            {
+                "id": 5334,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/kiwenuikpml3zbmgkf06.jpg"
+            },
+            {
+                "id": 5335,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/kmx67l3q1gqugxhg66zv.jpg"
+            },
+            {
+                "id": 5336,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/nqtsfctiapng5xcmozyk.jpg"
+            },
+            {
+                "id": 5337,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/l0kjrldascktx2kzqhbi.jpg"
+            },
+            {
+                "id": 5338,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/m9ra5j7omj0gn554hkkg.jpg"
+            },
+            {
+                "id": 5339,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/vev3osrana2gzm9bdj3f.jpg"
+            },
+            {
+                "id": 5340,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/eutpbosgfblccztjkioz.jpg"
+            },
+            {
+                "id": 5341,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/swg128b5wtptafv5foo9.jpg"
+            },
+            {
+                "id": 5645,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar4ct.jpg"
+            }
+        ],
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            },
+            {
+                "id": 2,
+                "name": "Multiplayer"
+            },
+            {
+                "id": 3,
+                "name": "Co-operative"
+            }
+        ],
+        "genres": [
+            {
+                "id": 5,
+                "name": "Shooter"
+            },
+            {
+                "id": 12,
+                "name": "Role-playing (RPG)"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            }
+        ],
+        "id": 25076,
+        "name": "Red Dead Redemption 2",
+        "popularity": 69.74819319106085,
+        "rating": 94.8337023678528,
+        "rating_count": 439,
+        "release_dates": [
+            {
+                "human": "2018-Oct-26",
+                "id": 137262
+            },
+            {
+                "human": "2018-Oct-26",
+                "id": 137263
+            },
+            {
+                "human": "2018-Oct-26",
+                "id": 137264
+            },
+            {
+                "human": "2018-Oct-26",
+                "id": 137265
+            },
+            {
+                "human": "2018-Oct-26",
+                "id": 137266
+            },
+            {
+                "human": "2018-Oct-26",
+                "id": 147060
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 43482,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/xegpfnsvlyeld0zkjnrc.jpg"
+            },
+            {
+                "id": 43485,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/c9xalka7stjkx4mes7kp.jpg"
+            },
+            {
+                "id": 181619,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/qg7gx276z3hsqlr9xpt6.jpg"
+            },
+            {
+                "id": 181620,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/x8xczj2a0y6g9rnhboko.jpg"
+            },
+            {
+                "id": 181621,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/dhw6ucx9laj5esv6rngn.jpg"
+            },
+            {
+                "id": 181622,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/h8f9uojkzvaau8pxsyxi.jpg"
+            },
+            {
+                "id": 181623,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/tdxv4zzkqyjnm9pmwxw0.jpg"
+            },
+            {
+                "id": 211553,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/kcfpf8wa8esalk0qkpo5.jpg"
+            },
+            {
+                "id": 212061,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/uyaminfh8sugglvt247u.jpg"
+            },
+            {
+                "id": 212062,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/banftd8fgfytbsfx6mjz.jpg"
+            },
+            {
+                "id": 212063,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/dorsz0jbcecmkxvzi3t8.jpg"
+            },
+            {
+                "id": 212064,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/mptosgjarjlyqxy7lqsm.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 17379,
+                "name": "Miscreated"
+            },
+            {
+                "id": 19560,
+                "name": "God of War"
+            },
+            {
+                "id": 19564,
+                "name": "Death Stranding"
+            },
+            {
+                "id": 26192,
+                "name": "The Last of Us: Part II"
+            },
+            {
+                "id": 28168,
+                "name": "Code Vein"
+            },
+            {
+                "id": 28309,
+                "name": "Tanzia"
+            },
+            {
+                "id": 55038,
+                "name": "Immortal: Unchained"
+            },
+            {
+                "id": 80916,
+                "name": "Omensight"
+            },
+            {
+                "id": 81249,
+                "name": "The Elder Scrolls VI"
+            },
+            {
+                "id": 105049,
+                "name": "Remnant: From the Ashes"
+            }
+        ],
+        "slug": "red-dead-redemption-2",
+        "summary": "Developed by the creators of Grand Theft Auto V and Red Dead Redemption, Red Dead Redemption 2 is an epic tale of life in America\u2019s unforgiving heartland. The game's vast and atmospheric world will also provide the foundation for a brand new online multiplayer experience.",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            },
+            {
+                "id": 38,
+                "name": "Open world"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            },
+            {
+                "id": 2,
+                "name": "Multiplayer"
+            }
+        ],
+        "genres": [
+            {
+                "id": 11,
+                "name": "Real Time Strategy (RTS)"
+            },
+            {
+                "id": 15,
+                "name": "Strategy"
+            }
+        ],
+        "id": 30229,
+        "name": "Bannermen",
+        "popularity": 69.30749964496431,
+        "rating": 50.0,
+        "rating_count": 1,
+        "release_dates": [
+            {
+                "human": "2019-Feb-21",
+                "id": 164196
+            },
+            {
+                "human": "2019-Feb-21",
+                "id": 164197
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 122525,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/nmi0mwgaqtf1xvjhujni.jpg"
+            },
+            {
+                "id": 122526,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/io3wk2ac2bzeyhhotsug.jpg"
+            },
+            {
+                "id": 122527,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/s0uz9huizer7amb6yxbd.jpg"
+            },
+            {
+                "id": 122528,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/stzdkymuiqy2ld49ar6y.jpg"
+            },
+            {
+                "id": 122529,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ambzsvcfsrzonqj2laqb.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 6985,
+                "name": "Three Kingdoms: Fate of the Dragon"
+            },
+            {
+                "id": 9058,
+                "name": "Praetorians"
+            },
+            {
+                "id": 9856,
+                "name": "Real Warfare 1242"
+            },
+            {
+                "id": 23345,
+                "name": "Life is Feudal: Forest Village"
+            },
+            {
+                "id": 28794,
+                "name": "Ancestors Legacy"
+            },
+            {
+                "id": 36553,
+                "name": "Medieval Kingdom Wars"
+            },
+            {
+                "id": 55029,
+                "name": "Age of Empires IV"
+            },
+            {
+                "id": 55036,
+                "name": "Anno 1800"
+            },
+            {
+                "id": 77334,
+                "name": "Stronghold 4"
+            },
+            {
+                "id": 78550,
+                "name": "Bad North"
+            }
+        ],
+        "slug": "bannermen",
+        "summary": "Bannermen is a real-time strategy (RTS) game, developed by the Swedish studio Pathos Interactive. The game will test your abilities as a battle commander where the main tasks consist of base building, resource management and battling enemy armies. \n \nThe game takes place in a semi-fantasy medieval world that has been brutally damaged due to decades of war, starvation and natural disasters. The people are in desperate need of a powerful leader that can unite the kingdom. Many tribes claim their right, but there is only room for one banner in the kingdom capital. \n \nCommand your troops through the war-ridden land, place your banner and let no one stand in your way to fame and glory!",
+        "themes": [
+            {
+                "id": 22,
+                "name": "Historical"
+            },
+            {
+                "id": 39,
+                "name": "Warfare"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            },
+            {
+                "id": 2,
+                "name": "Multiplayer"
+            },
+            {
+                "id": 3,
+                "name": "Co-operative"
+            }
+        ],
+        "genres": [
+            {
+                "id": 5,
+                "name": "Shooter"
+            }
+        ],
+        "id": 119177,
+        "name": "Call Of Duty: Modern Warfare",
+        "popularity": 67.7650722336264,
+        "release_dates": [
+            {
+                "human": "2019-Oct-25",
+                "id": 170337
+            },
+            {
+                "human": "2019-Oct-25",
+                "id": 170338
+            },
+            {
+                "human": "2019-Oct-25",
+                "id": 170339
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 314158,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6qem.jpg"
+            },
+            {
+                "id": 314159,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6qen.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 27270,
+                "name": "Payday 3"
+            },
+            {
+                "id": 43367,
+                "name": "RICO"
+            },
+            {
+                "id": 102868,
+                "name": "World War 3"
+            },
+            {
+                "id": 103281,
+                "name": "Halo Infinite"
+            },
+            {
+                "id": 103292,
+                "name": "Gears 5"
+            },
+            {
+                "id": 103298,
+                "name": "Doom: Eternal"
+            },
+            {
+                "id": 103301,
+                "name": "Wolfenstein: Youngblood"
+            },
+            {
+                "id": 105049,
+                "name": "Remnant: From the Ashes"
+            },
+            {
+                "id": 106805,
+                "name": "Call of Duty: Mobile"
+            },
+            {
+                "id": 118218,
+                "name": "Tom Clancy's Ghost Recon: Breakpoint"
+            }
+        ],
+        "slug": "call-of-duty-modern-warfare",
+        "summary": "Prepare to go dark, Modern Warfare is back! \n \nThe stakes have never been higher as players take on the role of lethal Tier One operators in a heart-racing saga that will affect the global balance of power. Call of Duty: Modern Warfare engulfs fans in an incredibly raw, gritty, provocative narrative that brings unrivaled intensity and shines a light on the changing nature of modern war. Developed by the studio that started it all, Infinity Ward delivers an epic reimagining of the iconic Modern Warfare series from the ground up. \n \nIn the visceral and dramatic single-player story campaign, Call of Duty: Modern Warfare pushes boundaries and breaks rules the way only Modern Warfare can. Players will engage in breathtaking covert operations alongside a diverse cast of international special forces throughout iconic European cities and volatile expanses of the Middle East. \n \nAnd the story doesn\u2019t end there. \n \nIn Call of Duty: Modern Warfare, players will be thrust into an immersive narrative spanning the entire game. Players can experience the ultimate online playground with classic multiplayer or squad-up and play cooperatively in a collection of elite operations, accessible to all skill levels.",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            },
+            {
+                "id": 39,
+                "name": "Warfare"
+            }
+        ]
+    },
+    {
+        "artworks": [
+            {
+                "id": 1213,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/qy3wcpfqgxewbtzhzt5y.jpg"
+            },
+            {
+                "id": 5039,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/us1zxkl318auwirwfeud.jpg"
+            },
+            {
+                "id": 6007,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar4mv.jpg"
+            },
+            {
+                "id": 6376,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar4x4.jpg"
+            },
+            {
+                "id": 6377,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar4x5.jpg"
+            },
+            {
+                "id": 6378,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar4x6.jpg"
+            },
+            {
+                "id": 6379,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar4x7.jpg"
+            },
+            {
+                "id": 6380,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar4x8.jpg"
+            },
+            {
+                "id": 6381,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar4x9.jpg"
+            }
+        ],
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 5,
+                "name": "Shooter"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            }
+        ],
+        "id": 37016,
+        "name": "Metro Exodus",
+        "popularity": 67.7650722336264,
+        "rating": 83.6840066970025,
+        "rating_count": 89,
+        "release_dates": [
+            {
+                "human": "2019-Feb-15",
+                "id": 162137
+            },
+            {
+                "human": "2019-Feb-15",
+                "id": 162138
+            },
+            {
+                "human": "2019-Feb-15",
+                "id": 162139
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 44199,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ivyjv4twtzcbxysseq39.jpg"
+            },
+            {
+                "id": 44200,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/m5s43zybsvndbw4co9wj.jpg"
+            },
+            {
+                "id": 44201,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/qyeivoo2brivvaxcpmab.jpg"
+            },
+            {
+                "id": 44202,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/c3wpjcbt3octz1ruzdrn.jpg"
+            },
+            {
+                "id": 44203,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/leboegblh8lp15i83oc6.jpg"
+            },
+            {
+                "id": 214208,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/rrbditarbrhhuf103vop.jpg"
+            },
+            {
+                "id": 214209,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/jlf82vd9jdvzmy25ajd4.jpg"
+            },
+            {
+                "id": 214210,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/avwzl72kskcdxisnjlmr.jpg"
+            },
+            {
+                "id": 214211,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/hogwqc8g89mesbvzveob.jpg"
+            },
+            {
+                "id": 214212,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/gharx9quvnz62udseh9r.jpg"
+            },
+            {
+                "id": 267950,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5qr2.jpg"
+            },
+            {
+                "id": 267951,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc5qr3.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 13210,
+                "name": "How to Survive 2"
+            },
+            {
+                "id": 17379,
+                "name": "Miscreated"
+            },
+            {
+                "id": 19541,
+                "name": "State of Decay 2"
+            },
+            {
+                "id": 19561,
+                "name": "Days Gone"
+            },
+            {
+                "id": 19564,
+                "name": "Death Stranding"
+            },
+            {
+                "id": 26192,
+                "name": "The Last of Us: Part II"
+            },
+            {
+                "id": 28168,
+                "name": "Code Vein"
+            },
+            {
+                "id": 36646,
+                "name": "GTFO"
+            },
+            {
+                "id": 102584,
+                "name": "Dying Light 2"
+            },
+            {
+                "id": 105049,
+                "name": "Remnant: From the Ashes"
+            }
+        ],
+        "slug": "metro-exodus",
+        "summary": "Metro Exodus is an epic, story-driven first person shooter from 4A Games that blends deadly combat and stealth with exploration and survival horror in one of the most immersive game worlds ever created. Explore the Russian wilderness across vast, non-linear levels and follow a thrilling story-line that spans an entire year through spring, summer and autumn to the depths of nuclear winter. Inspired by the novels of Dmitry Glukhovsky, Metro Exodus continues Artyom\u2019s story in the greatest Metro adventure yet",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            },
+            {
+                "id": 19,
+                "name": "Horror"
+            },
+            {
+                "id": 21,
+                "name": "Survival"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 5,
+                "name": "Shooter"
+            },
+            {
+                "id": 12,
+                "name": "Role-playing (RPG)"
+            },
+            {
+                "id": 32,
+                "name": "Indie"
+            }
+        ],
+        "id": 11646,
+        "name": "Ziggurat",
+        "popularity": 66.66333836838504,
+        "rating": 71.16994966007229,
+        "rating_count": 13,
+        "release_dates": [
+            {
+                "human": "2014-Oct-23",
+                "id": 32234
+            },
+            {
+                "human": "2014-Oct-23",
+                "id": 32235
+            },
+            {
+                "human": "2014-Oct-23",
+                "id": 32236
+            },
+            {
+                "human": "2014-Oct-23",
+                "id": 32237
+            },
+            {
+                "human": "2015-Mar-20",
+                "id": 32239
+            },
+            {
+                "human": "2015-Apr-21",
+                "id": 68001
+            },
+            {
+                "human": "2016-Jun-30",
+                "id": 68002
+            },
+            {
+                "human": "2015-Apr-22",
+                "id": 68003
+            },
+            {
+                "human": "2016-Aug-18",
+                "id": 68004
+            },
+            {
+                "human": "2015-Apr-22",
+                "id": 107052
+            },
+            {
+                "human": "2015-Apr-21",
+                "id": 134383
+            },
+            {
+                "human": "2015-Apr-22",
+                "id": 134384
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 41325,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/etgzkmh8oa68mbzqy4bt.jpg"
+            },
+            {
+                "id": 41326,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ez7tf1oyoa3vxhmpg1pi.jpg"
+            },
+            {
+                "id": 41327,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/kn1mbtffzhmcnm6qiftd.jpg"
+            },
+            {
+                "id": 41328,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/vl3qhqvgkorhhtotw6o1.jpg"
+            },
+            {
+                "id": 41329,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/z7820wqkduyagknhum8w.jpg"
+            },
+            {
+                "id": 181965,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/fvxlu42cz1e74zpwviec.jpg"
+            },
+            {
+                "id": 181966,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ewlpcmnnlxkaafvyx6wd.jpg"
+            },
+            {
+                "id": 181967,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ezexxpdtzgew5kot5b65.jpg"
+            },
+            {
+                "id": 181968,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/frxm1gdkaylmbuiaagq4.jpg"
+            },
+            {
+                "id": 181969,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/onfbfxjcmsyvx2dgnqoj.jpg"
+            },
+            {
+                "id": 181970,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/dhswxwn4syhdj8gtodgv.jpg"
+            },
+            {
+                "id": 181971,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/smgkbup5lds8jpumdwpn.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 3227,
+                "name": "Nuclear Throne"
+            },
+            {
+                "id": 7350,
+                "name": "Get Even"
+            },
+            {
+                "id": 9278,
+                "name": "Endless Legend"
+            },
+            {
+                "id": 9938,
+                "name": "Aarklash: Legacy"
+            },
+            {
+                "id": 22387,
+                "name": "Legrand Legacy"
+            },
+            {
+                "id": 26855,
+                "name": "Dead Cells"
+            },
+            {
+                "id": 28168,
+                "name": "Code Vein"
+            },
+            {
+                "id": 33153,
+                "name": "Judgment: Apocalypse Survival Simulation"
+            },
+            {
+                "id": 36198,
+                "name": "Children of Morta"
+            },
+            {
+                "id": 55038,
+                "name": "Immortal: Unchained"
+            }
+        ],
+        "slug": "ziggurat",
+        "summary": "Dungeon-Crawling First Person Shooting at its finest! Fast-paced combat! Dozens of perks, spells and enemies! Level ups! Random Dungeons! Traps! Badass bosses! Carrots! Ziggurat is the best combination of First Person Shooter and Rogue-LITE you have ever seen. \n \nBecome a neophyte sorcerer, and get ready for your rite of passage: Enter the labyrinth and face dangerous challenges to prove your worth and become a powerful wizard! \n \nThe game focuses on fast-paced first person shooting, with an old-school vibe, and updated handling and game mechanics. Dungeon crawling and RPG/Roguelike elements are added into the mix, resulting in a fun, challenging and varied game, with lots of content to discover. \n \nFight almighty bosses, get through rooms filled with traps, and treasures that may help you in your journey... Each game is a whole new experience!",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            },
+            {
+                "id": 17,
+                "name": "Fantasy"
+            },
+            {
+                "id": 18,
+                "name": "Science fiction"
+            }
+        ]
+    },
+    {
+        "artworks": [
+            {
+                "id": 6891,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar5bf.jpg"
+            },
+            {
+                "id": 6905,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar5bt.jpg"
+            },
+            {
+                "id": 6906,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar5bu.jpg"
+            },
+            {
+                "id": 6907,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar5bv.jpg"
+            },
+            {
+                "id": 7342,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar5ny.jpg"
+            },
+            {
+                "id": 7343,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar5nz.jpg"
+            },
+            {
+                "id": 7344,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar5o0.jpg"
+            },
+            {
+                "id": 7345,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar5o1.jpg"
+            },
+            {
+                "id": 7346,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar5o2.jpg"
+            },
+            {
+                "id": 7347,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar5o3.jpg"
+            }
+        ],
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 8,
+                "name": "Platform"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            },
+            {
+                "id": 32,
+                "name": "Indie"
+            }
+        ],
+        "id": 89597,
+        "name": "Unbound: Worlds Apart",
+        "popularity": 66.44299159533676,
+        "release_dates": [
+            {
+                "human": "2020-Q1",
+                "id": 167462
+            },
+            {
+                "human": "2020-Q1",
+                "id": 167463
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 297107,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6d8z.jpg"
+            },
+            {
+                "id": 297108,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6d90.jpg"
+            },
+            {
+                "id": 297109,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/sc6d91.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 19150,
+                "name": "Vagante"
+            },
+            {
+                "id": 20342,
+                "name": "Toby: The Secret Mine"
+            },
+            {
+                "id": 24426,
+                "name": "Forgotton Anne"
+            },
+            {
+                "id": 28070,
+                "name": "PLANET ALPHA"
+            },
+            {
+                "id": 33269,
+                "name": "Caveblazers"
+            },
+            {
+                "id": 37419,
+                "name": "Dude Simulator"
+            },
+            {
+                "id": 55190,
+                "name": "Pikuniku"
+            },
+            {
+                "id": 96217,
+                "name": "Eternity: The Last Unicorn"
+            },
+            {
+                "id": 111130,
+                "name": "Apsulov: End of Gods"
+            },
+            {
+                "id": 116681,
+                "name": "Hob: The Definitive Edition"
+            }
+        ],
+        "slug": "unbound-worlds-apart",
+        "summary": "Unbound is an atmospheric 2D Puzzle-Platformer where the main character, Soli, can conjure magic portals to travel between different realities in order to learn more about the catastrophe that ravaged his world. Inside certain portals, the physical properties of the character or world elements can change, offering new gameplay possibilities. \n \nUnbound\u2019s artistic approach can be summarized as a dark fairy tale presented in a cartoonish style, with the purpose to give the game experience a fresh look and feel. Curiosity and exploration will have an impact on the overall atmosphere and will immerse the player even more.",
+        "themes": [
+            {
+                "id": 1,
+                "name": "Action"
+            }
+        ]
+    },
+    {
+        "genres": [
+            {
+                "id": 11,
+                "name": "Real Time Strategy (RTS)"
+            },
+            {
+                "id": 13,
+                "name": "Simulator"
+            },
+            {
+                "id": 15,
+                "name": "Strategy"
+            },
+            {
+                "id": 31,
+                "name": "Adventure"
+            }
+        ],
+        "id": 20776,
+        "name": "Imperium Romanum",
+        "popularity": 66.2226448222885,
+        "screenshots": [
+            {
+                "id": 28182,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/gknkp5xyljl7offic6jr.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 662,
+                "name": "Anno 1404"
+            },
+            {
+                "id": 848,
+                "name": "Rise of Nations"
+            },
+            {
+                "id": 2040,
+                "name": "Knights of Honor"
+            },
+            {
+                "id": 3700,
+                "name": "The Settlers: Rise of an Empire"
+            },
+            {
+                "id": 7027,
+                "name": "Spellforce: The Order of Dawn"
+            },
+            {
+                "id": 9058,
+                "name": "Praetorians"
+            },
+            {
+                "id": 9789,
+                "name": "RimWorld"
+            },
+            {
+                "id": 10388,
+                "name": "Legends of Eisenwald"
+            },
+            {
+                "id": 28325,
+                "name": "Hearthlands"
+            },
+            {
+                "id": 35371,
+                "name": "Colony Survival"
+            }
+        ],
+        "slug": "imperium-romanum",
+        "summary": "Defend yourself against Barbarians attacking your settlement, watch the Chariot race in Circus Maximus within the spectacular empire building strategy game",
+        "themes": [
+            {
+                "id": 17,
+                "name": "Fantasy"
+            },
+            {
+                "id": 22,
+                "name": "Historical"
+            }
+        ]
+    },
+    {
+        "game_modes": [
+            {
+                "id": 1,
+                "name": "Single player"
+            }
+        ],
+        "genres": [
+            {
+                "id": 13,
+                "name": "Simulator"
+            },
+            {
+                "id": 15,
+                "name": "Strategy"
+            },
+            {
+                "id": 32,
+                "name": "Indie"
+            }
+        ],
+        "id": 17519,
+        "name": "Project Aura",
+        "popularity": 66.2226448222885,
+        "rating": 50.0,
+        "rating_count": 1,
+        "release_dates": [
+            {
+                "human": "2015-Jan-05",
+                "id": 71486
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 94404,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/bpsqhrwgp2zi8rihlkkr.jpg"
+            },
+            {
+                "id": 94405,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/in0oaszhciujhwzh81tu.jpg"
+            },
+            {
+                "id": 94406,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/wv1c8zimvw59osjqh8b0.jpg"
+            },
+            {
+                "id": 94407,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/q4nazkw1mllfnzwxknfa.jpg"
+            },
+            {
+                "id": 94408,
+                "url": "//images.igdb.com/igdb/image/upload/t_thumb/ghih4psuyv8ffsa4snmu.jpg"
+            }
+        ],
+        "similar_games": [
+            {
+                "id": 18623,
+                "name": "Villagers"
+            },
+            {
+                "id": 29173,
+                "name": "Startup Company"
+            },
+            {
+                "id": 31515,
+                "name": "Another Brick in the Mall"
+            },
+            {
+                "id": 32457,
+                "name": "Hardware Engineers"
+            },
+            {
+                "id": 35463,
+                "name": "Software Inc."
+            },
+            {
+                "id": 36269,
+                "name": "Supreme Ruler Ultimate"
+            },
+            {
+                "id": 36346,
+                "name": "TransOcean: The Shipping Company"
+            },
+            {
+                "id": 55590,
+                "name": "Mashinky"
+            },
+            {
+                "id": 55689,
+                "name": "Academia: School Simulator"
+            },
+            {
+                "id": 65827,
+                "name": "Bronze Age"
+            }
+        ],
+        "slug": "project-aura--1",
+        "summary": "Project Aura is a simulation/strategy videogame where you take control of a colony of climate disaster survivors.\n\nIn the near future, humans will face the drastic consequences of climate change. Forced to take refuge in vital reserves using cryo-preservation, they await a second chance.\n\nAt the end of the 21st century, humans, finally aware of the great climate disaster, dedicated their efforts not on preventing the inevitable crisis, but to ensure the survival of the species itself. \n\nIn this endeavor, they embarked on the construction of a network of cities on the sea, resistant to the hostile atmosphere. \n\nOvertaken by the events and extreme food shortage, they built ultra-secret shelters that would support them in hibernation, to be awakened in a more favorable situation."
+    }
+]
