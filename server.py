@@ -9,7 +9,6 @@ from flask_debugtoolbar import DebugToolbarExtension
 
 from model import connect_to_db, db, Game, User, Review, Rating, GameMode, Mode
 
-
 app = Flask(__name__)
   
 # set a 'SECRET_KEY' to enable the Flask session cookies
@@ -17,6 +16,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
 # This raises an error for silent error caused by undefined variable in Jinja2
 app.jinja_env.undefined = StrictUndefined
+
 
 @app.route('/')
 def index():
@@ -33,23 +33,23 @@ def show_login():
 @app.route('/login', methods=["POST"])
 def login_process():
 #     """Redirects user to homepage after login message"""
-    pass
-#     username = request.form.get("email")
-#     password = request.form.get("password") 
+    
+    username = request.form.get("email")
+    password = request.form.get("password") 
 
-#     # query for username in database( returns Truthly/False (none))
-#     username = db.session.query(User).filter(User.username=username,
-#                                         User.password=password).first().username
+    # query for username in database( returns Truthly/False (none))
+    # username = db.session.query(User).filter(User.username=username,
+                                        # User.password=password).first().username
 
-#     # check if username matches password
-#     if username:
-#         # log user in - add username from db to 
-#         flash("Successfully logged in")
-#         session["User"] = username
-#         return redirect(f'/users/{user_id}')
-#     else:
-#         flash("Username/Password is invalid")
-#         return redirect("/")
+    # check if username matches password
+    if username:
+        # log user in - add username from db to 
+        flash("Successfully logged in")
+        session["User"] = username
+        return redirect(f'/users/{user_id}')
+    else:
+        flash("Username/password is invalid")
+        return redirect("/")
 
 ######################### REGISTRATION
 @app.route('/register', methods=["GET"])
@@ -68,12 +68,13 @@ def registration_process():
 
     if User.query.filter(User.email == email).first():
         # If email exists in db
-        flash("Email already exists")
+        flash("Email already exists.")
         return redirect('/register')
 
-    # Add and commits user's email and password into the DB
+    # Add current date 
     current_date = date.today()
     register_date = current_date.strftime("%Y-%b-%d")
+    # Add and commits user's email and password into the DB
     db.session.add(User(username=username.lower(), email=email.lower(), password=password, register_date=register_date))
     db.session.commit()
     return redirect('/')
@@ -85,10 +86,20 @@ def show_terms_of_service():
     return render_template("terms_of_service.html")
 
 ######################################## GAMES 
-@app.route('/games', methods=["GET"])
+
+@app.route('/games')
 def show_games_list():
     """Displays games list"""
-    return render_template("games_list.html")
+    
+    games = Game.query.order_by('title').all()
+
+    return render_template("games_list.html", games=games)
+
+
+@app.route('/games/<game_id>')
+def game_details(game_id):
+
+    game_object = db.session.query(Game).filter(Game.game_id==game_id).first()
 
 
 if __name__ == "__main__":

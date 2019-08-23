@@ -3,4 +3,14 @@
 <br>
 <h3> Games </h3>
 
+    <ul>
+        {% for game in games %}
+        <li>
+            <a href="/games/{{ game.game_id }}">
+            {{ game.title }} 
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+        
 {% endblock %}
