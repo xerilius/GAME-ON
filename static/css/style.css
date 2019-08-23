@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic|Hind+Madurai|Lexend+Peta|Orbitron&display=swap');
+.nav-link {
+
+    color: white;
+
+}
+
+.navbar-brand {
+    color: yellow;
+    font-size: xx-large;
+    opacity:1;
+}
+
+#navbar {
+    background-color: #000000;
+    height: 80px;
+    font-family: 'Lexend Peta', sans-serif  
+}
+
+body {
+    background-color: white;
+    color: black;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
