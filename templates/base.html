@@ -10,18 +10,20 @@
 
 <body>
 <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
-        <a class="navbar-brand" href="#">GAME-ON</a>
+        <a class="navbar-brand" href="/">GAME-ON</a>
 
-    <div class="navbar-right ml-auto">
-        <a class="nav-link" href="#">LOGIN</a>   
+
+    <div class="navbar-right">
+        <a id="nav-link"class="nav-link" href="/games">GAMES</a> 
+        <a id="nav-link"class="nav-link" href="/login">LOGIN</a>
+        
     </div>
 </nav>
 
     {% block content %} put your content here {% endblock%}
 
 
-<!-- You need this in order to use JS-based components in the 
-further study. Leave this at the bottom and code above it. -->
+
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

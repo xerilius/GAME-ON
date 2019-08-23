@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h2>LOGIN </h2>
+<h3>LOGIN </h3>
 
 <!-- <form action='/login' method="POST">
     Username: <input type="text" name="username" required><br>
@@ -11,17 +11,17 @@
 
 
 <form class="form-horizontal" action="/login" method="POST">
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="username">Username:</label>
+  <div class="form-group" id="form-group">
+    <label class="control-label col-sm-2" for="username"></label>
     <div class="col-sm-2">
       <input type="text" class="form-control" id="username" placeholder="Username">
     </div>
   </div>
 
   <div class="form-group">
-    <label class="control-label col-sm-2" for="pwd">Password:</label>
+    <label class="control-label col-sm-2" for="pwd"></label>
     <div class="col-sm-2"> 
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+      <input type="password" class="form-control" id="pwd" placeholder="Password">
     </div>
   </div>
   
@@ -30,8 +30,9 @@
       <button type="submit" class="btn btn-default">LOGIN</button>
     </div>
   </div>
+  <p>Not registered? <a id=hyperlinks href="/register">Create an account.</a></p>
 </form>
 
-<a href
+
 
 {% endblock %}
