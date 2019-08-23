@@ -15,10 +15,7 @@ headers= {'user-key': API_KEY, 'Accept': 'application/json'}
 
 
 def get_game_data_w_offset0():
-    """Game data from API requests."""
-#######################################
-# >>>>> change limit values
-
+    """Game data from API requests with offset = 0."""
     payload = ("f  artworks.url, game_modes.name, genres.name, name, popularity,"   
            "rating, rating_count, release_dates.human, screenshots.url,"
            "similar_games.name, slug, summary, themes.name;"      
@@ -33,10 +30,7 @@ def get_game_data_w_offset0():
     return(game_data)
 
 def get_game_data_w_offset50():
-    """Game data from API requests."""
-#######################################
-# >>>>> change limit values
-
+    """Game data from API requests with offset = 50."""
     payload = ("f  artworks.url, game_modes.name, genres.name, name, popularity,"   
            "rating, rating_count, release_dates.human, screenshots.url,"
            "similar_games.name, slug, summary, themes.name;"      
@@ -51,9 +45,7 @@ def get_game_data_w_offset50():
     return(game_data)
 
 def get_game_data_w_offset100():
-    """Game data from API requests."""
-#######################################
-# >>>>> change limit values
+    """Game data from API requests with offset = 100."""
 
     payload = ("f  artworks.url, game_modes.name, genres.name, name, popularity,"   
            "rating, rating_count, release_dates.human, screenshots.url,"
@@ -69,10 +61,7 @@ def get_game_data_w_offset100():
     return(game_data)
 
 def get_game_data_w_offset150():
-    """Game data from API requests."""
-#######################################
-# >>>>> change limit values
-
+    """Game data from API requests with offset = 150."""
     payload = ("f  artworks.url, game_modes.name, genres.name, name, popularity,"   
            "rating, rating_count, release_dates.human, screenshots.url,"
            "similar_games.name, slug, summary, themes.name;"      
@@ -87,12 +76,7 @@ def get_game_data_w_offset150():
     return(game_data)
 
 
-
-
-
-
-
-def get_game_by_id(game_ids):
+def search_game_by_id(game_ids):
     pass
     # for game in game_ids:
     #     ",".join(game)

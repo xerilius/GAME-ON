@@ -82,6 +82,21 @@ def create_game_json(json_dict):
     if 'release_dates' in json_dict:
         release_date = json_dict['release_dates'][0]['human']
         game_info['release_date'] = release_date
+
+
+     # Add release date of game to dictionary
+    if game_info['release_date']:
+        if len(game_info['release_date']) == 3:
+            game_info['release_date'] = None
+        elif len(game_info['release_date']) <= 7:
+            game_info['release_date'] = datetime.strptime(game_info['release_date'][0:4], '%Y')
+        elif len(game_info['release_date']) >=10: 
+            game_info['release_date'] = datetime.strptime(game_info['release_date'], '%Y-%b-%d')
+        elif len(game_info['release_date']) == 8:
+            game_info['release_date'] = datetime.strptime(game_info['release_date'], '%Y-%b')
+        else: 
+            game_info['release_date'] = None
+
             
     
     # # Add rating to dictionary
@@ -139,7 +154,12 @@ def create_game_json(json_dict):
 
     print(game_info)
 
+
     return game_info
+
+
+# def get_default_gameinfo(none_date):
+
 
 
 def load_games(api_data):
@@ -150,15 +170,7 @@ def load_games(api_data):
     for game_data in api_data:
         game_info = create_game_json(game_data) 
 
-         # Add release date of game to dictionary
-        if game_info['release_date']:
-            if len(game_info['release_date']) == 3:
-                release_date=None
-            elif len(game_info['release_date']) <= 5:
-                release_date = datetime.strptime(game_info['release_date'], '%Y')
-            elif len(game_info['release_date']) >=10: 
-                release_date = datetime.strptime(game_info['release_date'], '%Y-%b-%d')
-
+    
 
 
 
@@ -173,7 +185,7 @@ def load_games(api_data):
             artwork_urls=game_info['artworks'], 
             popularity=game_info['popularity'],
             screenshot_urls=game_info['screenshots'],
-            release_date=release_date,
+            release_date=game_info['release_date'],
             summary=game_info['summary']) 
 
         if game_info['game_modes']:

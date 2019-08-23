@@ -2,6 +2,8 @@
 
 from jinja2 import StrictUndefined
 import os
+from datetime import date
+
 from flask import Flask, render_template, redirect, request, flash, session
 from flask_debugtoolbar import DebugToolbarExtension
 
@@ -59,6 +61,21 @@ def show_registration_form():
 @app.route('/register', methods=["POST"])
 def registration_process():
     """Stores user's registration data in db and returns to homepage"""
+    # Grab data from registration form
+    username = request.form.get('username')
+    email = request.form.get('email')
+    password = request.form.get('pwd')
+
+    if User.query.filter(User.email == email).first():
+        # If email exists in db
+        flash("Email already exists")
+        return redirect('/register')
+
+    # Add and commits user's email and password into the DB
+    current_date = date.today()
+    register_date = current_date.strftime("%Y-%b-%d")
+    db.session.add(User(username=username.lower(), email=email.lower(), password=password, register_date=register_date))
+    db.session.commit()
     return redirect('/')
 
 

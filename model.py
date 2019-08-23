@@ -150,7 +150,8 @@ class Review(db.Model):
     review_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     game_id = db.Column(db.Integer, db.ForeignKey('games.game_id'), nullable=False)
     review = db.Column(db.String(500))
-    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
+    review_date =  db.Column(db.Date, nullable=False)
 
     # Define relationship to User
     user = db.relationship('User', backref=db.backref('reviews',
@@ -175,7 +176,7 @@ class User(db.Model):
     username = db.Column(db.String, nullable=False, unique=True)
     password = db.Column(db.String, nullable=False)
     email = db.Column(db.String, nullable=False, unique=True)
-    register_date = db.Column(db.DateTime, nullable=False)
+    register_date = db.Column(db.Date, nullable=False)
 
     def __repr__(self):
         """Provies helpful representation when printed"""
