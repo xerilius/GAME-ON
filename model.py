@@ -172,9 +172,9 @@ class User(db.Model):
     __tablename__ = "users"
 
     user_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    username = db.Column(db.String, nullable=False)
+    username = db.Column(db.String, nullable=False, unique=True)
     password = db.Column(db.String, nullable=False)
-    email = db.Column(db.String, nullable=False)
+    email = db.Column(db.String, nullable=False, unique=True)
     register_date = db.Column(db.DateTime, nullable=False)
 
     def __repr__(self):
