@@ -21,16 +21,17 @@ def index():
     """Homepage"""
     return render_template("homepage.html")
 
-############################## Login routes
+############################## LOGIN
 @app.route('/login', methods=["GET"])
-def display_login():
+def show_login():
     """Displays login form"""
     return render_template("login_form.html")
 
 
-# @app.route('/login', methods=["POST"])
-# def login_process():
+@app.route('/login', methods=["POST"])
+def login_process():
 #     """Redirects user to homepage after login message"""
+    pass
 #     username = request.form.get("email")
 #     password = request.form.get("password") 
 
@@ -48,10 +49,29 @@ def display_login():
 #         flash("Username/Password is invalid")
 #         return redirect("/")
 
-@app.route('/register', methods=["POST"])
-def show_register_form():
+######################### REGISTRATION
+@app.route('/register', methods=["GET"])
+def show_registration_form():
     """Displays registration form"""
     return render_template("registration_form.html")
+
+
+@app.route('/register', methods=["POST"])
+def registration_process():
+    """Stores user's registration data in db and returns to homepage"""
+    return redirect('/')
+
+
+@app.route('/terms-of-service', methods=["GET"])
+def show_terms_of_service():
+    """Displays terms of service"""
+    return render_template("terms_of_service.html")
+
+######################################## GAMES 
+@app.route('/games', methods=["GET"])
+def show_games_list():
+    """Displays games list"""
+    return render_template("games_list.html")
 
 
 if __name__ == "__main__":

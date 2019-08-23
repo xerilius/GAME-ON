@@ -43,7 +43,7 @@ body {
     font-family: 'Lexend Peta', sans-serif
     font-size: 1em;
     line-height: 1;
-    text-align: center;
+    text-align: left;
 
 }
 
@@ -52,10 +52,18 @@ body {
 
 }
 
+
 h3 {
     font-family: 'Press Start 2P', cursive;
 }
 
+h4 {
+    text-align: left;
+}
+h6 {
+    text-align:left;
+}
 
-
-
+p {
+    text-align: left;
+}

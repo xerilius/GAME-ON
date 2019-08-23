@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>GAME-ON</h3>
+<p>Create your account to rate and review games.</p>
+
+<form class="form-horizontal" action="/register" method="POST">
+  
+
+  <div class="form-group" id="form-group">
+    <label class="control-label col-sm-2" for="fname"></label>
+    <div class="col-sm-2">
+      <input type="text" class="form-control" id="fname" placeholder="First Name" required>
+    </div>
+  </div>
+
+  <div class="form-group" id="form-group">
+    <label class="control-label col-sm-2" for="lname"></label>
+    <div class="col-sm-2">
+      <input type="text" class="form-control" id="lname" placeholder="Last Name" required>
+    </div>
+  </div>
+
+
+  <div class="form-group" id="form-group">
+    <label class="control-label col-sm-2" for="username"></label>
+    <div class="col-sm-2">
+      <input type="text" class="form-control" id="username" placeholder="Username" required>
+    </div>
+  </div>
+
+
+<div class="form-group" id="form-group">
+    <label class="control-label col-sm-2" for="email"></label>
+    <div class="col-sm-2">
+      <input type="email" class="form-control" id="email" placeholder="Email" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd"></label>
+    <div class="col-sm-2"> 
+      <input type="password" class="form-control" id="pwd" placeholder="Password" required>
+    </div>
+  </div>
+  
+  <div class="form-group"> 
+    <div class="col-sm-2">
+      <button type="submit" class="btn btn-default">Sign Up</button>
+    </div>
+  </div>
+</form>
+<p> By signing up, you agree to our  <a id=hyperlinks href="/terms-of-service">Terms of Service and Privacy Policy.</a> </p>
+{% endblock %}
