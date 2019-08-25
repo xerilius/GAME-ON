@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 
+
 <h3>LOGIN</h3>
 
+
+<!-- HTML Form -->
 <!-- <form action='/login' method="POST">
     Username: <input type="text" name="username" required><br>
     Password: <input type="password" name="password" required><br>
@@ -10,6 +13,7 @@
 </form> -->
 
 
+<!-- Bootstrap Form -->
 <form class="form-horizontal" action="/login" method="POST">
   <div class="form-group" id="form-group">
     <label class="control-label col-sm-2" for="username"></label>
@@ -32,6 +36,8 @@
   </div>
   <p>Not registered? <a id=hyperlinks href="/register">Create an account.</a></p>
 </form>
+
+
 
 
 
