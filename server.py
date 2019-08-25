@@ -21,25 +21,27 @@ app.jinja_env.undefined = StrictUndefined
 @app.route('/')
 def index():
     """Homepage"""
-    return render_template("homepage.html")
+    games = Game.query.order_by('game_id').limit(10).all()
+
+    return render_template("homepage.html", games=games)
 
 ############################## LOGIN
-@app.route('/login', methods=["GET"])
-def show_login():
-    """Displays login form"""
-    return render_template("login_form.html")
+# @app.route('/login', methods=["GET"])
+# def show_login():
+#     """Displays login form"""
+#     return render_template("login_form.html")
 
 
 @app.route('/login', methods=["POST"])
 def login_process():
 #     """Redirects user to homepage after login message"""
     
-    username = request.form.get("email")
+    username = request.form.get("username")
     password = request.form.get("password") 
 
     # query for username in database( returns Truthly/False (none))
-    # username = db.session.query(User).filter(User.username=username,
-                                        # User.password=password).first().username
+    username = db.session.query(User).filter(User.username=username,
+                                        User.password=password).first().username
 
     # check if username matches password
     if username:
@@ -84,6 +86,10 @@ def registration_process():
 def show_terms_of_service():
     """Displays terms of service"""
     return render_template("terms_of_service.html")
+
+@app.route('/about-me')
+def show_about_me_page():
+    pass
 
 ######################################## GAMES 
 
