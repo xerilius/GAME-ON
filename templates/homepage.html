@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 
-{% block title %}GAMEON Homepage{% endblock %}
+{% block title %}GAME-ON Homepage{% endblock %}
 {% block content %}
 
+<!-- Carousel -->
 <div id="carousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -61,7 +62,7 @@
     </div>
   </div>
 
-  <!-- Left & Right controls -->
+  <!-- Left & right controls for carousel -->
   <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
@@ -71,9 +72,19 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-    
-    <h1>Need to resize carousel images! Images are huge pls help</h1>
-    <h2>Popular games</h2>
+
+
+  <h2>Top 10 Games</h2><br>
+    <ol>
+      {% for game in games %}
+      <li>
+        <a href="/games/{{ game.game_id }}">
+          {{ game.title }}
+        </a>
+      </li>
+      {% endfor %}
+    </ol>
+
 
 
 {% endblock %}
