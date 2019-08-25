@@ -2,8 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
+/* nav bar */
 .navbar-brand {
-    color: yellow;
+    color: #ffc107;
     font-family: 'Permanent Marker', cursive;
     font-size: 2.5em; 
     line-height: auto;
@@ -11,6 +12,7 @@
 
 #navbar {
     background-color: #1A1A1A;
+
     height: 4em;
     font-family: 'Lexend Peta', sans-serif;
 }
@@ -19,55 +21,66 @@
     display: inline;
 }
 
-
 #hyperlinks {
     color: gray;
     font-size: 1em;
 }
 
-.carousel-item {
-    width: auto; 
-   
+/* carousel */
+.carousel-inner {
+  width: auto;
+  height:90vh;
   position: relative;
   overflow: hidden;
-  padding: 0 0 0 0;
+}
 
-  height:90vh;
-
+.carousel-control-next-icon, .carousel-control-prev-icon { 
+  height: 30px;
+  width: 50px;
 }
 
 a {
     color:white;
     font-size: 0.9em;
 }
-
+p {
+      margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
 body {
-    background-color: black;
+    background: black;
     color: white;
     font-family: 'Lexend Peta', sans-serif
     font-size: 1em;
     line-height: 1;
     text-align: left;
-
 }
 
-#form-group {
-    margin:auto;
-
+.modal-title {
+  color: #ffc107;
+  font-family:'Permanent Marker', cursive;
+  font-size: 3em;
+  margin: 7px 61.5px;
+}
+.modal-content{
+  background-color: #1A1A1A;
+      padding: 2rem;
+          margin: auto;
 }
 
-
-h3 {
-    font-family: 'Press Start 2P', cursive;
+.modal-header .close {
+  color: white;
+  opacity:1;
+  padding: 1rem;
+  margin: -2rem -2rem 4rem auto;
+}
+.modal-content a{
+  color: #ffc107;
 }
 
-h4 {
-    text-align: left;
-}
-h6 {
-    text-align:left;
+.modal-footer {
+   /* display: inline-flex;*/
+        margin-top: 2rem;
+        padding: 0rem;
 }
 
-p {
-    text-align: left;
-}

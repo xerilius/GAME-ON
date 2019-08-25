@@ -5,30 +5,76 @@
     <title>{% block title %}GAME-ON{% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/style.css">
+    <script src="http://code.jquery.com/jquery.js"></script>
+
 </head>
 
 
 <body>
+<!-- Navigation bar -->
 <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
         <a class="navbar-brand" href="/">GAME-ON</a>
-
-
     <div class="navbar-right">
-        <a id="nav-link"class="nav-link" href="/games">GAMES</a> 
-        <a id="nav-link"class="nav-link" href="/login">LOGIN</a>
-        
+        <a id="nav-link"class="nav-link" href="/games">GAMES</a>
+        <!--Login Modal button-->
+        <a id="nav-login-btn" class="nav-link" data-toggle="modal" data-target="#loginModal">LOGIN</a>   
+    </div>
+    
+    <!-- Login Modal Container-->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <!-- Login Modal Title-->
+            <h5 class="modal-title" id="loginModalLabel">GAME-ON</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+         
+          <!--Login Modal Body-->
+          <div class="modal-body text-center">
+            <!-- Login Form-->
+            <form class="form-horizontal" action="/login" method="POST">
+             <!--Username-->
+              <div class="form-group" id="form-group">
+                <label class="control-label col-sm-12" for="username"></label>
+                <div class="col-sm-12">
+                  <input type="text" class="form-control" id="username" placeholder="Username" required>
+                </div>
+              </div>
+              <!--Password-->
+              <div class="form-group">
+                <label class="control-label col-sm-12" for="pwd"></label>
+                <div class="col-sm-12"> 
+                  <input type="password" class="form-control" id="pwd" placeholder="Password" required><br>
+                </div>
+              </div>
+              <!--Submit Button-->
+              <div class="form-group"> 
+                <div class="col-sm-12">
+                  <button type="submit" class="btn btn-default">LOGIN</button>
+                </div>
+              </div>
+            <!--Login Modal Footer-->
+            <div class="modal-footer">
+            <p>Not registered? <a id=register-link href="/register">Create an account.</a></p>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
 </nav>
-    
-     <ul>
-        {% for message in get_flashed_messages() %}
-            <li class="flashed">{{ message }}</li>
-        {% endfor %}
-    </ul>
-    
-    {% block content %} put your content here {% endblock%}
-
-
+        <!-- Flash message -->
+         <ul>
+            {% for message in get_flashed_messages() %}
+                <li class="flashed">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        
+        {% block content %} put your content here {% endblock%}
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
