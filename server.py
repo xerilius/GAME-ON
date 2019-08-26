@@ -88,19 +88,29 @@ def registration_process():
     return redirect('/')
 
 ######################################## GAMES
-
 @app.route('/games')
 def show_games_list():
     """Show list of games"""
     games = Game.query.order_by('title').all()
-
     return render_template("games_list.html", games=games)
 
 @app.route('/games/<slug>')
 def show_game_details(slug):
     """Display details of each game"""
     game_object = db.session.query(Game).filter(Game.slug==slug).first()
-    return render_template('game_details.html', game_object=game_object)
+
+    # modify url to get original images instead of thumbnails
+    url_list = []
+    for url in game_object.screenshot_urls:
+        # obtain each component of url
+        replace_var = url.split('/')
+        # join result of modification via slicing and concatenation
+        newurl = ('/').join(replace_var[:-2] + ['t_original'] + replace_var[-1:])
+        # save modified url to list
+        url_list.append(newurl)
+
+    return render_template('game_details.html', game_object=game_object, url_list=url_list)
+
 
 ################################### USERS
 @app.route('/profile/<username>')

@@ -2,7 +2,41 @@
 {% block content %}
 
 <h3> {{ game_object.title }} </h3>
-Summary: <p>{{ game_object.summary }}</p>
+
+<h4> Screenshots   </h4>
+<!-- The grid: four columns-->
+{% for screenshot in url_list %}
+<div class="row">
+    <div class="column">
+        <img src="{{ screenshot }}" onclick="myFunction(this);">
+    </div>
+</div>
+{% endfor %}
+
+<h4> Artworks </h4>
+{{ game_object.artwork_urls}}<br><br>
+
+{% for artwork in game_object.artwork_urls %}
+<div class="row">
+    <div class="column">
+        <img src="{{ artwork }}" onclick="myFunction(this);">
+    </div>
+</div>
+{% endfor %}
+<!-- the expanding image container-->
+<div class="container">
+    <!--close image-->
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+    <!-- expanding image-->
+    <img id="expandedImg" style="width:100%">
+    <!-- image text -->
+    <div id="imgtext"></div>
+
+</div>
+
+<br>
+<p>Summary : {{ game_object.summary }}</p>
 <p>Release date: {{ game_object.release_date }}</p>
 <p>Popularity Score: {{ game_object.popularity }}</p>
 
