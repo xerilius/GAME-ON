@@ -1,2 +1,8 @@
 {% extends 'base.html' %}
-{% body content %} {% endblock %}
+{% block content %}
+
+<h3> {{ game_object.title }} </h3>
+Summary: <p>{{ game_object.summary }}</p>
+<p>Release date: {{ game_object.release_date }}</p>
+<p>Popularity Score: {{ game_object.release_date }}</p>
+{% endblock %}
