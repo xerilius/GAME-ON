@@ -96,15 +96,14 @@ def show_about_me_page():
 @app.route('/games')
 def show_games_list():
     """Show list of games"""
-    games=Game.query.order_by('title').all()
+    games = Game.query.order_by('title').all()
+    return render_template("games_list.html", games=games)
 
-    return render_template("game_list.html", games=games)
 
-
-@app.route('/games/<game_id>')
-def game_details(game_id):
-
-    game_object = db.session.query(Game).filter(Game.game_id==game_id).first()
+@app.route('/games/<slug>')
+def show_game_details(slug):
+    """Display details of each game"""
+    game_object = db.session.query(Game).filter(Game.slug==slug).first()
     return render_template('game_details.html', game_object=game_object)
 
 if __name__ == "__main__":
