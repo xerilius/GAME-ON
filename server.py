@@ -99,17 +99,26 @@ def show_game_details(slug):
     """Display details of each game"""
     game_object = db.session.query(Game).filter(Game.slug==slug).first()
 
-    # modify url to get original images instead of thumbnails
-    url_list = []
+    # stores screenshots AND artworks
+    ss_artworks = []
+    # modify url to get original images of screenshots instead of thumbnails
     for url in game_object.screenshot_urls:
         # obtain each component of url
         replace_var = url.split('/')
         # join result of modification via slicing and concatenation
         newurl = ('/').join(replace_var[:-2] + ['t_original'] + replace_var[-1:])
         # save modified url to list
-        url_list.append(newurl)
+        ss_artworks.append(newurl)
 
-    return render_template('game_details.html', game_object=game_object, url_list=url_list)
+
+    # modify url to get original images of artwork instead of thumbnails
+    for url in game_object.artwork_urls:
+        replace_ = url.split('/')
+        newurl = ('/').join(replace_[:-2] + ['t_original'] + replace_[-1:])
+        ss_artworks.append(newurl)
+
+    return render_template('game_details.html', game_object=game_object,
+                            ss_artworks=ss_artworks)
 
 
 ################################### USERS

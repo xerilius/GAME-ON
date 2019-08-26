@@ -3,26 +3,16 @@
 
 <h3> {{ game_object.title }} </h3>
 
-<h4> Screenshots   </h4>
+<h4> Screenshots and Artworks  </h4>
 <!-- The grid: four columns-->
-{% for screenshot in url_list %}
+{% for image in ss_artworks %}
 <div class="row">
     <div class="column">
-        <img src="{{ screenshot }}" onclick="myFunction(this);">
+        <img src="{{ image }}" onclick="myFunction(this);">
     </div>
 </div>
-{% endfor %}
+{% endfor %}<br><br>
 
-<h4> Artworks </h4>
-{{ game_object.artwork_urls}}<br><br>
-
-{% for artwork in game_object.artwork_urls %}
-<div class="row">
-    <div class="column">
-        <img src="{{ artwork }}" onclick="myFunction(this);">
-    </div>
-</div>
-{% endfor %}
 <!-- the expanding image container-->
 <div class="container">
     <!--close image-->
