@@ -29,7 +29,7 @@ def index():
 # @app.route('/login', methods=["GET"])
 # def show_login():
 #     """Displays login form"""
-#     return render_template("login_form.html")
+#     return render_template("homepage.html")
 
 
 @app.route('/login', methods=["POST"])
@@ -38,19 +38,19 @@ def login_process():
 
     username = request.form.get("username")
     password = request.form.get("password")
+    # Login form is case sensitive - automatically capitalize username
+    username=username.title()
 
     # query for username in database( returns Truthly/False (none))
-    username = User.query.filter(username=username, password=password).first()
+    user = User.query.filter_by(username=username, password=password).first()
+    if not user:
+        flash(username)
+        return redirect('/')
 
-    # check if username matches password
-    if username and password:
-        # log user in - add username from db to
-        flash("Successfully logged in")
-        session["User"] = username
-        return redirect(f'/users/{user_id}')
-    else:
-        flash("Username/password is invalid")
-        return redirect("/")
+    session['Username'] = user.username
+    flash("Welcome back, " + session['Username'] + "!")
+    return redirect('/')
+
 
 ######################### REGISTRATION
 @app.route('/register', methods=["GET"])
@@ -76,7 +76,7 @@ def registration_process():
     current_date = date.today()
     register_date = current_date.strftime("%Y-%b-%d")
     # Add and commits user's email and password into the DB
-    db.session.add(User(username=username.lower(), email=email.lower(), password=password, register_date=register_date))
+    db.session.add(User(username=username.title(), email=email.lower(), password=password, register_date=register_date))
     db.session.commit()
     return redirect('/')
 

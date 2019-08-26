@@ -40,14 +40,14 @@
               <div class="form-group" id="form-group">
                 <label class="control-label col-sm-12" for="username"></label>
                 <div class="col-sm-12">
-                  <input type="text" class="form-control" id="username" placeholder="Username" required>
+                  <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
                 </div>
               </div>
               <!--Password-->
               <div class="form-group">
                 <label class="control-label col-sm-12" for="pwd"></label>
                 <div class="col-sm-12">
-                  <input type="password" class="form-control" id="pwd" placeholder="Password" required><br>
+                  <input type="password" class="form-control" id="pwd" name="password" placeholder="Password" required><br>
                 </div>
               </div>
               <!--Submit Button-->
@@ -72,8 +72,8 @@
                 <li class="flashed">{{ message }}</li>
             {% endfor %}
         </ul>
-    {% block content %} put your content here {% endblock%}
-
+    {% block content %} {% endblock %}
+    {% block js %} {% endblock %}
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
