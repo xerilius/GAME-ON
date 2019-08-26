@@ -72,24 +72,13 @@ def registration_process():
         flash("Email already exists.")
         return redirect('/register')
 
-    # Add current date
+    # Add current date for user sign-up date
     current_date = date.today()
     register_date = current_date.strftime("%Y-%b-%d")
     # Add and commits user's email and password into the DB
     db.session.add(User(username=username.lower(), email=email.lower(), password=password, register_date=register_date))
     db.session.commit()
     return redirect('/')
-
-
-@app.route('/terms-of-service', methods=["GET"])
-def show_terms_of_service():
-    """Displays terms of service"""
-    return render_template("terms_of_service.html")
-
-@app.route('/about-me')
-def show_about_me_page():
-    #react cards
-    pass
 
 ######################################## GAMES
 
@@ -105,6 +94,18 @@ def show_game_details(slug):
     """Display details of each game"""
     game_object = db.session.query(Game).filter(Game.slug==slug).first()
     return render_template('game_details.html', game_object=game_object)
+
+
+
+@app.route('/terms-of-service', methods=["GET"])
+def show_terms_of_service():
+    """Displays terms of service"""
+    return render_template("terms_of_service.html")
+
+@app.route('/about-me')
+def show_about_me_page():
+    #react cards
+    pass
 
 
 if __name__ == "__main__":
