@@ -49,14 +49,15 @@
 .modal-title{
   color: #ffc107;
   font-family:'Permanent Marker', cursive;
-  font-size: 3em;
-  margin: 7px 61.5px;
+  font-size: 3rem;
+  margin: 14px 37.5px;
 }
 .modal-content {
     background-color: #1A1A1A;
-    padding: 2rem;
+    padding: 4rem;
     margin: auto;
     opacity: 0.95;
+    font-size: smaller;
 }
 
 .modal-content a{
@@ -67,7 +68,7 @@
   color: white;
   opacity:1;
   padding: 1rem;
-  margin: -2rem -2rem 4rem auto;
+  margin: -4rem -4rem 5rem auto;
 }
 
 .modal-footer{
