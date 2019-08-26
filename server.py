@@ -51,6 +51,13 @@ def login_process():
     flash("Welcome back, " + session['Username'] + "!")
     return redirect('/')
 
+@app.route('/logout')
+def logout():
+    """Logs out user"""
+    del session['Username']
+    flash("Signed out")
+    return redirect('/')
+
 
 ######################### REGISTRATION
 @app.route('/register', methods=["GET"])
@@ -95,7 +102,13 @@ def show_game_details(slug):
     game_object = db.session.query(Game).filter(Game.slug==slug).first()
     return render_template('game_details.html', game_object=game_object)
 
+################################### USERS
+@app.route('/profile/<username>')
+def user_profile(username):
+    """Shows user profile"""
 
+    user = User.query.get(username)
+    return render_template("user_profile.html", user=user)
 
 @app.route('/terms-of-service', methods=["GET"])
 def show_terms_of_service():
