@@ -10,7 +10,7 @@ from flask_debugtoolbar import DebugToolbarExtension
 from model import connect_to_db, db, Game, User, Review, Rating, GameMode, Mode
 
 app = Flask(__name__)
-  
+
 # set a 'SECRET_KEY' to enable the Flask session cookies
 # app.config['SECRET_KEY'] = '<replace with a secret key>'
 app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
@@ -35,17 +35,16 @@ def index():
 @app.route('/login', methods=["POST"])
 def login_process():
 #     """Redirects user to homepage after login message"""
-    
+
     username = request.form.get("username")
-    password = request.form.get("password") 
+    password = request.form.get("password")
 
     # query for username in database( returns Truthly/False (none))
-    username = db.session.query(User).filter(User.username=username,
-                                        User.password=password).first().username
+    username = User.query.filter(username=username, password=password).first()
 
     # check if username matches password
-    if username:
-        # log user in - add username from db to 
+    if username and password:
+        # log user in - add username from db to
         flash("Successfully logged in")
         session["User"] = username
         return redirect(f'/users/{user_id}')
@@ -73,7 +72,7 @@ def registration_process():
         flash("Email already exists.")
         return redirect('/register')
 
-    # Add current date 
+    # Add current date
     current_date = date.today()
     register_date = current_date.strftime("%Y-%b-%d")
     # Add and commits user's email and password into the DB
@@ -89,14 +88,15 @@ def show_terms_of_service():
 
 @app.route('/about-me')
 def show_about_me_page():
+    #react cards
     pass
 
-######################################## GAMES 
+######################################## GAMES
 
 @app.route('/games')
 def show_games_list():
     """Displays games list"""
-    
+
     games = Game.query.order_by('title').all()
 
     return render_template("games_list.html", games=games)

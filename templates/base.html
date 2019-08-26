@@ -6,20 +6,20 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/style.css">
     <script src="http://code.jquery.com/jquery.js"></script>
-
 </head>
 
-
 <body>
-<!-- Navigation bar -->
+<!-- Navigation bar -->s
 <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div id=nav-brand>
         <a class="navbar-brand" href="/">GAME-ON</a>
+    </div>
     <div class="navbar-right">
         <a id="nav-link"class="nav-link" href="/games">GAMES</a>
         <!--Login Modal button-->
-        <a id="nav-login-btn" class="nav-link" data-toggle="modal" data-target="#loginModal">LOGIN</a>   
+        <a id="nav-login-btn" class="nav-link" data-toggle="modal" data-target="#loginModal">LOGIN</a>
     </div>
-    
+
     <!-- Login Modal Container-->
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -32,7 +32,7 @@
             <span aria-hidden="true">&times;</span>
             </button>
           </div>
-         
+
           <!--Login Modal Body-->
           <div class="modal-body text-center">
             <!-- Login Form-->
@@ -47,25 +47,25 @@
               <!--Password-->
               <div class="form-group">
                 <label class="control-label col-sm-12" for="pwd"></label>
-                <div class="col-sm-12"> 
+                <div class="col-sm-12">
                   <input type="password" class="form-control" id="pwd" placeholder="Password" required><br>
                 </div>
               </div>
               <!--Submit Button-->
-              <div class="form-group"> 
+              <div class="form-group">
                 <div class="col-sm-12">
                   <button type="submit" class="btn btn-default">LOGIN</button>
                 </div>
               </div>
-            <!--Login Modal Footer-->
-            <div class="modal-footer">
-            <p>Not registered? <a id=register-link href="/register">Create an account.</a></p>
-            </div>
             </form>
+          </div>
+          <!--Login Modal Footer-->
+          <div class="modal-footer">
+          <p>Not registered? <a id=register-link href="/register">Create an account.</a></p>
           </div>
         </div>
       </div>
-    </div>
+  </dsiv>
 </nav>
         <!-- Flash message -->
          <ul>
@@ -73,8 +73,7 @@
                 <li class="flashed">{{ message }}</li>
             {% endfor %}
         </ul>
-        
-        {% block content %} put your content here {% endblock%}
+    {% block content %} put your content here {% endblock%}
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -82,4 +81,5 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
+<footer class="footer"> {% block footer %} © 2019 GameON-LINE | Rights Reserved {% endblock %}</footer>
 </html>

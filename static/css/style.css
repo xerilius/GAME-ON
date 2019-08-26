@@ -1,53 +1,108 @@
 @import url('https://fonts.googleapis.com/css?family=Didact+Gothic|Hind+Madurai|Lexend+Peta|Orbitron&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
 /* nav bar */
-.navbar-brand {
+.navbar-brand{
     color: #ffc107;
     font-family: 'Permanent Marker', cursive;
-    font-size: 2.5em; 
+    font-size: 2.5em;
     line-height: auto;
 }
-
-#navbar {
-    background-color: #1A1A1A;
-
-    height: 4em;
-    font-family: 'Lexend Peta', sans-serif;
+#nav-brand a:hover {
+    font-size:2.5em;
+    color: white;
 }
 
-.nav-link {
+#navbar{
+    background-color: #1A1A1A;
+    height: 4em;
+    font-family: 'Lexend Peta', sans-serif;
+
+}
+/* Change color of links on hover */
+#navbar a:hover{
+        color:  #ffc107;
+}
+.nav-link{
     display: inline;
 }
 
-#hyperlinks {
-    color: gray;
-    font-size: 1em;
-}
-
 /* carousel */
-.carousel-inner {
+#carousel{
+    height: 90vh;
+}
+.carousel-inner{
   width: auto;
   height:90vh;
   position: relative;
   overflow: hidden;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
 }
 
-.carousel-control-next-icon, .carousel-control-prev-icon { 
+.carousel-control-next-icon, .carousel-control-prev-icon {
   height: 30px;
   width: 50px;
 }
 
+/*login*/
+.modal-title{
+  color: #ffc107;
+  font-family:'Permanent Marker', cursive;
+  font-size: 3em;
+  margin: 7px 61.5px;
+}
+.modal-content {
+    background-color: #1A1A1A;
+    padding: 2rem;
+    margin: auto;
+    opacity: 0.95;
+}
+
+.modal-content a{
+  color: grey;
+}
+
+.modal-header .close{
+  color: white;
+  opacity:1;
+  padding: 1rem;
+  margin: -2rem -2rem 4rem auto;
+}
+
+.modal-footer{
+    padding: 0;
+}
+
+.modal-footer p{
+    margin-top: 2rem;
+    padding: 11px;
+}
+
+.registration{
+    text-align:center;
+    margin: 0 auto;
+    width:350px;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.registration h5{
+    margin-top: 1.3rem;
+    margin-bottom: 1rem;
+    font-family: 'Lexend Peta', sans-serif;
+    color: #ffc107;
+}
+
 a {
     color:white;
-    font-size: 0.9em;
 }
-p {
-      margin-top: 2rem;
-    margin-bottom: 0.5rem;
-}
-body {
+a:hover{
+    color:  #ffc107;
+    }
+
+p{margin-bottom: 0.5rem;}
+
+body{
     background: black;
     color: white;
     font-family: 'Lexend Peta', sans-serif
@@ -55,32 +110,29 @@ body {
     line-height: 1;
     text-align: left;
 }
-
-.modal-title {
-  color: #ffc107;
-  font-family:'Permanent Marker', cursive;
-  font-size: 3em;
-  margin: 7px 61.5px;
-}
-.modal-content{
-  background-color: #1A1A1A;
-      padding: 2rem;
-          margin: auto;
+/* buttons */
+.btn {
+  background-color: white;
+  border: none;
+  padding: 16px 32px;
+  text-align: center;
+  margin: 4px 2px;
+  transition: 0.3s;
 }
 
-.modal-header .close {
-  color: white;
-  opacity:1;
-  padding: 1rem;
-  margin: -2rem -2rem 4rem auto;
-}
-.modal-content a{
-  color: #ffc107;
+.btn:hover {
+    background-image: linear-gradient(to right, #fcd78b, #ffc107 49%, #0f87ff 100% );
 }
 
-.modal-footer {
-   /* display: inline-flex;*/
-        margin-top: 2rem;
-        padding: 0rem;
-}
+.footer {
+    text-align:center;
+    position:relative;
+    right:0;
+    left: 0;
+    bottom: 0;
+    padding-top: 5rem;;
+    padding-bottom: 2rem;
+    opacity: 0.4;
 
+
+}

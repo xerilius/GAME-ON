@@ -2,7 +2,6 @@
 
 {% block title %}GAME-ON Homepage{% endblock %}
 {% block content %}
-
 <!-- Carousel -->
 <div id="carousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -73,7 +72,7 @@
   </a>
 </div>
 
-
+<div class=games>
   <h2>Top 10 Games</h2><br>
     <ol>
       {% for game in games %}
@@ -84,7 +83,7 @@
       </li>
       {% endfor %}
     </ol>
-
+</div>
 
 
 {% endblock %}
