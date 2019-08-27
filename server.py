@@ -44,7 +44,7 @@ def login_process():
     # query for username in database( returns Truthly/False (none))
     user = User.query.filter_by(username=username, password=password).first()
     if not user:
-        flash(username)
+        flash("Invalid Username/Password")
         return redirect('/')
 
     session['Username'] = user.username
@@ -109,7 +109,6 @@ def show_game_details(slug):
         newurl = ('/').join(replace_var[:-2] + ['t_original'] + replace_var[-1:])
         # save modified url to list
         ss_artworks.append(newurl)
-
 
     # modify url to get original images of artwork instead of thumbnails
     for url in game_object.artwork_urls:
