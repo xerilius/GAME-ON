@@ -69,7 +69,9 @@
         <!-- Flash message -->
          <ul>
             {% for message in get_flashed_messages() %}
-                <li class="flashed">{{ message }}</li>
+                <div class="alert alert-light" role="alert">
+                    <b> {{ message }} </b>
+                </div>
             {% endfor %}
         </ul>
     {% block content %} {% endblock %}

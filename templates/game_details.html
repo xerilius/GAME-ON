@@ -3,31 +3,40 @@
 
 <h3> {{ game_object.title }} </h3>
 
-<h4> Screenshots and Artworks  </h4>
-<!-- The grid: four columns-->
-{% for image in ss_artworks %}
-<div class="row">
-    <div class="column">
-        <img src="{{ image }}" onclick="myFunction(this);">
-    </div>
-</div>
-{% endfor %}<br><br>
 
-<!-- the expanding image container-->
-<div class="container">
-    <!--close image-->
-    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+<h4> Screenshots and Artworks  </h4><br>
 
-    <!-- expanding image-->
-    <img id="expandedImg" style="width:100%">
-    <!-- image text -->
-    <div id="imgtext"></div>
+<script>
+	const ssArtworks = {{ ss_artworks | tojson }};
+	document.write(`<div id="carousel" class="carousel slide" data-ride="carousel">`);
+	document.write(`<div class="carousel-inner">`);
 
-</div>
+	document.write(`<div class="carousel-item active">`);
+	document.write(`<img class="carousel-slides w-100" src="${ssArtworks.slice(0,1)}">`);
+	document.write(`</div>`);
 
-<br>
+	for (const img_url of ssArtworks.slice(1)) {
+		document.write(`<div class="carousel-item">`);
+		document.write(`<img class="carousel-slides w-100" src="${img_url}">`);
+		document.write(`</div>`);
+		}
+	document.write(`</div>`)
+	document.write(`</div>`)
+</script>
+
+<!-- Left & right controls for carousel -->
+<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="sr-only">Next</span>
+</a>
+
 <p>Summary : {{ game_object.summary }}</p>
 <p>Release date: {{ game_object.release_date }}</p>
 <p>Popularity Score: {{ game_object.popularity }}</p>
 
+<
 {% endblock %}

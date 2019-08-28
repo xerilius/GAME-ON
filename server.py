@@ -70,21 +70,29 @@ def show_registration_form():
 def registration_process():
     """Stores user's registration data in db and returns to homepage"""
     # Grab data from registration form
-    username = request.form.get('username')
+    username = request.form.get('username').title()
     email = request.form.get('email')
     password = request.form.get('pwd')
 
+
+    # Check if username exists in db
+    if User.query.filter(User.username == username).first():
+        flash("Username already exists.")
+        return redirect('/register')
+
+    # Check if email exists in db
     if User.query.filter(User.email == email).first():
-        # If email exists in db
         flash("Email already exists.")
         return redirect('/register')
 
     # Add current date for user sign-up date
-    current_date = date.today()
-    register_date = current_date.strftime("%Y-%b-%d")
-    # Add and commits user's email and password into the DB
-    db.session.add(User(username=username.title(), email=email.lower(), password=password, register_date=register_date))
-    db.session.commit()
+    else:
+        current_date = date.today()
+        register_date = current_date.strftime("%Y-%b-%d")
+        # Add and commits user's email and password into the DB
+        db.session.add(User(username=username, email=email.lower(), password=password, register_date=register_date))
+        db.session.commit()
+
     return redirect('/')
 
 ######################################## GAMES
