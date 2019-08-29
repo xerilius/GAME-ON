@@ -1,42 +1,61 @@
 {% extends 'base.html' %}
+
 {% block content %}
-
-<h3> {{ game_object.title }} </h3>
-
-
-<h4> Screenshots and Artworks  </h4><br>
 
 <script>
 	const ssArtworks = {{ ss_artworks | tojson }};
-	document.write(`<div id="carousel" class="carousel slide" data-ride="carousel">`);
-	document.write(`<div class="carousel-inner">`);
 
+	document.write(`<div id="gcarousel" class="carousel slide" data-ride="carousel">`);
+
+	document.write(`<div class="carousel-inner">`);
+	document.write(`<div class="bg-image"></div>`);
 	document.write(`<div class="carousel-item active">`);
-	document.write(`<img class="carousel-slides w-100" src="${ssArtworks.slice(0,1)}">`);
+	document.write(`<img class="carousel-slides w-50" src="${ssArtworks.slice(0,1)}">`);
 	document.write(`</div>`);
 
 	for (const img_url of ssArtworks.slice(1)) {
 		document.write(`<div class="carousel-item">`);
-		document.write(`<img class="carousel-slides w-100" src="${img_url}">`);
+		document.write(`<img class="carousel-slides w-50" src="${img_url}">`);
 		document.write(`</div>`);
 		}
 	document.write(`</div>`)
 	document.write(`</div>`)
+	// Left & right controls for carousel
+	document.write(`
+	<a class="carousel-control-prev" href="#gcarousel" role="button" data-slide="prev">  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	  <span class="sr-only">Previous</span>
+	</a>
+	<a class="carousel-control-next" href="#gcarousel" role="button" data-slide="next">
+	  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	  <span class="sr-only">Next</span>
+	</a>`)
 </script>
 
-<!-- Left & right controls for carousel -->
-<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-  <span class="sr-only">Previous</span>
-</a>
-<a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  <span class="sr-only">Next</span>
-</a>
+<div class="container">
+  <div class="row">
+	<div class="column">
+	<p>{{ game_object.summary }}</p><br>
+	<p>Release Date: {{ game_object.release_date }}</p><br>
+    <p>Popularity Score : {{ game_object.popularity }}</p>
+	</div>
+  </div>
+</div>
 
-<p>Summary : {{ game_object.summary }}</p>
-<p>Release date: {{ game_object.release_date }}</p>
-<p>Popularity Score: {{ game_object.popularity }}</p>
+<!-- user must be signed in to write review-->
+{% if session.get("Username") %}
+<div class="container">
+<h5>REVIEWS</h5>
+  <div class="row">
+  	<div class="column">
+	  <form id="review" action="/games/{{game_object.slug}}" method="POST">
+	    <label for="review"></label>
+	   	<textarea id="ureview" name="ureview" placeholder="Write something..."></textarea><br>
+    	<button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endif %}
 
-<
+
 {% endblock %}

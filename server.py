@@ -45,17 +45,21 @@ def login_process():
     user = User.query.filter_by(username=username, password=password).first()
     if not user:
         flash("Invalid Username/Password")
+
         return redirect('/')
 
     session['Username'] = user.username
     flash("Welcome back, " + session['Username'] + "!")
+
     return redirect('/')
+
 
 @app.route('/logout')
 def logout():
     """Logs out user"""
     del session['Username']
     flash("Signed out")
+
     return redirect('/')
 
 
@@ -63,6 +67,7 @@ def logout():
 @app.route('/register', methods=["GET"])
 def show_registration_form():
     """Displays registration form"""
+
     return render_template("registration_form.html")
 
 
@@ -73,7 +78,6 @@ def registration_process():
     username = request.form.get('username').title()
     email = request.form.get('email')
     password = request.form.get('pwd')
-
 
     # Check if username exists in db
     if User.query.filter(User.username == username).first():
@@ -100,9 +104,11 @@ def registration_process():
 def show_games_list():
     """Show list of games"""
     games = Game.query.order_by('title').all()
+
     return render_template("games_list.html", games=games)
 
-@app.route('/games/<slug>')
+
+@app.route('/games/<slug>', methods=["GET", "POST"])
 def show_game_details(slug):
     """Display details of each game"""
     game_object = db.session.query(Game).filter(Game.slug==slug).first()
@@ -124,8 +130,33 @@ def show_game_details(slug):
         newurl = ('/').join(replace_[:-2] + ['t_original'] + replace_[-1:])
         ss_artworks.append(newurl)
 
+
+        # return reviews and ratings
     return render_template('game_details.html', game_object=game_object,
                             ss_artworks=ss_artworks)
+
+@app.route('/games/<slug>', methods=["POST"])
+def get_game_reviews(slug):
+    """Stores user game review into database to display on page"""
+    # Get review data
+    review = request.form.get('ureview')
+    # Get username
+
+    username = session['Username']
+    user = User.query.filter_by(username=username).first()
+    user_id = user.user_id
+    # Get game id
+    game_object = db.session.query(Game).filter(Game.slug==slug).first()
+    game_id = game_object.game_id
+
+    current_date = date.today()
+    review_date = current_date.strftime("%Y-%b-%d")
+
+    db.session.add(Review(game_id=game_id, review=review, user_id=user_id,review_date=review_date))
+    db.session.commit()
+
+    return redirect('/games/<slug>')
+
 
 
 ################################### USERS

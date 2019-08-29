@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Didact+Gothic|Hind+Madurai|Lexend+Peta|Orbitron&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 
-/* nav bar */
+/* NAVIGATION BAR */
 .navbar-brand{
     color: #ffc107;
     font-family: 'Permanent Marker', cursive;
@@ -29,21 +29,48 @@
 
 /* carousel */
 #carousel{
+	width: auto;
     height: 90vh;
+
+
 }
-.carousel-inner{
-  width: auto;
+#carousel .carousel-inner{
   height:90vh;
   position: relative;
   overflow: hidden;
   margin-top: -1rem;
   margin-bottom: 1rem;
+  text-align:center;
+  z-index: 100;
 }
 
-.carousel-control-next-icon, .carousel-control-prev-icon {
+#carousel .carousel-control-next-icon,  {
   height: 30px;
   width: 50px;
 }
+
+/*Game screenshots & artworks carousel*/
+#gcarousel .carousel-inner {
+  text-align: center;
+  width: auto;
+  height: 60vh;
+}
+
+/* #gcarousel .bg-image{
+background-image: url(
+    https://www.internetmatters.org/wp-content/uploads/2019/06/OnlineGaming-1200x630.png);
+/* Add the blur effect */
+  /* filter: blur(8px); */
+  /* -webkit-filter: blur(8px); */
+
+  /* Full height */
+  /* height: 100%; */
+  /* z-index:-1; */
+  /* Center and scale the image nicely */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; } */
+/* }  */
 
 /*login*/
 .modal-title{
@@ -94,6 +121,17 @@
     color: #ffc107;
 }
 
+/*Game Review Textbox*/
+textarea {
+  width: 900px;
+  height:255px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
 a {
     color:white;
 }
@@ -109,7 +147,6 @@ body{
     font-family: 'Lexend Peta', sans-serif
     font-size: 1em;
     line-height: 1;
-    text-align: left;
 }
 /* buttons */
 .btn {
