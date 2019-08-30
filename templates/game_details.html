@@ -57,5 +57,11 @@
 </div>
 {% endif %}
 
+{% for review in reviews %}
+<br><br>
+Review by user_id: {{ review.user_id }} on {{ review.review_date }}<br>
+{{ review.review }}<br>
+{% endfor %}
+
 
 {% endblock %}

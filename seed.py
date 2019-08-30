@@ -154,7 +154,6 @@ def create_game_json(json_dict):
 
     print(game_info)
 
-
     return game_info
 
 
@@ -169,10 +168,6 @@ def load_games(api_data):
     # store json values into temporary dictionary before transferring into DB
     for game_data in api_data:
         game_info = create_game_json(game_data) 
-
-    
-
-
 
         # if game_info['release_date']:
         #     release_date = datetime.strptime(game_info['release_date'], '%Y-%b-%d')
@@ -213,15 +208,3 @@ load_games(data1)
 load_games(data2)
 load_games(data3)
 load_games(data4)
-
-
-#####################################################################
-
-    # step1 : create  flask requests to API
-    # step2 : install all modules required (ex)pip3 install requests) 
-    #           via GitBash
-    # step3 : pip3 freeze > requirements.txt
-    # step4 : make model tables
-    # step5 : parse data and insert with sql alchemy
-
-     #git add -A instead of * 

@@ -67,6 +67,73 @@ class GameMode(db.Model):
         return "<GameMode game_id={} mode_id={}>".format(
                     self.game_id, self.game_mode)
 
+################################################################
+class Rating(db.Model):
+    """Rating of game by a user."""
+
+    __tablename__ = "ratings"
+
+    rating_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    game_id = db.Column(db.Integer, db.ForeignKey('games.game_id'), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
+    rating = db.Column(db.Integer, nullable=True)
+    
+    # Define relationship to User
+    user = db.relationship('User', backref=db.backref('ratings',
+                                                      order_by=rating_id))
+    # Define relationship to Game
+    game = db.relationship('Game', backref=db.backref('ratings',
+                                                      order_by=rating_id))
+
+    def __repr__(self):
+        """Provides helpful representation when printed"""
+
+        return "<Rating rating_id={} game_id={} star_rating={}>".format(
+                self.rating_id, self.game_id, self.star_rating)
+
+################################################################
+class Review(db.Model):
+    """User reviews"""
+
+    __tablename__ = "reviews"
+
+    review_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    game_id = db.Column(db.Integer, db.ForeignKey('games.game_id'), nullable=False)
+    review = db.Column(db.String, unique=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
+    review_date =  db.Column(db.Date, nullable=False)
+
+    # Define relationship to User
+    user = db.relationship('User', backref=db.backref('reviews',
+                                                      order_by=review_id))
+    # Define relationship to Game
+    game = db.relationship('Game', backref=db.backref('reviews',
+                                                      order_by=review_id))
+
+    def __repr__(self):
+        """Provides helpful representation when printed"""
+
+        return "<Review review_id={} game_id={} review={}>".format(
+                self.review_id, self.game_id, self.review)
+
+######################################################################
+class User(db.Model):
+    """User of Gaming website."""
+
+    __tablename__ = "users"
+
+    user_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    username = db.Column(db.String, nullable=False, unique=True)
+    password = db.Column(db.String, nullable=False)
+    email = db.Column(db.String, nullable=False, unique=True)
+    register_date = db.Column(db.Date, nullable=False)
+
+    def __repr__(self):
+        """Provies helpful representation when printed"""
+
+        return "<User user_id={} username={} password={} email={} register_date={}".format(
+            self.user_id, self.username, self.password, self.email, 
+                        self.register_date)
 ######################
 
 # class Genre(db.Model):
@@ -115,75 +182,6 @@ class GameMode(db.Model):
 #     def __repr__(self):
 #         return "<GameTheme game_id={} theme_id={}>".format(
 #                 self.game_id, self.theme_id)
-
-
-################################################################
-class Rating(db.Model):
-    """Rating of game by a user."""
-
-    __tablename__ = "ratings"
-
-    rating_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    game_id = db.Column(db.Integer, db.ForeignKey('games.game_id'), nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
-    rating = db.Column(db.Integer, nullable=True)
-    
-    # Define relationship to User
-    user = db.relationship('User', backref=db.backref('ratings',
-                                                      order_by=rating_id))
-    # Define relationship to Game
-    game = db.relationship('Game', backref=db.backref('ratings',
-                                                      order_by=rating_id))
-
-    def __repr__(self):
-        """Provides helpful representation when printed"""
-
-        return "<Rating rating_id={} game_id={} star_rating={}>".format(
-                self.rating_id, self.game_id, self.star_rating)
-
-################################################################
-class Review(db.Model):
-    """User reviews"""
-
-    __tablename__ = "reviews"
-
-    review_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    game_id = db.Column(db.Integer, db.ForeignKey('games.game_id'), nullable=False)
-    review = db.Column(db.String(500))
-    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
-    review_date =  db.Column(db.Date, nullable=False)
-
-    # Define relationship to User
-    user = db.relationship('User', backref=db.backref('reviews',
-                                                      order_by=review_id))
-    # Define relationship to Game
-    game = db.relationship('Game', backref=db.backref('reviews',
-                                                      order_by=review_id))
-
-    def __repr__(self):
-        """Provides helpful representation when printed"""
-
-        return "<Review review_id={} game_id={} review={}>".format(
-                self.review_id, self.game_id, self.review)
-
-######################################################################
-class User(db.Model):
-    """User of Gaming website."""
-
-    __tablename__ = "users"
-
-    user_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    username = db.Column(db.String, nullable=False, unique=True)
-    password = db.Column(db.String, nullable=False)
-    email = db.Column(db.String, nullable=False, unique=True)
-    register_date = db.Column(db.Date, nullable=False)
-
-    def __repr__(self):
-        """Provies helpful representation when printed"""
-
-        return "<User user_id={} username={} password={} email={} register_date={}".format(
-            self.user_id, self.username, self.password, self.email, 
-                        self.register_date)
 
 
 # class Newsfeed(db.Model):
