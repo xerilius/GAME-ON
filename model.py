@@ -16,7 +16,7 @@ class Game(db.Model):
     game_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     igdb_id = db.Column(db.Integer, unique=True)
     title = db.Column(db.String, nullable=False, unique=True)
-    slug = db.Column(db.String, nullable=False, unique=True) 
+    slug = db.Column(db.String, nullable=False, unique=True)
 
     summary = db.Column(db.String, nullable=True)
     release_date = db.Column(db.Date, nullable=True)
@@ -34,7 +34,7 @@ class Game(db.Model):
     game_modes = db.relationship("Mode", secondary="game_modes", backref="games")
     # genres = db.relationship("Genre", secondary="game_genres", backref="games")
     # themes = db.relationship("Theme", secondary="game_themes", backref="games")
-  
+
 
     def __repr__(self):
         """Provide helpful representation when printed"""
@@ -77,7 +77,7 @@ class Rating(db.Model):
     game_id = db.Column(db.Integer, db.ForeignKey('games.game_id'), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
     rating = db.Column(db.Integer, nullable=True)
-    
+
     # Define relationship to User
     user = db.relationship('User', backref=db.backref('ratings',
                                                       order_by=rating_id))
@@ -132,7 +132,7 @@ class User(db.Model):
         """Provies helpful representation when printed"""
 
         return "<User user_id={} username={} password={} email={} register_date={}".format(
-            self.user_id, self.username, self.password, self.email, 
+            self.user_id, self.username, self.password, self.email,
                         self.register_date)
 ######################
 
@@ -177,7 +177,7 @@ class User(db.Model):
 
 #     __tablename__ = "game_themes"
 #     game_id = db.Column(db.Integer, db.ForeignKey('games.game_id'), primary_key=True)
-#     theme_id = db.Column(db.Integer, db.ForeignKey('themes.theme_id'), primary_key=True) 
+#     theme_id = db.Column(db.Integer, db.ForeignKey('themes.theme_id'), primary_key=True)
 
 #     def __repr__(self):
 #         return "<GameTheme game_id={} theme_id={}>".format(
@@ -187,7 +187,7 @@ class User(db.Model):
 # class Newsfeed(db.Model):
 #     """News feed of games """
 
-#     __tablename__ = "news"    
+#     __tablename__ = "news"
 
 #     news_id = db.Column(db.Integer, autoincrement=True, nullable=False)
 #     game_id = db.Column(db.Integer, db.ForeignKey('games.game_id'))
@@ -220,13 +220,14 @@ def connect_to_db(app):
     # Configure to use our PostgreSQL database
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///gameon'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    app.config['SQLALCHEMY_ECHO'] = True
     db.app = app
     db.init_app(app)
 
 
 if __name__ == '__main__':
     # For convenience. if we run this module interactively,
-    # it will leave you in a state of being able to work with 
+    # it will leave you in a state of being able to work with
     # the database directly.
 
     from server import app

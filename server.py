@@ -22,16 +22,9 @@ app.jinja_env.undefined = StrictUndefined
 def index():
     """Homepage"""
     games = Game.query.order_by('game_id').limit(10).all()
-
     return render_template("homepage.html", games=games)
 
 ############################## LOGIN
-# @app.route('/login', methods=["GET"])
-# def show_login():
-#     """Displays login form"""
-#     return render_template("homepage.html")
-
-
 @app.route('/login', methods=["POST"])
 def login_process():
 #     """Redirects user to homepage after login message"""
@@ -45,29 +38,23 @@ def login_process():
     user = User.query.filter_by(username=username, password=password).first()
     if not user:
         flash("Invalid Username/Password")
-
         return redirect('/')
 
     session['Username'] = user.username
     flash("Welcome back, " + session['Username'] + "!")
-
     return redirect('/')
-
 
 @app.route('/logout')
 def logout():
     """Logs out user"""
     del session['Username']
     flash("Signed out")
-
     return redirect('/')
-
 
 ######################### REGISTRATION
 @app.route('/register', methods=["GET"])
 def show_registration_form():
     """Displays registration form"""
-
     return render_template("registration_form.html")
 
 
@@ -104,9 +91,7 @@ def registration_process():
 def show_games_list():
     """Show list of games"""
     games = Game.query.order_by('title').all()
-
     return render_template("games_list.html", games=games)
-
 
 @app.route('/games/<slug>', methods=["GET", "POST"])
 def show_game_details(slug):
@@ -124,7 +109,7 @@ def show_game_details(slug):
         replace_var = url.split('/')
         # join result of modification via slicing and concatenation
         newurl = ('/').join(replace_var[:-2] + ['t_original'] + replace_var[-1:])
-        # save modified url to list
+                # save modified url to list
         ss_artworks.append(newurl)
 
     # modify url to get original images of artwork instead of thumbnails
@@ -163,11 +148,23 @@ def show_game_details(slug):
     return render_template('game_details.html', game_object=game_object,
                             ss_artworks=ss_artworks, reviews=reviews)
 
-@app.route('/games/edit-review')
-# render delete
+@app.route('/reviews/<review_id>/delete', methods=["POST"])
+def delete_review(review_id):
+        if not session['Username']:
+            # (message, status code)
+            return("Not logged in", 403)
+        username = session['Username']
+        user = User.query.filter_by(username=username).first()
+        user_id = user.user_id
+        print("user_id", user_id)
+        print(review_id)
 
+        # review_id is string atm so convert to int
+        db.session.delete(Review.query.get(int(review_id)))
 
+        db.session.commit()
 
+        return("", 204)
 
 
 ################################### USERS
@@ -178,7 +175,7 @@ def user_profile(username):
     user = User.query.get(username)
     return render_template("user_profile.html", user=user)
 
-@app.route('/terms-of-service', methods=["GET"])
+@app.route('/terms-of-service')
 def show_terms_of_service():
     """Displays terms of service"""
     return render_template("terms_of_service.html")
@@ -187,6 +184,7 @@ def show_terms_of_service():
 def show_about_me_page():
     #react cards
     pass
+
 
 
 if __name__ == "__main__":

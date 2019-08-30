@@ -41,6 +41,19 @@
   </div>
 </div>
 
+<div class="container">
+	{% for review in reviews %}
+
+	<div class="review-post">
+	<br><br>
+	Review by user_id: {{ review.user_id }} on {{ review.review_date }}<br>
+	{{ review.review }}<br>
+	<input type="button" class="delete-review" value="delete" data-review-id="{{ review.review_id }}"/>
+	</div>
+	{% endfor %}
+	<br><br>
+</div>
+
 <!-- user must be signed in to write review-->
 {% if session.get("Username") %}
 <div class="container">
@@ -51,17 +64,14 @@
 	    <label for="review"></label>
 	   	<textarea id="ureview" name="ureview" placeholder="Write something..."></textarea><br>
     	<button type="submit" class="btn">Submit</button>
+
       </form>
     </div>
   </div>
 </div>
 {% endif %}
 
-{% for review in reviews %}
-<br><br>
-Review by user_id: {{ review.user_id }} on {{ review.review_date }}<br>
-{{ review.review }}<br>
-{% endfor %}
+
 
 
 {% endblock %}
