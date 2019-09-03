@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Didact+Gothic|Hind+Madurai|Lexend+Peta|Orbitron&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Covered+By+Your+Grace|Homemade+Apple|Julius+Sans+One&display=swap');
+/*
+font-family: 'Bad Script', cursive;
+font-family: 'Julius Sans One', sans-serif;
+font-family: 'Homemade Apple', cursive;
+font-family: 'Covered By Your Grace', cursive;
+font-family: 'Rock Salt', cursive;
+font-family: 'Didact Gothic', sans-serif;
+*/
+
 
 /* NAVIGATION BAR */
 .navbar-brand{
@@ -23,6 +35,7 @@
 #navbar a:hover{
         color:  #ffc107;
 }
+
 .nav-link{
     display: inline;
 }
@@ -31,9 +44,8 @@
 #carousel{
 	width: auto;
     height: 90vh;
-
-
 }
+
 #carousel .carousel-inner{
   height:90vh;
   position: relative;
@@ -41,10 +53,10 @@
   margin-top: -1rem;
   margin-bottom: 1rem;
   text-align:center;
-  z-index: 100;
+
 }
 
-#carousel .carousel-control-next-icon,  {
+#carousel .carousel-control-next-icon .carousel-control-prev-icon{
   height: 30px;
   width: 50px;
 }
@@ -79,6 +91,7 @@ background-image: url(
   font-size: 3rem;
   margin: 14px 37.5px;
 }
+
 .modal-content {
     background-color: #1A1A1A;
     padding: 4rem;
@@ -135,12 +148,18 @@ textarea {
 a {
     color:white;
 }
+
 a:hover{
     color:  #ffc107;
     }
 
 p{margin-bottom: 0.5rem;}
 
+h1 {
+    font-family: 'Rock Salt', cursive;
+    text-align: center;
+    z-index: 1;
+}
 body{
     background: black;
     color: white;
