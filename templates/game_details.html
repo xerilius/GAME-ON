@@ -43,21 +43,20 @@
 
 <div class="container">
 	{% for review in reviews %}
-
 	<div class="review-post">
 	<br><br>
 	Review by {{ review.user_id }} on {{ review.review_date }}<br>
 	{{ review.review }}<br>
-
+	
 	<input type="button" class="delete-review" value="delete" data-review-id="{{ review.review_id }}"/>
-
+	
 	</div>
 
 	{% endfor %}
 	<br><br>
 </div>
 
-<!-- user must be signed in to write review-->
+<!-- user must be signed in to see review section-->
 {% if session.get("Username") %}
 <div class="container">
 <h5>REVIEWS</h5>

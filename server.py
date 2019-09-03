@@ -40,6 +40,7 @@ def login_process():
         flash("Invalid Username/Password")
         return redirect('/')
 
+
     session['Username'] = user.username
     flash("Welcome back, " + session['Username'] + "!")
     return redirect('/')
@@ -93,6 +94,7 @@ def show_games_list():
     games = Game.query.order_by('title').all()
     return render_template("games_list.html", games=games)
 
+
 @app.route('/games/<slug>', methods=["GET", "POST"])
 def show_game_details(slug):
     """Display details of each game"""
@@ -120,10 +122,7 @@ def show_game_details(slug):
 
     # get user's review
     review = request.form.get('ureview')
-    # Get username
-    username = session['Username']
-    user = User.query.filter_by(username=username).first()
-    user_id = user.user_id
+    
     # Get game id
     game_object = db.session.query(Game).filter(Game.slug==slug).first()
     game_id = game_object.game_id
@@ -134,6 +133,11 @@ def show_game_details(slug):
     # if button pressed to submit game review
     if request.method =='POST':
         print("User attempting to submit review")
+
+        username = session['Username']
+        user = User.query.filter_by(username=username).first()
+        user_id = user.user_id
+
         # check if user has already reviewed specified game
         check_review = db.session.query(Review).filter(Review.game_id==game_id,
                                         Review.user_id==user_id).first()
@@ -142,17 +146,21 @@ def show_game_details(slug):
             flash("You have already reviewed this game!")
         # if user has not reviewed game - add review to database:
         if check_review == None:
-            db.session.add(Review(game_id=game_id, review=review, user_id=user_id,review_date=review_date))
+            db.session.add(Review(game_id=game_id, review=review, user_id=user_id,
+                                    review_date=review_date))
             db.session.commit()
 
     return render_template('game_details.html', game_object=game_object,
                             ss_artworks=ss_artworks, reviews=reviews)
 
+
+####################### Removing Reviews
 @app.route('/reviews/<review_id>/delete', methods=["POST"])
 def delete_review(review_id):
         if not session['Username']:
             # (message, status code)
             return("Not logged in", 403)
+
         username = session['Username']
         user = User.query.filter_by(username=username).first()
         user_id = user.user_id
@@ -161,9 +169,9 @@ def delete_review(review_id):
 
         # review_id is string atm so convert to int
         db.session.delete(Review.query.get(int(review_id)))
-
         db.session.commit()
 
+        # returning status code
         return("", 204)
 
 
