@@ -11,7 +11,6 @@ function deleteReview(evt) {
     });
 
 }
-console.log("hellooooooooo")
 const deleteButtons = document.getElementsByClassName("delete-review");
 for (deleteButton of deleteButtons) {
     console.log(deleteButton)
