@@ -8,7 +8,7 @@ from model import connect_to_db, db, Game , Mode
 from server import app
 
 from api_data import get_game_data_w_offset0, get_game_data_w_offset50
-from api_data import get_game_data_w_offset100, get_game_data_w_offset150 
+from api_data import get_game_data_w_offset100, get_game_data_w_offset150
 import json
 
 # connect and create db
@@ -44,10 +44,11 @@ game_modes = {
 
 
 def create_game_json(json_dict):
+    """Temporary dictionary to organize json data before transferred into db"""
     game_info = {
         'artworks': [],
         'game_id': None,
-        'name': None, 
+        'name': None,
         'game_modes': [],
         # 'genres': [],
         'popularity': None,
@@ -58,12 +59,10 @@ def create_game_json(json_dict):
         'summary': None,
         # 'themes': [],
         # 'rating': None,
-        # 'rating_count': None,    
+        # 'rating_count': None,
     }
     
     # game = whole jsonfile
-    # print(game.keys()) >> ['id, aggregates, ..']
-
     igdb_id = json_dict['id']
     game_info['game_id'] = igdb_id
 
@@ -77,12 +76,10 @@ def create_game_json(json_dict):
     popularity = json_dict['popularity']
     game_info['popularity'] = popularity
 
-    
-    # Add release date of game to dictionary 
+    # Add release date of game to dictionary
     if 'release_dates' in json_dict:
         release_date = json_dict['release_dates'][0]['human']
         game_info['release_date'] = release_date
-
 
      # Add release date of game to dictionary
     if game_info['release_date']:
@@ -90,29 +87,21 @@ def create_game_json(json_dict):
             game_info['release_date'] = None
         elif len(game_info['release_date']) <= 7:
             game_info['release_date'] = datetime.strptime(game_info['release_date'][0:4], '%Y')
-        elif len(game_info['release_date']) >=10: 
+        elif len(game_info['release_date']) >=10:
             game_info['release_date'] = datetime.strptime(game_info['release_date'], '%Y-%b-%d')
         elif len(game_info['release_date']) == 8:
             game_info['release_date'] = datetime.strptime(game_info['release_date'], '%Y-%b')
-        else: 
+        else:
             game_info['release_date'] = None
-
-            
-    
-    # # Add rating to dictionary
-    # if 'rating' in json_dict:
-    #     rating = game_info['rating'] 
-    #     game_info['rating'] = rating
 
     # Add summary of game to dictionary
     if 'summary' in json_dict:
         summary = json_dict['summary']
         game_info['summary'] = summary
 
-
     # # Checks if genres exist for game and add it to game info dictionary
     # if 'genres' in json_dict:
-    #     # loop thru genre's list 
+    #     # loop thru genre's list
     #     for genre in json_dict['genres']:
     #         genre_name = genre['name']
     #         # store genre to temp dictionary
@@ -132,8 +121,7 @@ def create_game_json(json_dict):
             game_mode = mode['name']
             print("game_mode" , game_mode)
             game_info['game_modes'].append(game_mode)
- 
-    
+
     # Add list of artworks URL to dictionary list
     if 'artworks' in json_dict:
         for artwork in json_dict['artworks']:
@@ -153,35 +141,27 @@ def create_game_json(json_dict):
     #         game_info['similar_games'].append(sim_game_id)
 
     print(game_info)
-
     return game_info
 
 
-# def get_default_gameinfo(none_date):
-
-
-
 def load_games(api_data):
-    """Transferring data into database"""
+    """Transferring game data into database"""
     print("Games")
 
     # store json values into temporary dictionary before transferring into DB
     for game_data in api_data:
-        game_info = create_game_json(game_data) 
-
-        # if game_info['release_date']:
-        #     release_date = datetime.strptime(game_info['release_date'], '%Y-%b-%d')
+        game_info = create_game_json(game_data)
 
         # variables to add to game table
         game = Game(
             igdb_id=game_info['game_id'],
-            title=game_info['name'], 
+            title=game_info['name'],
             slug=game_info['slug'],
-            artwork_urls=game_info['artworks'], 
+            artwork_urls=game_info['artworks'],
             popularity=game_info['popularity'],
             screenshot_urls=game_info['screenshots'],
             release_date=game_info['release_date'],
-            summary=game_info['summary']) 
+            summary=game_info['summary'])
 
         if game_info['game_modes']:
             for mode_name in game_info['game_modes']:
@@ -193,16 +173,10 @@ def load_games(api_data):
         #     genre = game_genres[genre_name]
         #     game.game_genres.append(genre)
 
-
-
         db.session.add(game)
-
-        # db.session.add(rating)
         db.session.commit()
         print(f'Created {game}!')
-      
-    # Once done adding data to table, commit work to save progress
-    # db.session.commit()
+
 
 load_games(data1)
 load_games(data2)
