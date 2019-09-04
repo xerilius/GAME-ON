@@ -7,7 +7,9 @@ from datetime import date
 from flask import Flask, render_template, redirect, request, flash, session
 from flask_debugtoolbar import DebugToolbarExtension
 
+
 from model import connect_to_db, db, Game, User, Review, Rating, GameMode, Mode
+from api_data import search_game_by_name
 
 app = Flask(__name__)
 
@@ -88,6 +90,29 @@ def registration_process():
     return redirect('/')
 
 ######################################## GAMES
+@app.route('/search', methods=["POST"])
+def search_games():
+    """Search for games in database and stores new games in db"""
+    # get game title from search bar
+    game_search = request.form.get("searchbar").strip()
+    print(game_search)
+    # query in db to see if game title exists
+    search = "%{}%".format(game_search).title()
+    game_names = Game.query.filter(Game.title.ilike(search)).all()
+    print(game_names)
+    if game_names:
+        return render_template('results_page.html', games=game_names)
+
+    if not game_names:
+        return render_template ('results_page.html', games=game_names)
+
+    else:
+        # call api_data function to request data from API
+        game_request = search_game_by_name(game_search)
+        
+
+        return render_template('results_page.html', games=[])
+
 @app.route('/games')
 def show_games_list():
     """Show list of games"""
@@ -122,7 +147,7 @@ def show_game_details(slug):
 
     # get user's review
     review = request.form.get('ureview')
-    
+
     # Get game id
     game_object = db.session.query(Game).filter(Game.slug==slug).first()
     game_id = game_object.game_id
@@ -139,13 +164,13 @@ def show_game_details(slug):
         user_id = user.user_id
 
         # check if user has already reviewed specified game
-        check_review = db.session.query(Review).filter(Review.game_id==game_id,
+        check_review_exists = db.session.query(Review).filter(Review.game_id==game_id,
                                         Review.user_id==user_id).first()
-        print(check_review)
-        if check_review:
+        print(check_review_exists)
+        if check_review_exists:
             flash("You have already reviewed this game!")
         # if user has not reviewed game - add review to database:
-        if check_review == None:
+        if check_review_exists == None:
             db.session.add(Review(game_id=game_id, review=review, user_id=user_id,
                                     review_date=review_date))
             db.session.commit()
@@ -153,7 +178,16 @@ def show_game_details(slug):
     return render_template('game_details.html', game_object=game_object,
                             ss_artworks=ss_artworks, reviews=reviews)
 
-
+####################### Adding Reviews
+# @app.route('/reviews/<review_id>/add', methods=["POST"])
+# def add_review:(review_id):
+#     if not session['Username']:
+#         return("Not logged in", 403)
+####################### Edit Reviews
+# @app.route('/reviews/<review_id>/edit', methods=["POST"])
+# def edit_review(review_id):
+#     if not session['Username']:
+#         return("not logged in",403)
 ####################### Removing Reviews
 @app.route('/reviews/<review_id>/delete', methods=["POST"])
 def delete_review(review_id):
