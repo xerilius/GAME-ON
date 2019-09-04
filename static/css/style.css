@@ -11,7 +11,9 @@ font-family: 'Covered By Your Grace', cursive;
 font-family: 'Rock Salt', cursive;
 font-family: 'Didact Gothic', sans-serif;
 */
-
+.navbar-toggler-icon {
+    background-colro: white;
+}
 
 /* NAVIGATION BAR */
 .navbar-brand{
@@ -84,6 +86,11 @@ background-image: url(
   /* background-size: cover; } */
 /* }  */
 
+#searchBar {
+    position: fixed;
+    top: 30px !important;
+    left: auto;
+}
 /*login*/
 .modal-title{
   color: #ffc107;
@@ -119,6 +126,7 @@ background-image: url(
     margin-top: 2rem;
     padding: 11px;
 }
+
 
 .registration{
     text-align:center;
