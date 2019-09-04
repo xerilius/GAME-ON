@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}GAME-ON Homepage{% endblock %}
+{% block content %}
+{% for game in games %}
+    <a href="/games/{{game.slug}}" >
+    {{ game.title }}<br>
+    {{ game.release_date }}<br>
+    {{ game.popularity }}
+    </a>
+{% endfor %}
+
+{% if not games %}
+    no results !
+{% endif %}
+
+
+
+{% endblock %}
