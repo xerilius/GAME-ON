@@ -1,3 +1,10 @@
+
+const deleteButtons = document.getElementsByClassName("delete-review");
+for (deleteButton of deleteButtons) {
+    console.log(deleteButton)
+    deleteButton.addEventListener('click', deleteReview);
+}
+
 function deleteReview(evt) {
     console.log(evt.target)
     const deleteButton = evt.target;
@@ -9,10 +16,6 @@ function deleteReview(evt) {
         const removeReview = deleteButton.parentNode
         removeReview.remove();
     });
+}
 
-}
-const deleteButtons = document.getElementsByClassName("delete-review");
-for (deleteButton of deleteButtons) {
-    console.log(deleteButton)
-    deleteButton.addEventListener('click', deleteReview);
-}
+
