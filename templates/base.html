@@ -3,6 +3,7 @@
 <head>
     <title>{% block title %}GAME-ON{% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/static/css/style.css">
     <script src="http://code.jquery.com/jquery.js"></script>
 </head>
@@ -13,11 +14,38 @@
     <div id=nav-brand>
         <a class="navbar-brand" href="/">GAME-ON</a>
     </div>
+
     <div class="navbar-right">
+        <!-- search -->
+        <a id="search-bar" data-toggle="modal" href="#searchBar"><i class="fa fa-fw fa-search fa-lg"></i></a>
+
         <a id="nav-link"class="nav-link" href="/games">GAMES</a>
+
         <!--Login Modal button-->
-        <a id="nav-login-btn" class="nav-link" data-toggle="modal" data-target="#loginModal">LOGIN</a>
+        <a id="nav-login-btn" class="nav-link" data-toggle="modal" href="#loginModal">LOGIN</a>
+        <!-- Hamburger menu icon -->
+        <!-- <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button> -->
     </div>
+    <!-- Full Height Modal Right -->
+    <div class="modal fade" id="searchBar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true">
+      <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+              <form class="form-horizontal" action="/games/search-results" method="POST">
+                  <input type="text" class="search-form" id="searchbar" name="searchbar" placeholder="Search your game ...">
+              </form>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+      </div>
+    </div>
+    </div
+    <!-- Full Height Modal Right -->
 
     <!-- Login Modal Container-->
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
