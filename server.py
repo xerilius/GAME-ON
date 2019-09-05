@@ -4,12 +4,15 @@ from jinja2 import StrictUndefined
 import os
 from datetime import date
 
+import json
+
 from flask import Flask, render_template, redirect, request, flash, session
 from flask_debugtoolbar import DebugToolbarExtension
 
-
 from model import connect_to_db, db, Game, User, Review, Rating, GameMode, Mode
+from seed import create_game_json
 from api_data import search_game_by_name
+
 
 app = Flask(__name__)
 
@@ -35,7 +38,6 @@ def login_process():
     password = request.form.get("password")
     # Login form is case sensitive - automatically capitalize username
     username=username.title()
-
     # query for username in database( returns Truthly/False (none))
     user = User.query.filter_by(username=username, password=password).first()
     if not user:
@@ -90,29 +92,6 @@ def registration_process():
     return redirect('/')
 
 ######################################## GAMES
-@app.route('/search', methods=["POST"])
-def search_games():
-    """Search for games in database and stores new games in db"""
-    # get game title from search bar
-    game_search = request.form.get("searchbar").strip()
-    print(game_search)
-    # query in db to see if game title exists
-    search = "%{}%".format(game_search).title()
-    game_names = Game.query.filter(Game.title.ilike(search)).all()
-    print(game_names)
-    if game_names:
-        return render_template('results_page.html', games=game_names)
-
-    if not game_names:
-        return render_template ('results_page.html', games=game_names)
-
-    else:
-        # call api_data function to request data from API
-        game_request = search_game_by_name(game_search)
-        
-
-        return render_template('results_page.html', games=[])
-
 @app.route('/games')
 def show_games_list():
     """Show list of games"""
@@ -178,6 +157,53 @@ def show_game_details(slug):
     return render_template('game_details.html', game_object=game_object,
                             ss_artworks=ss_artworks, reviews=reviews)
 
+
+@app.route('/games/search-results', methods=["POST"])
+def search_games():
+    """Search for games in database and stores new games in db"""
+    # get game title from search bar
+    game_search = request.form.get("searchbar")
+    # query in db to see if game title exists
+    search = "%{}%".format(game_search).title()
+    game_names = Game.query.filter(Game.title.ilike(search)).all()
+    print(game_names)
+
+    if game_names:
+            return render_template('search_results.html', games=game_names)
+
+    else:
+        # call api_data function to request data from API
+        game_request = search_game_by_name(game_search)
+        for game_data in game_request:
+            game_info = create_game_json(game_data)
+            # variables to add to game table
+            game = Game(
+                igdb_id=game_info['game_id'],
+                title=game_info['name'],
+                slug=game_info['slug'],
+                artwork_urls=game_info['artworks'],
+                popularity=game_info['popularity'],
+                screenshot_urls=game_info['screenshots'],
+                release_date=game_info['release_date'],
+                summary=game_info['summary'])
+
+            if game_info['game_modes']:
+                for mode_name in game_info['game_modes']:
+                    mode = Mode.query.filter(Mode.game_mode==mode_name).first()
+                    if mode:
+                        game.game_modes.append(mode)
+
+            db.session.add(game)
+            db.session.commit()
+            print(f'Created {game}!')
+        return render_template('search_results.html', games=game_names)
+
+
+
+
+
+    # return render_template('search_results.html', games=[])
+
 ####################### Adding Reviews
 # @app.route('/reviews/<review_id>/add', methods=["POST"])
 # def add_review:(review_id):
@@ -217,16 +243,17 @@ def user_profile(username):
     user = User.query.get(username)
     return render_template("user_profile.html", user=user)
 
+
 @app.route('/terms-of-service')
 def show_terms_of_service():
     """Displays terms of service"""
     return render_template("terms_of_service.html")
 
+
 @app.route('/about-me')
 def show_about_me_page():
     #react cards
     pass
-
 
 
 if __name__ == "__main__":
