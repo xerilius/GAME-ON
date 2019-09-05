@@ -5,46 +5,15 @@ from pprint import pprint
 from datetime import datetime
 from sqlalchemy import func
 from model import connect_to_db, db, Game , Mode
-from server import app
 
 from api_data import get_game_data_w_offset0, get_game_data_w_offset50
 from api_data import get_game_data_w_offset100, get_game_data_w_offset150
+
 import json
-
-# connect and create db
-connect_to_db(app)
-db.create_all()
-
-# API request
-data1 = get_game_data_w_offset0()
-data2 = get_game_data_w_offset50()
-data3 = get_game_data_w_offset100()
-data4 = get_game_data_w_offset150()
-# pprint(data)
-
-# manually adding modes and adding it to Mode table under game_mode field
-single_player = Mode(game_mode='Single player')
-multi_player = Mode(game_mode='Multiplayer')
-co_op = Mode(game_mode='Co-op')
-mmo = Mode(game_mode='MMO')
-split_screen = Mode(game_mode='Split screen')
-
-# add all variables to db
-db.session.add_all([single_player, multi_player, co_op, mmo, split_screen])
-db.session.commit()
-
-# hard code game modes for game_mode field in modes table
-game_modes = {
-    'Single player': single_player,
-    'Multiplayer': multi_player,
-    'Co-operative': co_op,
-    'Massively Multiplayer Online (MMO)': mmo,
-    'Split screen': split_screen
-}
-
 
 def create_game_json(json_dict):
     """Temporary dictionary to organize json data before transferred into db"""
+
     game_info = {
         'artworks': [],
         'game_id': None,
@@ -61,7 +30,6 @@ def create_game_json(json_dict):
         # 'rating': None,
         # 'rating_count': None,
     }
-    
     # game = whole jsonfile
     igdb_id = json_dict['id']
     game_info['game_id'] = igdb_id
@@ -80,7 +48,6 @@ def create_game_json(json_dict):
     if 'release_dates' in json_dict:
         release_date = json_dict['release_dates'][0]['human']
         game_info['release_date'] = release_date
-
      # Add release date of game to dictionary
     if game_info['release_date']:
         if len(game_info['release_date']) == 3:
@@ -93,28 +60,12 @@ def create_game_json(json_dict):
             game_info['release_date'] = datetime.strptime(game_info['release_date'], '%Y-%b')
         else:
             game_info['release_date'] = None
-
     # Add summary of game to dictionary
     if 'summary' in json_dict:
         summary = json_dict['summary']
         game_info['summary'] = summary
 
-    # # Checks if genres exist for game and add it to game info dictionary
-    # if 'genres' in json_dict:
-    #     # loop thru genre's list
-    #     for genre in json_dict['genres']:
-    #         genre_name = genre['name']
-    #         # store genre to temp dictionary
-    #         game_info['genres'].append(genre_name)
-
-    # # Add themes values to game_info dictionary
-    # if 'themes' in json_dict:
-    #     for theme in json_dict['themes']:
-    #         theme_name = theme['name']
-    #         game_info['themes'].append(theme)
-
     # Add game mode to dictionary
-
     if 'game_modes' in json_dict:
         for mode in json_dict['game_modes']:
             print("mode", mode)
@@ -144,14 +95,13 @@ def create_game_json(json_dict):
     return game_info
 
 
-def load_games(api_data):
+def load_games(api_data, game_modes):
     """Transferring game data into database"""
     print("Games")
 
     # store json values into temporary dictionary before transferring into DB
     for game_data in api_data:
         game_info = create_game_json(game_data)
-
         # variables to add to game table
         game = Game(
             igdb_id=game_info['game_id'],
@@ -177,8 +127,37 @@ def load_games(api_data):
         db.session.commit()
         print(f'Created {game}!')
 
+if __name__ == '__main__':
+    # connect and create db
+    connect_to_db(app)
+    db.create_all()
 
-load_games(data1)
-load_games(data2)
-load_games(data3)
-load_games(data4)
+    # API request
+    data1 = get_game_data_w_offset0()
+    data2 = get_game_data_w_offset50()
+    data3 = get_game_data_w_offset100()
+    data4 = get_game_data_w_offset150()
+    # pprint(data)
+
+    # manually adding modes and adding it to Mode table under game_mode field
+    single_player = Mode(game_mode='Single player')
+    multi_player = Mode(game_mode='Multiplayer')
+    co_op = Mode(game_mode='Co-op')
+    mmo = Mode(game_mode='MMO')
+    split_screen = Mode(game_mode='Split screen')
+    # add all variables to db
+    db.session.add_all([single_player, multi_player, co_op, mmo, split_screen])
+    db.session.commit()
+    # hard code game modes for game_mode field in modes table
+    game_modes = {
+        'Single player': single_player,
+        'Multiplayer': multi_player,
+        'Co-operative': co_op,
+        'Massively Multiplayer Online (MMO)': mmo,
+        'Split screen': split_screen
+    }
+
+    load_games(data1)
+    load_games(data2)
+    load_games(data3)
+    load_games(data4)
