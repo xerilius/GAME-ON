@@ -88,7 +88,7 @@ class Rating(db.Model):
     def __repr__(self):
         """Provides helpful representation when printed"""
 
-        return "<Rating rating_id={} game_id={} star_rating={}>".format(
+        return "<Rating rating_id={} game_id={} rating={}>".format(
                 self.rating_id, self.game_id, self.rating)
 
 ################################################################
