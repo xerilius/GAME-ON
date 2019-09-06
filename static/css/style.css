@@ -11,6 +11,10 @@ font-family: 'Covered By Your Grace', cursive;
 font-family: 'Rock Salt', cursive;
 font-family: 'Didact Gothic', sans-serif;
 */
+.carousel-control-next, .carousel-control-prev {
+    top: 4em;
+}
+
 li {
     list-style-type: none;
 }
