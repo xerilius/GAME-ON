@@ -6,7 +6,7 @@
 
 <script>
 	const ssArtworks = {{ ss_artworks | tojson }};
-
+	document.write(`<div class="game-carousel">`);
 	document.write(`<div id="gcarousel" class="carousel slide" data-ride="carousel">`);
 
 	document.write(`<div class="carousel-inner">`);
@@ -31,6 +31,7 @@
 	  <span class="carousel-control-next-icon" aria-hidden="true"></span>
 	  <span class="sr-only">Next</span>
 	</a>`)
+	document.write(`</div>`)
 </script>
 
 <div class="container">
@@ -47,9 +48,10 @@
 	{% for review in reviews %}
 	<div class="review-post">
 	<br><br>
+
 	Review by {{ review.user_id }} on {{ review.review_date }}<br>
 	{{ review.review }}<br><br>
-	{% if session.get('Username') %}
+	{% if user_id == review.user_id %}
 	<!--Displaying delete button on the DOM-->
 	<input type="button" class="delete-review" value="delete" data-review-id="{{ review.review_id }}"/>
 	{% endif %}
@@ -59,32 +61,59 @@
 </div>
 
 <!-- user must be signed in to select stars-->
-//jinja if value=value  , then check star
-<div class="container"> 
+
+<div class="container">
 	<form id="rating" action="/games/{{game_object.slug}}" method="POST">
-		<div id="star-ratings-grp">
+		{{ user_rating }}
+	  <div id="star-ratings-grp">
+
+		<!-- 1 -->
 		<label class="star-rating" for="rating-1">
+			{% if user_rating != None and user_rating.rating == 1 %}
+			<input type="radio" id="rating-1" name="rating" value="1" checked>
+			{% else %}
 			<input type="radio" id="rating-1" name="rating" value="1">
+			{% endif %}
 			<i class="fa fa-gamepad fa-3x" aria-hidden="true"></i>
 		</label>
+		<!-- 2 -->
 		<label class="star-rating" for="rating-2">
-		<input type="radio" id="rating-2" name="rating" value="2">
+		  {% if user_rating != None and user_rating.rating == 2 %}
+		  <input type="radio" id="rating-2" name="rating" value="2" checked>
+		  {% else %}
+		  <input type="radio" id="rating-2" name="rating" value="2">
+		  {% endif %}
 		  <i class="fa fa-gamepad fa-3x" aria-hidden="true"></i>
-		 </label>
-		 <label class="star-rating" for="rating-3">
-		<input type="radio" id="rating-3" name="rating" value="3">
-		 <i class="fa fa-gamepad fa-3x" aria-hidden="true"></i>
+		</label>
+		<!-- 3 -->
+		<label class="star-rating" for="rating-3">
+		  {% if user_rating != None and user_rating.rating == 3 %}
+		  <input type="radio" id="rating-3" name="rating" value="3" checked>
+		  {% else %}
+		  <input type="radio" id="rating-3" name="rating" value="3">
+		  {% endif %}
+		  <i class="fa fa-gamepad fa-3x" aria-hidden="true"></i>
 	   </label>
- 	 	<label class="star-rating" for="rating-4">
+	   <!-- 4 -->
+ 	 <label class="star-rating" for="rating-4">
+		{% if user_rating != None and user_rating.rating == 4 %}
+		<input type="radio" id="rating-4" name="rating" value="4" checked>
+		{% else %}
 		<input type="radio" id="rating-4" name="rating" value="4">
-		 <i class="fa fa-gamepad fa-3x" aria-hidden="true"></i>
+		{% endif %}
+		<i class="fa fa-gamepad fa-3x" aria-hidden="true"></i>
 	  </label>
-		 <label class="star-rating" for="rating-5">
-		<input type="radio" id="rating-5" name="rating" value="5">
+	  <!-- 5 -->
+	  <label class="star-rating" for="rating-5">
+		  {% if user_rating != None and user_rating.rating == 5 %}
+		  <input type="radio" id="rating-5" name="rating" value="5" checked>
+		  {% else %}
+		  <input type="radio" id="rating-5" name="rating" value="5">
+		  {% endif %}
 		  <i class="fa fa-gamepad fa-3x" aria-hidden="true"></i>
 	  </label>
-		</div>
-		</form>
+	</div>
+  </form>
 </div>
 
 <!-- user must be signed in to see review section-->
