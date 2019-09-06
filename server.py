@@ -19,7 +19,7 @@ app = Flask(__name__)
 # set a 'SECRET_KEY' to enable the Flask session cookies
 # app.config['SECRET_KEY'] = '<replace with a secret key>'
 app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
-# This raises an error for silent error caused by undefined variable in Jinja2
+# This raises an error for a silent error caused by undefined variable in Jinja2
 app.jinja_env.undefined = StrictUndefined
 
 
@@ -101,23 +101,21 @@ def show_games_list():
 @app.route('/games/<slug>', methods=["GET", "POST"])
 def show_game_details(slug):
     """Display details of each game"""
+
     # All game info (game_id, slug, title, popularity) filtered by game's slug
     game_object = db.session.query(Game).filter(Game.slug==slug).first()
     # All game reviews for the game specified by game id in reviews table
     reviews = db.session.query(Review).filter(Review.game_id==game_object.game_id).all()
 
-    # stores screenshots AND artworks
+    # screenshots and artwork links for the image gallery
     ss_artworks = []
-    # modify url to get original images of screenshots instead of thumbnails
     for url in game_object.screenshot_urls:
         # obtain each component of url
         replace_var = url.split('/')
-        # join result of modification via slicing and concatenation
+        # join result of  URL modification via slicing and concatenation
         newurl = ('/').join(replace_var[:-2] + ['t_original'] + replace_var[-1:])
-                # save modified url to list
         ss_artworks.append(newurl)
 
-    # modify url to get original images of artwork instead of thumbnails
     for url in game_object.artwork_urls:
         replace_ = url.split('/')
         newurl = ('/').join(replace_[:-2] + ['t_original'] + replace_[-1:])
@@ -125,27 +123,29 @@ def show_game_details(slug):
 
     # get user's review
     review = request.form.get('ureview')
-    # Get game id
     game_object = db.session.query(Game).filter(Game.slug==slug).first()
     game_id = game_object.game_id
-    # store review date
+    # review date
     current_date = date.today()
     review_date = current_date.strftime("%Y-%b-%d")
 
-    username = session["Username"]
-    user_obj = db.session.query(User).filter(User.username==username).first()
-    user_id = user_obj.user_id
-    rating_obj = db.session.query(Rating).filter(Rating.user_id==user_id, Rating.game_id==game_id).first()
-    print("@@@@@@@@@", rating_obj)
 
+    # check for username in users
+    username = session['Username']
+    user = db.session.query(User).filter(User.username==username).first()
+    # get user id by username
+    user_id = user.user_id
+    # check for rating for that user id and game id
+    rating_obj = db.session.query(Rating).filter(Rating.user_id==user_id, Rating.game_id==game_id).first()
+    print('@@@@@@@@@@@@@@@@', rating_obj)
+    
+    username = session['Username']
+    user = User.query.filter_by(username=username).first()
+    user_id = user.user_id
 
     # if button pressed to submit game review
     if request.method =='POST':
         print("User attempting to submit review")
-
-        username = session['Username']
-        user = User.query.filter_by(username=username).first()
-        user_id = user.user_id
 
         # check if user has already reviewed specified game
         check_review_exists = db.session.query(Review).filter(Review.game_id==game_id,
@@ -160,15 +160,15 @@ def show_game_details(slug):
             db.session.commit()
 
     return render_template('game_details.html', game_object=game_object,
-                            ss_artworks=ss_artworks, reviews=reviews, user_rating=user_rating)
+                            ss_artworks=ss_artworks, reviews=reviews, user_rating=rating_obj, user_id=user_id)
+
 
 @app.route('/games/<slug>/rating', methods=["POST"])
 def user_rating(slug):
-    print(request.form)
-    print(request.form.get("rating"))
+    # print(request.form)
+    # print(request.form.get("rating"))
 
     user_choice = request.form.get('star')
-    print(user_choice)
 
     username = session["Username"]
     user = User.query.filter_by(username=username).first()
@@ -180,12 +180,17 @@ def user_rating(slug):
     # update rating if exists,
     check_rating_exists = db.session.query(Rating).filter(Rating.game_id==game_id,
                                     Rating.user_id==user_id).first()
-    # #else add rating
-    # if check_rating_exists:
-    #     print("exists")
-    # else:
-    #     db.session.add(Rating(game_id=game_id, rating=user_choice, user_id=user_id))
-    #     db.session.commit()
+
+    if check_rating_exists:
+        update_rating = db.session.query(Rating).filter(Rating.game_id==game_id,
+                                        Rating.user_id==user_id).update({"rating": user_choice })
+        db.session.commit()
+
+        print("user rating exists")
+    else:
+        db.session.add(Rating(game_id=game_id, rating=user_choice, user_id=int(user_id)))
+        db.session.commit()
+
 
     return("", 204)
 
@@ -208,6 +213,7 @@ def search_games():
     else:
         # call api_data function to request data from API
         game_request = search_game_by_name(game_search)
+
         for game_data in game_request:
             game_info = create_game_json(game_data)
             # variables to add to game table
@@ -226,12 +232,19 @@ def search_games():
                     mode = Mode.query.filter(Mode.game_mode==mode_name).first()
                     if mode:
                         game.game_modes.append(mode)
+            try:
+                db.session.add(game)
+                db.session.commit()
+                print(f'Created {game}!')
+            except:
+                print("Skipped duplicate entry")
+    # gets game id from db again (double checking)
+    search = "%{}%".format(game_search).title().strip()
+    game_names = Game.query.filter(Game.title.ilike(search)).all()
 
-            db.session.add(game)
-            db.session.commit()
-            print(f'Created {game}!')
-        return render_template('search_results.html', games=game_names)
+    return render_template('search_results.html', games=game_names)
     # return render_template('search_results.html', games=[])
+
 
 @app.route('/reviews/<review_id>/delete', methods=["POST"])
 def delete_review(review_id):
