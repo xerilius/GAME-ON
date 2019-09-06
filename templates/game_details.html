@@ -48,7 +48,7 @@
 	<div class="review-post">
 	<br><br>
 	Review by {{ review.user_id }} on {{ review.review_date }}<br>
-	{{ review.review }}<br>
+	{{ review.review }}<br><br>
 	{% if session.get('Username') %}
 	<!--Displaying delete button on the DOM-->
 	<input type="button" class="delete-review" value="delete" data-review-id="{{ review.review_id }}"/>
