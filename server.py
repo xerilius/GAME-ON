@@ -44,7 +44,6 @@ def login_process():
         flash("Invalid Username/Password")
         return redirect('/')
 
-
     session['Username'] = user.username
     flash("Welcome back, " + session['Username'] + "!")
     return redirect('/')
@@ -53,7 +52,7 @@ def login_process():
 def logout():
     """Logs out user"""
     del session['Username']
-    flash("Signed out")
+    flash("Goodbye!")
     return redirect('/')
 
 ######################### REGISTRATION
@@ -126,13 +125,19 @@ def show_game_details(slug):
 
     # get user's review
     review = request.form.get('ureview')
-
     # Get game id
     game_object = db.session.query(Game).filter(Game.slug==slug).first()
     game_id = game_object.game_id
     # store review date
     current_date = date.today()
     review_date = current_date.strftime("%Y-%b-%d")
+
+    username = session["Username"]
+    user_obj = db.session.query(User).filter(User.username==username).first()
+    user_id = user_obj.user_id
+    rating_obj = db.session.query(Rating).filter(Rating.user_id==user_id, Rating.game_id==game_id).first()
+    print("@@@@@@@@@", rating_obj)
+
 
     # if button pressed to submit game review
     if request.method =='POST':
@@ -155,7 +160,36 @@ def show_game_details(slug):
             db.session.commit()
 
     return render_template('game_details.html', game_object=game_object,
-                            ss_artworks=ss_artworks, reviews=reviews)
+                            ss_artworks=ss_artworks, reviews=reviews, user_rating=user_rating)
+
+@app.route('/games/<slug>/rating', methods=["POST"])
+def user_rating(slug):
+    print(request.form)
+    print(request.form.get("rating"))
+
+    user_choice = request.form.get('star')
+    print(user_choice)
+
+    username = session["Username"]
+    user = User.query.filter_by(username=username).first()
+    user_id = user.user_id
+
+    game_object = db.session.query(Game).filter(Game.slug==slug).first()
+    game_id = game_object.game_id
+    print(game_id)
+    # update rating if exists,
+    check_rating_exists = db.session.query(Rating).filter(Rating.game_id==game_id,
+                                    Rating.user_id==user_id).first()
+    # #else add rating
+    # if check_rating_exists:
+    #     print("exists")
+    # else:
+    #     db.session.add(Rating(game_id=game_id, rating=user_choice, user_id=user_id))
+    #     db.session.commit()
+
+    return("", 204)
+
+
 
 
 @app.route('/games/search-results', methods=["POST"])
@@ -164,7 +198,7 @@ def search_games():
     # get game title from search bar
     game_search = request.form.get("searchbar")
     # query in db to see if game title exists
-    search = "%{}%".format(game_search).title()
+    search = "%{}%".format(game_search).title().strip()
     game_names = Game.query.filter(Game.title.ilike(search)).all()
     print(game_names)
 
@@ -197,24 +231,8 @@ def search_games():
             db.session.commit()
             print(f'Created {game}!')
         return render_template('search_results.html', games=game_names)
-
-
-
-
-
     # return render_template('search_results.html', games=[])
 
-####################### Adding Reviews
-# @app.route('/reviews/<review_id>/add', methods=["POST"])
-# def add_review:(review_id):
-#     if not session['Username']:
-#         return("Not logged in", 403)
-####################### Edit Reviews
-# @app.route('/reviews/<review_id>/edit', methods=["POST"])
-# def edit_review(review_id):
-#     if not session['Username']:
-#         return("not logged in",403)
-####################### Removing Reviews
 @app.route('/reviews/<review_id>/delete', methods=["POST"])
 def delete_review(review_id):
         if not session['Username']:
