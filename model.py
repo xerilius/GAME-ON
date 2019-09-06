@@ -89,7 +89,7 @@ class Rating(db.Model):
         """Provides helpful representation when printed"""
 
         return "<Rating rating_id={} game_id={} star_rating={}>".format(
-                self.rating_id, self.game_id, self.star_rating)
+                self.rating_id, self.game_id, self.rating)
 
 ################################################################
 class Review(db.Model):
