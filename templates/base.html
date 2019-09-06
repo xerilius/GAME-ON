@@ -3,8 +3,8 @@
 <head>
     <title>{% block title %}GAME-ON{% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/v4-shims.css">
     <link rel="stylesheet" href="/static/css/style.css">
     <script src="http://code.jquery.com/jquery.js"></script>
 </head>
@@ -18,22 +18,22 @@
 
     <div class="nav justify-content-end">
         <!-- search -->
-
+        <div class="navbar-links"
         <span><a id="search-bar" class="nav-link" data-toggle="modal" href="#searchBar"><i class="fa fa-fw fa-search fa-lg" aria-hidden="true"></i> SEARCH</a></span>
-
         <span><a id="nav-link" class="nav-link" href="/games"><i class="fa fa-gamepad fa-2x" aria-hidden="true"></i> GAMES</a></span>
         <span>
         {% if session.get('Username') %}
         <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i> {{ session['Username'].upper() }}</a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-user-astronaut fa-lg"></i>{{ session['Username'].upper() }}</a>
         <ul class="dropdown-menu">
           <li><a class="nav-link" href="/logout"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> LOGOUT</a></li>
         </ul>
       </li>
         <!--Login Modal button-->
         {% else %}
-        <a id="nav-login-btn" class="nav-link" data-toggle="modal" href="#loginModal"><i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i> LOGIN</a>
+        <a id="nav-login-btn" class="nav-link" data-toggle="modal" href="#loginModal"><i class="fas fa-user-astronaut fa-lg"></i> LOGIN</a>
     </span>
+</div>
 
 
         {% endif %}
