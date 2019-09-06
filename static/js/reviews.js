@@ -10,12 +10,10 @@ function deleteReview(evt) {
     const deleteButton = evt.target;
     const reviewId = deleteButton.dataset.reviewId;
     console.log($, $.post)
-    
+
     $.post(`/reviews/${reviewId}/delete`, function()  {
         console.log("did this work");
         const removeReview = deleteButton.parentNode
         removeReview.remove();
     });
 }
-
-

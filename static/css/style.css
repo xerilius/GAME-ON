@@ -11,10 +11,17 @@ font-family: 'Covered By Your Grace', cursive;
 font-family: 'Rock Salt', cursive;
 font-family: 'Didact Gothic', sans-serif;
 */
-.navbar-toggler-icon {
-    background-colro: white;
+li {
+    list-style-type: none;
 }
 
+.navbar-toggler-icon {
+    background-color: white;
+}
+#searchBar.search-form {
+    text-align: center;
+
+}
 /* NAVIGATION BAR */
 .navbar-brand{
     color: #ffc107;
@@ -30,7 +37,7 @@ font-family: 'Didact Gothic', sans-serif;
 #navbar{
     background-color: #1A1A1A;
     height: 4em;
-    font-family: 'Lexend Peta', sans-serif;
+    font-family: 'Lexend Peta', sans-serif ;
 
 }
 /* Change color of links on hover */
@@ -40,8 +47,19 @@ font-family: 'Didact Gothic', sans-serif;
 
 .nav-link{
     display: inline;
+
 }
 
+.dropdown-menu {
+    background-color:#1A1A1A;
+     text-decoration: none;
+}
+a.dropdown-toggle {
+     text-decoration: none;
+}
+span {
+    text-align: center;
+}
 /* carousel */
 #carousel{
 	width: auto;
@@ -86,11 +104,6 @@ background-image: url(
   /* background-size: cover; } */
 /* }  */
 
-#searchBar {
-    position: fixed;
-    top: 30px !important;
-    left: auto;
-}
 /*login*/
 .modal-title{
   color: #ffc107;
@@ -155,6 +168,7 @@ textarea {
 
 a {
     color:white;
+
 }
 
 a:hover{

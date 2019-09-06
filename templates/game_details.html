@@ -54,9 +54,37 @@
 	<input type="button" class="delete-review" value="delete" data-review-id="{{ review.review_id }}"/>
 	{% endif %}
 	</div>
-
 	{% endfor %}
 	<br><br>
+</div>
+
+<!-- user must be signed in to select stars-->
+//jinja if value=value  , then check star
+<div class="container"> 
+	<form id="rating" action="/games/{{game_object.slug}}" method="POST">
+		<div id="star-ratings-grp">
+		<label class="star-rating" for="rating-1">
+			<input type="radio" id="rating-1" name="rating" value="1">
+			<i class="fa fa-gamepad fa-3x" aria-hidden="true"></i>
+		</label>
+		<label class="star-rating" for="rating-2">
+		<input type="radio" id="rating-2" name="rating" value="2">
+		  <i class="fa fa-gamepad fa-3x" aria-hidden="true"></i>
+		 </label>
+		 <label class="star-rating" for="rating-3">
+		<input type="radio" id="rating-3" name="rating" value="3">
+		 <i class="fa fa-gamepad fa-3x" aria-hidden="true"></i>
+	   </label>
+ 	 	<label class="star-rating" for="rating-4">
+		<input type="radio" id="rating-4" name="rating" value="4">
+		 <i class="fa fa-gamepad fa-3x" aria-hidden="true"></i>
+	  </label>
+		 <label class="star-rating" for="rating-5">
+		<input type="radio" id="rating-5" name="rating" value="5">
+		  <i class="fa fa-gamepad fa-3x" aria-hidden="true"></i>
+	  </label>
+		</div>
+		</form>
 </div>
 
 <!-- user must be signed in to see review section-->
@@ -69,14 +97,11 @@
 	    <label for="review"></label>
 	   	<textarea id="ureview" name="ureview" placeholder="Write something..."></textarea><br>
     	<button type="submit" class="btn">Submit</button>
-
       </form>
     </div>
   </div>
 </div>
 {% endif %}
-
-
-
-
+<script src="/static/js/reviews.js"></script>
+<script src="/static/js/ratings.js"></script>
 {% endblock %}
