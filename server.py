@@ -19,7 +19,7 @@ app = Flask(__name__)
 # set a 'SECRET_KEY' to enable the Flask session cookies
 # app.config['SECRET_KEY'] = '<replace with a secret key>'
 app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
-# This raises an error for a silent error caused by undefined variable in Jinja2
+# This raises an error for silent error caused by undefined variable in Jinja2
 app.jinja_env.undefined = StrictUndefined
 
 
@@ -106,7 +106,6 @@ def show_game_details(slug):
     game_object = db.session.query(Game).filter(Game.slug==slug).first()
     # All game reviews for the game specified by game id in reviews table
     reviews = db.session.query(Review).filter(Review.game_id==game_object.game_id).all()
-
     # screenshots and artwork links for the image gallery
     ss_artworks = []
     for url in game_object.screenshot_urls:
@@ -121,7 +120,7 @@ def show_game_details(slug):
         newurl = ('/').join(replace_[:-2] + ['t_original'] + replace_[-1:])
         ss_artworks.append(newurl)
 
-    # get user's review
+    # get user's review from form
     review = request.form.get('ureview')
     game_object = db.session.query(Game).filter(Game.slug==slug).first()
     game_id = game_object.game_id
@@ -129,28 +128,30 @@ def show_game_details(slug):
     current_date = date.today()
     review_date = current_date.strftime("%Y-%b-%d")
 
+    username = session.get("Username")
+    #if user logged in
+    if username:
+        user = db.session.query(User).filter(User.username==username).first()
+            # get user id by username
+        user_id = user.user_id
+        rating_obj = db.session.query(Rating).filter(Rating.user_id==user_id, Rating.game_id==game_id).first()
+    else:
+        user_id = None
+        rating_obj = []
 
-    # check for username in users
-    username = session['Username']
-    user = db.session.query(User).filter(User.username==username).first()
-    # get user id by username
-    user_id = user.user_id
-    # check for rating for that user id and game id
-    rating_obj = db.session.query(Rating).filter(Rating.user_id==user_id, Rating.game_id==game_id).first()
+
     print('@@@@@@@@@@@@@@@@', rating_obj)
-    
-    username = session['Username']
-    user = User.query.filter_by(username=username).first()
-    user_id = user.user_id
-
     # if button pressed to submit game review
     if request.method =='POST':
         print("User attempting to submit review")
 
+        username = session['Username']
+        user = User.query.filter_by(username=username).first()
+        user_id = user.user_id
         # check if user has already reviewed specified game
         check_review_exists = db.session.query(Review).filter(Review.game_id==game_id,
                                         Review.user_id==user_id).first()
-        print(check_review_exists)
+
         if check_review_exists:
             flash("You have already reviewed this game!")
         # if user has not reviewed game - add review to database:
@@ -169,27 +170,25 @@ def user_rating(slug):
     # print(request.form.get("rating"))
 
     user_choice = request.form.get('star')
-
     username = session["Username"]
     user = User.query.filter_by(username=username).first()
     user_id = user.user_id
-
     game_object = db.session.query(Game).filter(Game.slug==slug).first()
     game_id = game_object.game_id
     print(game_id)
-    # update rating if exists,
+
     check_rating_exists = db.session.query(Rating).filter(Rating.game_id==game_id,
                                     Rating.user_id==user_id).first()
-
+    # updating or storing game rating
     if check_rating_exists:
         update_rating = db.session.query(Rating).filter(Rating.game_id==game_id,
                                         Rating.user_id==user_id).update({"rating": user_choice })
         db.session.commit()
-
         print("user rating exists")
     else:
         db.session.add(Rating(game_id=game_id, rating=user_choice, user_id=int(user_id)))
         db.session.commit()
+        print("user added rating")
 
 
     return("", 204)
@@ -237,7 +236,7 @@ def search_games():
                 db.session.commit()
                 print(f'Created {game}!')
             except:
-                print("Skipped duplicate entry")
+                print("Skipped")
     # gets game id from db again (double checking)
     search = "%{}%".format(game_search).title().strip()
     game_names = Game.query.filter(Game.title.ilike(search)).all()
