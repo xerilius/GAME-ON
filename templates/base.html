@@ -13,29 +13,28 @@
 <!-- Navigation bar -->
 <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div id=nav-brand>
-        <a class="navbar-brand" href="/">GAME-ON</a>
+        <a class="navbar-brand" href="/">GAME-0N</a>
     </div>
 
     <div class="nav justify-content-end">
         <!-- search -->
-        <div class="navbar-links"
-        <span><a id="search-bar" class="nav-link" data-toggle="modal" href="#searchBar"><i class="fa fa-fw fa-search fa-lg" aria-hidden="true"></i> SEARCH</a></span>
-        <span><a id="nav-link" class="nav-link" href="/games"><i class="fa fa-gamepad fa-2x" aria-hidden="true"></i> GAMES</a></span>
-        <span>
+        <div class="navbar-links">
+        <span><a id="search-bar" class="nav-link" data-toggle="modal" href="#searchBar"><i class="fa fa-fw fa-search fa-2x" aria-hidden="true"></i> </a></span>
+        <span><a id="nav-link" class="nav-link" href="/games"><i class="fa fa-gamepad fa-2x" aria-hidden="true"></i> </a></span>
+
         {% if session.get('Username') %}
-        <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-user-astronaut fa-lg"></i>{{ session['Username'].upper() }}</a>
+        <span class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-user-astronaut fa-2x"></i>{{ session['Username'].upper() }}</a>
         <ul class="dropdown-menu">
           <li><a class="nav-link" href="/logout"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> LOGOUT</a></li>
         </ul>
-      </li>
+    </span>
         <!--Login Modal button-->
         {% else %}
-        <a id="nav-login-btn" class="nav-link" data-toggle="modal" href="#loginModal"><i class="fas fa-user-astronaut fa-lg"></i> LOGIN</a>
-    </span>
+        <a id="nav-login-btn" class="nav-link" data-toggle="modal" href="#loginModal"><i class="fas fa-user-astronaut fa-2x"></i> </a>
 </div>
-
-
+</div>
+</div>
         {% endif %}
 
         <!-- Hamburger menu icon -->
@@ -48,18 +47,14 @@
       aria-hidden="true">
       <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
       <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header text-center">
-              <form class="form-horizontal" action="/games/search-results" method="POST"><i class="fab fa-searchengin"></i>
-                <i class="fa fa-gamepad fa-3x" aria-hidden="true"></i>  <input type="text" class="search-form" id="searchbar" name="searchbar" placeholder="Search your game ...">
+        <div id="search-box" class="modal-content">
+              <form class="form-horizontal" action="/games/search-results" method="POST"><i class="fa fa-gamepad fa-3x" aria-hidden="true"></i>
+                  <input type="text" class="search-form" id="searchbar" name="searchbar" placeholder="Search your game ...">
               </form>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
           </div>
       </div>
     </div>
-</div>
+
 
     <!-- Login Modal Container-->
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -106,7 +101,8 @@
           </div>
         </div>
       </div>
-  </dsiv>
+  </div>
+
 </nav>
         <!-- Flash message -->
          <ul>
@@ -123,5 +119,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
-<footer class="footer"> {% block footer %} © 2019 GameON-LINE | Rights Reserved {% endblock %}</footer>
+<footer class="footer"> {% block footer %} © 2019 GAME-ON  | Rights Reserved {% endblock %}</footer>
 </html>
