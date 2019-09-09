@@ -11,7 +11,7 @@ font-family: 'Covered By Your Grace', cursive;
 font-family: 'Rock Salt', cursive;
 font-family: 'Didact Gothic', sans-serif;
 */
-.carousel-control-next, .carousel-control-prev {
+.carousel-control-next, .carousel-control-prev{
     top: 4em;
 }
 
@@ -22,9 +22,22 @@ li {
 .navbar-toggler-icon {
     background-color: white;
 }
-#searchBar.search-form {
-    text-align: center;
+input#searchbar.search-form {
+    color: #ffc107;
+    background-color: transparent;
+    border-color: transparent;
+    padding-bottom: 0.5rem;
+    outline-width: 0;
 
+}
+div#search-box.modal-content {
+    padding: 1rem;
+    border-bottom: white;
+}
+
+form.form-horizontal {
+    position: auto;
+    padding-bottom: 0.5;
 }
 /* NAVIGATION BAR */
 .navbar-brand{
@@ -38,22 +51,26 @@ li {
     color: white;
 }
 
-#navbar{
+.navbar{
     background-color: #1A1A1A;
     height: 4em;
     font-family: 'Lexend Peta', sans-serif ;
+    padding: .5rem 2rem 3.5rem;
 
 }
 /* Change color of links on hover */
-#navbar a:hover{
-        color:  #ffc107;
+.navbar a:hover{
+        color: #ffc107;
 }
 
 .nav-link{
     display: inline;
-
+    padding: .5rem 0.5rem;
 }
-
+div#navbar-links {
+    display: flex;
+    align-items: center;
+}
 .dropdown-menu {
     background-color:#1A1A1A;
      text-decoration: none;
@@ -61,9 +78,7 @@ li {
 a.dropdown-toggle {
      text-decoration: none;
 }
-span {
-    text-align: center;
-}
+
 /* carousel */
 #carousel{
 	width: auto;
@@ -172,7 +187,6 @@ textarea {
 
 a {
     color:white;
-
 }
 
 a:hover{
@@ -216,4 +230,28 @@ body{
     padding-top: 5rem;;
     padding-bottom: 2rem;
     opacity: 0.4;
+}
+/* remove radio button circles in rating form */
+[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/*Emoji rating spacing */
+.fas {
+padding: .5rem 0.5rem;
+}
+
+[type=button]{
+    background-color: white;
+    border-color: transparent;
+    color: black;
+    font-family: 'Covered By Your Grace', cursive;
+
+
+}
+
+[type=button]:hover{
+    background-color:#ffc107;
 }
