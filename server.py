@@ -48,6 +48,7 @@ def login_process():
     flash("Welcome back, " + session['Username'] + "!")
     return redirect('/')
 
+
 @app.route('/logout')
 def logout():
     """Logs out user"""
@@ -93,10 +94,15 @@ def registration_process():
 ######################################## GAMES
 @app.route('/games')
 def show_games_list():
-    """Show list of games"""
+    """Games list sorted alphabetically"""
     games = Game.query.order_by('title').all()
     return render_template("games_list.html", games=games)
 
+@app.route('/games/by-popularity')
+def show_games_by_popularity():
+    """Games list by popularity"""
+    games = Game.query.order_by(Game.popularity.desc()).all()
+    return render_template("games_list_by_popularity.html", games=games)
 
 @app.route('/games/<slug>', methods=["GET", "POST"])
 def show_game_details(slug):
@@ -140,10 +146,9 @@ def show_game_details(slug):
         rating_obj = []
 
 
-    print('@@@@@@@@@@@@@@@@', rating_obj)
     # if button pressed to submit game review
     if request.method =='POST':
-        print("User attempting to submit review")
+        print("User submit review")
 
         username = session['Username']
         user = User.query.filter_by(username=username).first()
@@ -190,10 +195,7 @@ def user_rating(slug):
         db.session.commit()
         print("user added rating")
 
-
     return("", 204)
-
-
 
 
 @app.route('/games/search-results', methods=["POST"])
