@@ -1,17 +1,35 @@
+//returns DOM nodes
+const labels = document.getElementsByClassName("star-rating");
 
-const starRatings = document.getElementById("star-ratings-grp");
-starRatings.addEventListener('click', rateGame);
+function resetLabelColors (labels) {
+    for (let label of labels) {
+        // label.children = list of label.star-ratings
+        console.log(label.children)
+        label.children[1].style.color = "white"
+        // console.log(label)
+    }
+}
 
-function rateGame(evt) {
-    // console.log(evt.target)
-    const starLabel = evt.target;
-    console.log(starLabel)
-    const ratingValue = document.querySelector('input[name=rating]:checked').value;
-    console.log(ratingValue)
+for (let label of labels) {
+    const emoji = label.children[1];
+    const inputRadio = label.children[0];
+    if (inputRadio.checked) {
+        emoji.style.color = "yellow";
+    }
 
-    const slug = window.location.pathname.split('/').pop()
-    const data = {'star': ratingValue}
-    $.post(`/games/${slug}/rating`, data, function()  {
-        console.log(".........")
+    emoji.addEventListener('click', function() {
+        const emojiValue = emoji.dataset.starValue;
+        const slug = window.location.pathname.split('/').pop()
+        const data = {'star': emojiValue}
+        console.log(slug, data);
+        $.post(`/games/${slug}/rating`, data, function()  {
+            console.log(".........")
+        });
+        resetLabelColors(labels);
+        emoji.style.color = "yellow";
+
+        // if document.querySelector('input[name=rating]:checked') {
+        //     emoji.style.color = "yellow";
+        // }
     });
 }
