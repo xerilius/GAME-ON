@@ -1,3 +1,4 @@
+
 {% extends 'base.html' %}
 
 {% block content %}
@@ -8,13 +9,11 @@
 	const ssArtworks = {{ ss_artworks | tojson }};
 	document.write(`<div class="game-carousel">`);
 	document.write(`<div id="gcarousel" class="carousel slide" data-ride="carousel">`);
-
 	document.write(`<div class="carousel-inner">`);
 	document.write(`<div class="bg-image"></div>`);
 	document.write(`<div class="carousel-item active">`);
 	document.write(`<img class="carousel-slides w-50" src="${ssArtworks.slice(0,1)}">`);
 	document.write(`</div>`);
-
 	for (const img_url of ssArtworks.slice(1)) {
 		document.write(`<div class="carousel-item">`);
 		document.write(`<img class="carousel-slides w-50" src="${img_url}">`);
@@ -57,7 +56,7 @@
 			{% else %}
 			<input type="radio" id="rating-1" name="rating" value="1">
 			{% endif %}
-			<i class="fas fa-poo fa-3x" aria-hidden="true"></i>
+			<i class="fas fa-poo fa-3x" aria-hidden="true" data-star-value="1"></i>
 		</label>
 		<!-- 2 -->
 		<label class="star-rating" for="rating-2">
@@ -66,7 +65,7 @@
 		  {% else %}
 		  <input type="radio" id="rating-2" name="rating" value="2">
 		  {% endif %}
-		  <i class="fas fa-frown-open fa-3x" aria-hidden="true"></i>
+		  <i class="fas fa-frown-open fa-3x" aria-hidden="true" data-star-value="2"></i>
 		</label>
 		<!-- 3 -->
 		<label class="star-rating" for="rating-3">
@@ -75,7 +74,7 @@
 		  {% else %}
 		  <input type="radio" id="rating-3" name="rating" value="3">
 		  {% endif %}
-		  <i class="fas fa-meh fa-3x"></i>
+		  <i class="fas fa-meh fa-3x" data-star-value="3"></i>
 	   </label>
 	   <!-- 4 -->
  	 <label class="star-rating" for="rating-4">
@@ -84,7 +83,7 @@
 		{% else %}
 		<input type="radio" id="rating-4" name="rating" value="4">
 		{% endif %}
-		<i class="fas fa-smile fa-3x"></i>
+		<i class="fas fa-smile fa-3x" data-star-value="4"></i>
 	  </label>
 	  <!-- 5 -->
 	  <label class="star-rating" for="rating-5">
@@ -93,7 +92,7 @@
 		  {% else %}
 		  <input type="radio" id="rating-5" name="rating" value="5">
 		  {% endif %}
-		  <i class="fas fa-grin-stars fa-3x"></i>
+		  <i class="fas fa-grin-stars fa-3x" data-star-value="5"></i>
 	  </label>
 	</div>
   </form>
