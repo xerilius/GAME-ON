@@ -43,25 +43,8 @@
 	</div>
   </div>
 </div>
-
-<div class="container">
-	{% for review in reviews %}
-	<div class="review-post">
-	<br><br>
-
-	Review by {{ review.user_id }} on {{ review.review_date }}<br>
-	{{ review.review }}<br><br>
-	{% if user_id == review.user_id %}
-	<!--Displaying delete button on the DOM-->
-	<input type="button" class="delete-review" value="delete" data-review-id="{{ review.review_id }}"/>
-	{% endif %}
-	</div>
-	{% endfor %}
-	<br><br>
-</div>
-
-<!-- user must be signed in to select stars-->
-
+<!-- Emoji Game Ratings-->
+{% if session.get("Username") %}
 <div class="container">
 	<form id="rating" action="/games/{{game_object.slug}}" method="POST">
 		{{ user_rating }}
@@ -74,7 +57,7 @@
 			{% else %}
 			<input type="radio" id="rating-1" name="rating" value="1">
 			{% endif %}
-			<i class="fa fa-gamepad fa-3x" aria-hidden="true"></i>
+			<i class="fas fa-poo fa-3x" aria-hidden="true"></i>
 		</label>
 		<!-- 2 -->
 		<label class="star-rating" for="rating-2">
@@ -83,7 +66,7 @@
 		  {% else %}
 		  <input type="radio" id="rating-2" name="rating" value="2">
 		  {% endif %}
-		  <i class="fa fa-gamepad fa-3x" aria-hidden="true"></i>
+		  <i class="fas fa-frown-open fa-3x" aria-hidden="true"></i>
 		</label>
 		<!-- 3 -->
 		<label class="star-rating" for="rating-3">
@@ -92,7 +75,7 @@
 		  {% else %}
 		  <input type="radio" id="rating-3" name="rating" value="3">
 		  {% endif %}
-		  <i class="fa fa-gamepad fa-3x" aria-hidden="true"></i>
+		  <i class="fas fa-meh fa-3x"></i>
 	   </label>
 	   <!-- 4 -->
  	 <label class="star-rating" for="rating-4">
@@ -101,7 +84,7 @@
 		{% else %}
 		<input type="radio" id="rating-4" name="rating" value="4">
 		{% endif %}
-		<i class="fa fa-gamepad fa-3x" aria-hidden="true"></i>
+		<i class="fas fa-smile fa-3x"></i>
 	  </label>
 	  <!-- 5 -->
 	  <label class="star-rating" for="rating-5">
@@ -110,13 +93,30 @@
 		  {% else %}
 		  <input type="radio" id="rating-5" name="rating" value="5">
 		  {% endif %}
-		  <i class="fa fa-gamepad fa-3x" aria-hidden="true"></i>
+		  <i class="fas fa-grin-stars fa-3x"></i>
 	  </label>
 	</div>
   </form>
 </div>
+{% endif %}
+<div class="container">
+	{% for review in reviews %}
+	<div class="review-post">
+	<br><br>
 
-<!-- user must be signed in to see review section-->
+	Review by {{ user }} on {{ review.review_date }}<br>
+	{{ review.review }}<br><br>
+	{% if user_id == review.user_id %}
+	<!--Displaying delete button on the DOM-->
+	<input type="button" class="delete-review" value="Delete" data-review-id="{{ review.review_id }}"/>
+	{% endif %}
+	</div>
+	{% endfor %}
+	<br><br>
+</div>
+
+
+<!-- user must be signed in to write review-->
 {% if session.get("Username") %}
 <div class="container">
 <h5>REVIEWS</h5>
