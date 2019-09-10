@@ -201,7 +201,9 @@ h1 {
     z-index: 1;
 }
 body{
-    background: black;
+    /* background-color: black; */
+    background-image: url("/static/img/background2.jpg");
+    background-repeat: repeat;
     color: white;
     font-family: 'Lexend Peta', sans-serif
     font-size: 1em;
