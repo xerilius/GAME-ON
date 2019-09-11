@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
 <!-- Navigation bar -->
 <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div id=nav-brand>
@@ -37,11 +38,6 @@
 </div>
         {% endif %}
 
-        <!-- Hamburger menu icon -->
-        <!-- <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button> -->
-    </div>
     <!--search bar modal-->
     <div class="modal fade" id="searchBar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
       aria-hidden="true">
@@ -104,7 +100,6 @@
         </div>
       </div>
   </div>
-
 </nav>
         <!-- Flash message -->
          <ul>
@@ -114,8 +109,13 @@
                 </div>
             {% endfor %}
         </ul>
-    {% block content %} {% endblock %}
-    {% block js %} {% endblock %}
+
+<div class="background-video">
+  <video autoplay loop>
+    <source src="./static/img/stars.mp4" type="video/mp4">
+  </video>
+</div>
+     {% block content %}{% endblock %}
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
