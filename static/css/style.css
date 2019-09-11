@@ -12,6 +12,24 @@ font-family: 'Rock Salt', cursive;
 font-family: 'Didact Gothic', sans-serif;
 */
 
+
+.background-video {
+  position: relative;
+}
+
+.background-video video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+}
+
+
+
 /* RATING CHART */
 .rating-chart {
     margin: 0 auto; /* Center website */
@@ -163,10 +181,8 @@ input#searchbar.search-form {
     border-color: transparent;
     padding-left: 1rem;
     outline-width: 0;
-    width: 700px;
+    width: 550px;
     font-size: medium;
-    display:inline-flex;
-
 }
 div#search-box.modal-content {
     padding: 1rem;
@@ -174,9 +190,12 @@ div#search-box.modal-content {
     display: inline-flex;
     flex-direction: row;
     padding-bottom: 0.3rem;
-
+    width: auto;
 }
 
+form.searchbox {
+    display: inline-flex;
+}
 
 form.form-horizontal {
     position: auto;
@@ -265,7 +284,7 @@ background-image: url(
   /* Full height */
   /* height: 100%;
   z-index:-1; */
-  /* Center and scale the image nicely */
+
   /* background-position: center;
   background-repeat: no-repeat;
   background-size: cover;  */
