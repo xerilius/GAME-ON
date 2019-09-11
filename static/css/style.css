@@ -52,10 +52,14 @@ form.form-horizontal {
 }
 
 .navbar{
-    background-color: #1A1A1A;
+    /* background-color: #1A1A1A; */
+    background-color: black;
+    background: rgba(0, 0, 0, 0.3);
     height: 4em;
     font-family: 'Lexend Peta', sans-serif ;
     padding: .5rem 2rem 3.5rem;
+    /* background-image: url("/static/img/darkness.jpg") */
+
 
 }
 /* Change color of links on hover */
@@ -111,17 +115,17 @@ a.dropdown-toggle {
 background-image: url(
     https://www.internetmatters.org/wp-content/uploads/2019/06/OnlineGaming-1200x630.png);
 /* Add the blur effect */
-  /* filter: blur(8px); */
-  /* -webkit-filter: blur(8px); */
+  /* filter: blur(8px);
+  -webkit-filter: blur(8px); */
 
   /* Full height */
-  /* height: 100%; */
-  /* z-index:-1; */
+  /* height: 100%;
+  z-index:-1; */
   /* Center and scale the image nicely */
-  /* background-position: center; */
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; } */
-/* }  */
+  /* background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;  */
+/* } */
 
 /*login*/
 .modal-title{
@@ -202,8 +206,11 @@ h1 {
 }
 body{
     /* background-color: black; */
-    background-image: url("/static/img/background2.jpg");
-    background-repeat: repeat;
+    background-image: url("/static/img/nightsky.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
     color: white;
     font-family: 'Lexend Peta', sans-serif
     font-size: 1em;
