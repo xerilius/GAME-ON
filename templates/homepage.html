@@ -75,42 +75,56 @@
 
 <!-- Tab links -->
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+  <button class="tablinks" onclick="openTabs(event, 'Topgames')"> ✦ TOP ⑩ GAMES ✦</button>
+  <button class="tablinks" onclick="openTabs(event, 'Anticipated')"> ✦ MOST ANTICIPATED ✦ </button>
+  <button class="tablinks" onclick="openTabs(event, 'Recommended')"> ✦ RECOMMENDED ✦ </button>
 </div>
 
 <!-- Tab content -->
-<div id="London" class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
+<div id="Topgames" class="tabcontent">
+  <h3> 「 TOP 10 GAMES 」</h3>
+  <ol>
+    {% for game in games %}
+    <li><br>
+      <a href="/games/{{ game.slug }}">
+        {{ game.title }}
+      </a>
+    </li>
+    {% endfor %}
+  </ol>
 </div>
 
-<div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
+<div id="Anticipated" class="tabcontent">
+  <h3> MOST ANTICIPATED </h3>
   <p>Paris is the capital of France.</p>
 </div>
 
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
+<div id="Recommended" class="tabcontent">
+  <h3> RECOMMENDED </h3>
   <p>Tokyo is the capital of Japan.</p>
 </div>
 
 
+<script>
+  function openTabs(evt, categories) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
 
-<div class="container">
-<div class="games">
-  <h2>Top 10 Games</h2><br>
-    <ol>
-      {% for game in games %}
-      <li><br>
-        <a href="/games/{{ game.slug }}">
-          {{ game.title }}
-        </a>
-      </li>
-      {% endfor %}
-    </ol>
-</div>
-</div>
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
 
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(categories).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
 {% endblock %}
