@@ -2,10 +2,10 @@
 {% block content %}
 <br>
 <h3> ALL GAMES </h3>
-<a href="/games/by-popularity">Sort by popularity</a>
-<ul>
+<a href="/games/by-popularity">Sort by Popularity</a>
+<ul><br>
   {% for game in games %}
-  <li>
+  <li><br>
     <a href="/games/{{ game.slug }}"><i class="fa fa-gamepad 3x"></i> {{ game.title }}</a>
   </li>
   {% endfor %}
