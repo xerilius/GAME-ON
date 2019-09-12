@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>{% block title %}GAME-ON{% endblock %}</title>
-
+    <link rel="icon" href="/static/img/gamepad-icon.png">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/v4-shims.css">
@@ -11,7 +11,11 @@
 </head>
 
 <body>
-
+    <div class="background-video">
+      <video autoplay loop preload="auto">
+        <source src="/static/img/stars.mp4" type="video/mp4">
+      </video>
+    </div>
 <!-- Navigation bar -->
 <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div id=nav-brand>
@@ -111,15 +115,12 @@
             {% endfor %}
         </ul>
 
-<div class="background-video">
-  <video autoplay loop>
-    <source src="./static/img/stars.mp4" type="video/mp4">
-  </video>
-</div>
-     {% block content %}{% endblock %}
-<script src="/static/js/bg-vid.js"> </script>
+
+ {% block content %}{% endblock %}
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="/static/js/bg-vid.js"> </script>
 </body>
 <footer class="footer"> {% block footer %} © 2019 GAME-ON  | Rights Reserved {% endblock %}</footer>
 </html>
