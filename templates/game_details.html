@@ -4,6 +4,10 @@
 {% block content %}
 
 <h1>{{ game_object.title }}</h1>
+<div class="hero-image">
+  <!-- <div class="hero-text">
+  </div> -->
+</div>
 
 <script>
 	const ssArtworks = {{ ss_artworks | tojson }};
@@ -43,67 +47,74 @@
   </div>
 </div>
 
-
-
-
 <div class="rating-chart">
 	<p>4.1 average based on 254 reviews.</p>
 	<hr style="border:3px solid #f1f1f1">
 <div class="row">
+	<!-- 5 stars-->
   <div class="side">
-    <div>5 star</div>
+    <div><i class="fas fa-grin-stars" data-star-value="5"></i> AMAZING</div>
   </div>
   <div class="middle">
     <div class="bar-container">
-      <div class="bar-5"></div>
+      <div class="bar-5" style="width: {{ rating5/total * 100 }}%"></div>
     </div>
   </div>
   <div class="side right">
-    <div>150</div>
+    <div>total num ratings </div>
   </div>
+
+<!--4 stars-->
   <div class="side">
-    <div>4 star</div>
+    <div><i class="fas fa-smile" data-star-value="4"></i> GOOD</div>
   </div>
   <div class="middle">
     <div class="bar-container">
-      <div class="bar-4"></div>
+      <div class="bar-4" style="width:{{ rating4/total * 100 }}%"></div>
     </div>
   </div>
   <div class="side right">
-    <div>63</div>
+    <div> total num ratings </div>
   </div>
+
+  <!-- 3 stars-->
   <div class="side">
-    <div>3 star</div>
+    <div> <i class="fas fa-meh" data-star-value="3"></i>  MEH</div>
   </div>
   <div class="middle">
     <div class="bar-container">
-      <div class="bar-3"></div>
+      <div class="bar-3" style="width: {{ rating3/total * 100 }}%"></div>
     </div>
   </div>
   <div class="side right">
-    <div>15</div>
+    <div>total num ratings </div>
   </div>
+
+<!-- 2 stars-->
   <div class="side">
-    <div>2 star</div>
+    <div><i class="fas fa-frown-open" aria-hidden="true" data-star-value="2"></i> BAD</div>
+  </div>
+
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-2" style="width: {{ rating2/total * 100 }}%"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div> total num ratings </div>
+  </div>
+
+  <!-- 1 stars-->
+  <div class="side">
+    <div><i class="fas fa-poo" aria-hidden="true" data-star-value="1"></i>HORRIBLE</div>
   </div>
   <div class="middle">
     <div class="bar-container">
-      <div class="bar-2"></div>
+      <div class="bar-1" style="width: {{ rating1/total * 100 }}%"></div>
     </div>
   </div>
   <div class="side right">
-    <div>6</div>
-  </div>
-  <div class="side">
-    <div>1 star</div>
-  </div>
-  <div class="middle">
-    <div class="bar-container">
-      <div class="bar-1"></div>
-    </div>
-  </div>
-  <div class="side right">
-    <div>20</div>
+    <div> total num ratings </div>
   </div>
 </div>
 </div>
@@ -113,9 +124,7 @@
 {% if session.get("Username") %}
 <div class="container">
 	<form id="rating" action="/games/{{game_object.slug}}" method="POST">
-		{{ user_rating }}
 	  <div id="star-ratings-grp">
-
 		<!-- 1 -->
 		<label class="star-rating" for="rating-1">
 			{% if user_rating != None and user_rating.rating == 1 %}
@@ -169,7 +178,7 @@
 	{% for review in reviews %}
 	<div class="review-post">
 	<br><br>
-
+<!-- User Reviews -->
 	Review by {{review.user_id}} on {{ review.review_date }}<br>
 	{{ review.review }}<br><br>
 	{% if user_id == review.user_id %}
@@ -180,7 +189,6 @@
 	{% endfor %}
 	<br><br>
 </div>
-
 
 <!-- user must be signed in to write review-->
 {% if session.get("Username") %}
@@ -197,6 +205,7 @@
   </div>
 </div>
 {% endif %}
+
 <script src="/static/js/reviews.js"></script>
 <script src="/static/js/ratings.js"></script>
 {% endblock %}
