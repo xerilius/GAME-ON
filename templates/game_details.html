@@ -47,8 +47,13 @@
   </div>
 </div>
 
+
 <div class="rating-chart">
-	<p>4.1 average based on 254 reviews.</p>
+	{% if total == 0 %}
+	<p> No reviews. </p>
+	{% else %}
+	<p>{{ avg }} average based on {{ total }} reviews.</p>
+	{% endif %}
 	<hr style="border:3px solid #f1f1f1">
 <div class="row">
 	<!-- 5 stars-->
@@ -57,11 +62,12 @@
   </div>
   <div class="middle">
     <div class="bar-container">
-      <div class="bar-5" style="width: {{ rating5/total * 100 }}%"></div>
+
+      <div class="bar-5" style="width: {{ rating5 }}%!important"></div>
     </div>
   </div>
   <div class="side right">
-    <div>total num ratings </div>
+    <div>{{ r5 }} </div>
   </div>
 
 <!--4 stars-->
@@ -70,11 +76,11 @@
   </div>
   <div class="middle">
     <div class="bar-container">
-      <div class="bar-4" style="width:{{ rating4/total * 100 }}%"></div>
+      <div class="bar-4" style="width:{{ rating4 }}%!important"></div>
     </div>
   </div>
   <div class="side right">
-    <div> total num ratings </div>
+    <div> {{ r4 }} </div>
   </div>
 
   <!-- 3 stars-->
@@ -83,11 +89,11 @@
   </div>
   <div class="middle">
     <div class="bar-container">
-      <div class="bar-3" style="width: {{ rating3/total * 100 }}%"></div>
+      <div class="bar-3" style="width: {{ rating3 }}%!important"></div>
     </div>
   </div>
   <div class="side right">
-    <div>total num ratings </div>
+    <div>{{ r3 }} </div>
   </div>
 
 <!-- 2 stars-->
@@ -97,11 +103,11 @@
 
   <div class="middle">
     <div class="bar-container">
-      <div class="bar-2" style="width: {{ rating2/total * 100 }}%"></div>
+      <div class="bar-2" style="width: {{ rating2 }}%!important"></div>
     </div>
   </div>
   <div class="side right">
-    <div> total num ratings </div>
+    <div> {{ r2 }} </div>
   </div>
 
   <!-- 1 stars-->
@@ -110,15 +116,16 @@
   </div>
   <div class="middle">
     <div class="bar-container">
-      <div class="bar-1" style="width: {{ rating1/total * 100 }}%"></div>
+      <div class="bar-1" style="width: {{ rating1 }}%!important"></div>
     </div>
   </div>
   <div class="side right">
-    <div> total num ratings </div>
+    <div> {{ r1 }} </div>
   </div>
 </div>
 </div>
 <br><br>
+
 
 <!-- Emoji Game Ratings-->
 {% if session.get("Username") %}
