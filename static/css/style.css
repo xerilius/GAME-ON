@@ -13,6 +13,37 @@ font-family: 'Didact Gothic', sans-serif;
 */
 
 
+body, html {
+    height: 100%;
+}
+
+/* The hero image */
+div.game-carousel.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/img/astronaut.jpg");
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+
+
 .background-video {
   position: relative;
 }
@@ -27,7 +58,6 @@ font-family: 'Didact Gothic', sans-serif;
     height: auto;
     z-index: -100;
 }
-
 
 
 /* RATING CHART */
@@ -84,11 +114,11 @@ font-family: 'Didact Gothic', sans-serif;
 }
 
 /* Individual bars */
-.bar-5 {width: 60%; height: 18px; background-color: #4CAF50;}
-.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
-.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
-.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
-.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+.bar-5 { height: 18px; background-color: #4CAF50;}
+.bar-4 { height: 18px; background-color: #2196F3;}
+.bar-3 { height: 18px; background-color: #00bcd4;}
+.bar-2 { height: 18px; background-color: #ff9800;}
+.bar-1 { height: 18px; background-color: #f44336;}
 
 /* Responsive layout - make the columns stack on top of each other instead of next to each other */
 @media (max-width: 400px) {
@@ -100,8 +130,6 @@ font-family: 'Didact Gothic', sans-serif;
     display: none;
   }
 }
-
-
 
 
 
@@ -126,7 +154,7 @@ font-family: 'Didact Gothic', sans-serif;
   transition: 0.3s;
   color: white;
   font-family: 'Lexend Peta', sans-serif ;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 /* Change background color of buttons on hover */
