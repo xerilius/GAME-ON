@@ -14,11 +14,9 @@ from seed import create_game_json
 from api_data import search_game_by_name
 from sqlalchemy import func
 
-
 app = Flask(__name__)
 
 # set a 'SECRET_KEY' to enable the Flask session cookies
-# app.config['SECRET_KEY'] = '<replace with a secret key>'
 app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
 # This raises an error for silent error caused by undefined variable in Jinja2
 app.jinja_env.undefined = StrictUndefined
@@ -30,10 +28,11 @@ def index():
     games = Game.query.order_by('game_id').limit(10).all()
     return render_template("homepage.html", games=games)
 
+
 ############################## LOGIN
 @app.route('/login', methods=["POST"])
 def login_process():
-#     """Redirects user to homepage after login message"""
+    """Redirects user to homepage after login message"""
 
     username = request.form.get("username")
     password = request.form.get("password")
@@ -53,6 +52,7 @@ def login_process():
 @app.route('/logout')
 def logout():
     """Logs out user"""
+
     del session['Username']
     flash("Goodbye!")
     return redirect('/')
@@ -71,23 +71,21 @@ def registration_process():
     username = request.form.get('username').title()
     email = request.form.get('email')
     password = request.form.get('pwd')
-
     # Check if username exists in db
     if User.query.filter(User.username == username).first():
         flash("Username already exists.")
         return redirect('/register')
-
     # Check if email exists in db
     if User.query.filter(User.email == email).first():
         flash("Email already exists.")
         return redirect('/register')
-
     # Add current date for user sign-up date
     else:
         current_date = date.today()
         register_date = current_date.strftime("%Y-%b-%d")
         # Add and commits user's email and password into the DB
-        db.session.add(User(username=username, email=email.lower(), password=password, register_date=register_date))
+        db.session.add(User(username=username, email=email.lower(),
+                            password=password, register_date=register_date))
         db.session.commit()
 
     return redirect('/')
@@ -96,29 +94,29 @@ def registration_process():
 @app.route('/games')
 def show_games_list():
     """Games list sorted alphabetically"""
+
     games = Game.query.order_by('title').all()
     return render_template("games_list.html", games=games)
+
 
 @app.route('/games/by-popularity')
 def show_games_by_popularity():
     """Games list by popularity"""
+
     games = Game.query.order_by(Game.popularity.desc()).all()
     return render_template("games_list_by_popularity.html", games=games)
+
 
 @app.route('/games/<slug>', methods=["GET", "POST"])
 def show_game_details(slug):
     """Display details of each game"""
 
-    # All game info (game_id, slug, title, popularity) filtered by game's slug
     game_object = db.session.query(Game).filter(Game.slug==slug).first()
-    # All game reviews for the game specified by game id in reviews table
     reviews = db.session.query(Review).filter(Review.game_id==game_object.game_id).all()
     # screenshots and artwork links for the image gallery
     ss_artworks = []
     for url in game_object.screenshot_urls:
-        # obtain each component of url
         replace_var = url.split('/')
-        # join result of  URL modification via slicing and concatenation
         newurl = ('/').join(replace_var[:-2] + ['t_original'] + replace_var[-1:])
         ss_artworks.append(newurl)
 
@@ -134,22 +132,16 @@ def show_game_details(slug):
     # review date
     current_date = date.today()
     review_date = current_date.strftime("%Y-%b-%d")
+
     # total num of reviews for the game
     total = db.session.query(Rating).filter(Rating.game_id==game_id).count()
-
     # query for rating numbers
     get_rating = db.session.query(Rating).filter(Rating.game_id==game_id)
-    # rating 1
     r1 = get_rating.filter(Rating.rating==1).count()
-    # rating 2
     r2 = get_rating.filter(Rating.rating==2).count()
-    # rating 3
     r3 = get_rating.filter(Rating.rating==3).count()
-    # rating 4
     r4 = get_rating.filter(Rating.rating==4).count()
-    # rating 5
     r5 = get_rating.filter(Rating.rating==5).count()
-
     if total != 0:
         rating1 = r1/total * 100
         rating2 = r2/total * 100
@@ -160,43 +152,34 @@ def show_game_details(slug):
         sum_ = 0
         for rating in get_rating:
             sum_ += rating.rating
-
         avg_rating = sum_/total
-
     else:
         rating1 = 0
         rating2 = 0
         rating3 = 0
         rating4 = 0
         rating5 = 0
-
         avg_rating = "0"
 
-
-
     username = session.get("Username")
-    #if user logged in
+    # if user logged in
     if username:
         user = db.session.query(User).filter(User.username==username).first()
-            # get user id by username
+        # get user id by username
         user_id = user.user_id
-        rating_obj = db.session.query(Rating).filter(Rating.user_id==user_id, Rating.game_id==game_id).first()
+        rating_obj = db.session.query(Rating).filter(Rating.user_id==user_id,
+                                                Rating.game_id==game_id).first()
     else:
         user_id = None
         rating_obj = []
-
-
     # if button pressed to submit game review
     if request.method =='POST':
-        print("User submit review")
-
         username = session['Username']
         user = User.query.filter_by(username=username).first()
         user_id = user.user_id
         # check if user has already reviewed specified game
         check_review_exists = db.session.query(Review).filter(Review.game_id==game_id,
                                         Review.user_id==user_id).first()
-
         if check_review_exists:
             flash("You have already reviewed this game!")
         # if user has not reviewed game - add review to database:
@@ -210,13 +193,15 @@ def show_game_details(slug):
                             user_rating=rating_obj, user_id=user_id,
                             rating1=rating1, rating2=rating2,
                             rating3=rating3, rating4=rating4,
-                            rating5=rating5, total=total, r1=r1,r2=r2,r3=r3,r4=r4,r5=r5, avg=avg_rating)
+                            rating5=rating5, total=total, r1=r1,r2=r2,r3=r3,r4=r4,r5=r5,
+                            avg=avg_rating)
+
 
 @app.route('/games/<slug>/rating', methods=["POST"])
-def user_rating(slug):
-    # print(request.form)
-    # print(request.form.get("rating"))
+def get_user_rating(slug):
+    """Stores user rating into database"""
 
+    # print(request.form)
     user_choice = request.form.get('star')
     username = session["Username"]
     user = User.query.filter_by(username=username).first()
@@ -224,7 +209,6 @@ def user_rating(slug):
     game_object = db.session.query(Game).filter(Game.slug==slug).first()
     game_id = game_object.game_id
     print(game_id)
-
 
     check_rating_exists = db.session.query(Rating).filter(Rating.game_id==game_id,
                                     Rating.user_id==user_id).first()
@@ -253,7 +237,6 @@ def search_games():
 
     if game_names:
             return render_template('search_results.html', games=game_names)
-
     else:
         # call api_data function to request data from API
         game_request = search_game_by_name(game_search)
@@ -292,20 +275,18 @@ def search_games():
 
 @app.route('/reviews/<review_id>/delete', methods=["POST"])
 def delete_review(review_id):
-        if not session['Username']:
-            # (message, status code)
-            return("Not logged in", 403)
+    """Delete user's review from database"""
+
+    if not session['Username']:
+        # (message, status code)
+        return("Not logged in", 403)
 
         username = session['Username']
         user = User.query.filter_by(username=username).first()
         user_id = user.user_id
-        print("user_id", user_id)
-        print(review_id)
-
         # review_id is string atm so convert to int
         db.session.delete(Review.query.get(int(review_id)))
         db.session.commit()
-
         # returning status code
         return("", 204)
 
@@ -323,12 +304,6 @@ def user_profile(username):
 def show_terms_of_service():
     """Displays terms of service"""
     return render_template("terms_of_service.html")
-
-
-@app.route('/about-me')
-def show_about_me_page():
-    #react cards
-    pass
 
 
 if __name__ == "__main__":

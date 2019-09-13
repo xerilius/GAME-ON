@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
 <br>
-<h3> ALL GAMES </h3>
-<a href="/games/by-popularity">Sort by Popularity ▼ </a>
-<ul><br>
+<h3 style="margin: 0 5%"> ALL GAMES </h3><br>
+<h5><a style="margin: 0 5%" href="/games/by-popularity">Sort by Popularity ▼ </a></h5>
+<ul style="margin: 0 5%"><br>
   {% for game in games %}
   <li><br>
     <a href="/games/{{ game.slug }}"><i class="fa fa-gamepad 3x"></i> {{ game.title }}</a>
