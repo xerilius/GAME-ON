@@ -140,17 +140,39 @@ def show_game_details(slug):
     # query for rating numbers
     get_rating = db.session.query(Rating).filter(Rating.game_id==game_id)
     # rating 1
-    rating1 = get_rating.filter(Rating.rating==1).count()
+    r1 = get_rating.filter(Rating.rating==1).count()
     # rating 2
-    rating2 = get_rating.filter(Rating.rating==2).count()
+    r2 = get_rating.filter(Rating.rating==2).count()
     # rating 3
-    rating3 = get_rating.filter(Rating.rating==3).count()
+    r3 = get_rating.filter(Rating.rating==3).count()
     # rating 4
-    rating4 = get_rating.filter(Rating.rating==4).count()
+    r4 = get_rating.filter(Rating.rating==4).count()
     # rating 5
-    rating5 = get_rating.filter(Rating.rating==5).count()
+    r5 = get_rating.filter(Rating.rating==5).count()
 
-    rating1_per = rating1/total * 100
+    if total != 0:
+        rating1 = r1/total * 100
+        rating2 = r2/total * 100
+        rating3 = r3/total * 100
+        rating4 = r4/total * 100
+        rating5 = r5/total * 100
+
+        sum_ = 0
+        for rating in get_rating:
+            sum_ += rating.rating
+
+        avg_rating = sum_/total
+
+    else:
+        rating1 = 0
+        rating2 = 0
+        rating3 = 0
+        rating4 = 0
+        rating5 = 0
+
+        avg_rating = "0"
+
+
 
     username = session.get("Username")
     #if user logged in
@@ -188,7 +210,7 @@ def show_game_details(slug):
                             user_rating=rating_obj, user_id=user_id,
                             rating1=rating1, rating2=rating2,
                             rating3=rating3, rating4=rating4,
-                            rating5=rating5, total=total)
+                            rating5=rating5, total=total, r1=r1,r2=r2,r3=r3,r4=r4,r5=r5, avg=avg_rating)
 
 @app.route('/games/<slug>/rating', methods=["POST"])
 def user_rating(slug):
