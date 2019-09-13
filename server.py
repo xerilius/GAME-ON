@@ -12,6 +12,7 @@ from flask_debugtoolbar import DebugToolbarExtension
 from model import connect_to_db, db, Game, User, Review, Rating, GameMode, Mode
 from seed import create_game_json
 from api_data import search_game_by_name
+from sqlalchemy import func
 
 
 app = Flask(__name__)
@@ -133,6 +134,23 @@ def show_game_details(slug):
     # review date
     current_date = date.today()
     review_date = current_date.strftime("%Y-%b-%d")
+    # total num of reviews for the game
+    total = db.session.query(Rating).filter(Rating.game_id==game_id).count()
+
+    # query for rating numbers
+    get_rating = db.session.query(Rating).filter(Rating.game_id==game_id)
+    # rating 1
+    rating1 = get_rating.filter(Rating.rating==1).count()
+    # rating 2
+    rating2 = get_rating.filter(Rating.rating==2).count()
+    # rating 3
+    rating3 = get_rating.filter(Rating.rating==3).count()
+    # rating 4
+    rating4 = get_rating.filter(Rating.rating==4).count()
+    # rating 5
+    rating5 = get_rating.filter(Rating.rating==5).count()
+
+    rating1_per = rating1/total * 100
 
     username = session.get("Username")
     #if user logged in
@@ -166,8 +184,11 @@ def show_game_details(slug):
             db.session.commit()
 
     return render_template('game_details.html', game_object=game_object,
-                            ss_artworks=ss_artworks, reviews=reviews, user_rating=rating_obj, user_id=user_id)
-
+                            ss_artworks=ss_artworks, reviews=reviews,
+                            user_rating=rating_obj, user_id=user_id,
+                            rating1=rating1, rating2=rating2,
+                            rating3=rating3, rating4=rating4,
+                            rating5=rating5, total=total)
 
 @app.route('/games/<slug>/rating', methods=["POST"])
 def user_rating(slug):
@@ -181,6 +202,7 @@ def user_rating(slug):
     game_object = db.session.query(Game).filter(Game.slug==slug).first()
     game_id = game_object.game_id
     print(game_id)
+
 
     check_rating_exists = db.session.query(Rating).filter(Rating.game_id==game_id,
                                     Rating.user_id==user_id).first()
@@ -206,7 +228,6 @@ def search_games():
     # query in db to see if game title exists
     search = "%{}%".format(game_search).title().strip()
     game_names = Game.query.filter(Game.title.ilike(search)).all()
-    print(game_names)
 
     if game_names:
             return render_template('search_results.html', games=game_names)
