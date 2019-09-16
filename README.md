@@ -9,9 +9,9 @@ GAME-ON is a web app that allows users to discover, rate and review games. Users
 * [About Me](#aboutme)
 
 ## <a name="technologies"></a>🎮Technologies
-Backend: Python 🐍, Flask, PostgreSQL, SQLAlchemy <br/>
-Frontend: JavaScript, AJAX, jQUERY, Jinja2, Boostrap, HTML5, CSS3 <br/>
-APIs: IGDB <br/>
+**Backend:** 🐍 Python , Flask, PostgreSQL, SQLAlchemy <br/>
+**Frontend:** JavaScript, AJAX, jQUERY, Jinja2, Boostrap, HTML5, CSS3 <br/>
+**APIs:** IGDB <br/>
 
 ## <a name="features"></a>🎮Features
 Discover: popular, recommended, anticipated and trending games. <br/>
@@ -22,42 +22,42 @@ Review games <br/>
 
 ## <a name="install"></a>🎮Installation
 ##### To run GAME-ON: <br/>
-Clone or fork this repo: 
+**Clone or fork this repo**: 
 ```
 $ git clone https://github.com/xerilius/GAME-ON.git
 ```
-Create and  activate a virtual environment inside the GAME-ON directory:
+**Create and  activate a virtual environment inside the GAME-ON directory:**
 ```
 $ virtualenv env
 $ source env/bin/activate
 ```
-Install the dependencies:
+**Install the dependencies:**
 ```
 $ pip install -r requirements.txt
 ```
-Sign-up to use [IGDB's API](https://api.igdb.com/signup). <br/>
-Save your API key :key: in a file <kbd>secrets.sh</kbd> with this format:
+**Sign-up to use [IGDB's API](https://api.igdb.com/signup). <br/>
+Save your API key :key: in a file <kbd>secrets.sh</kbd> with this format:**
 ```
 export SECRET_KEY = "PUT_YOUR_KEY_HERE"
 export IGDB_API_KEY = "PUT_YOUR_KEY_HERE"
 ```
-Source your keys from <kbd>secrets.sh</kbd>:
+**Source your keys from <kbd>secrets.sh</kbd>:**
 ```
 (env)$ source secrets.sh
 ```
-Set up the database:
+**Set up the database:**
 ```
 (env)$ createdb gameon
 ```
-Seed data into database:
+**Seed data into database:**
 ```
 (env)$ python3 seed.py
 ```
-Run the app:
+**Run the app:**
 ```
 (env)$ python3 server.py
 ```
-In your web browser, type in `localhost:5000/` in the URL bar to access GAME-ON.
+**In your web browser, type in `localhost:5000/` in the URL bar to access GAME-ON.**
 
 ## <a name="version"></a>🎮Version 2.0
 * Edit reviews
