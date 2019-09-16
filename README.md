@@ -1,4 +1,4 @@
-# 🎮GAME-ON 🎮
+# GAME-ON 
 GAME-ON is a web app that allows users to discover, rate and review games. Users are able to register and log into their account, modify ratings and delete their game reviews. All data on games are from IGDB's API. 
 
 ## Contents
@@ -8,19 +8,19 @@ GAME-ON is a web app that allows users to discover, rate and review games. Users
 * [Version 2.0](#version)
 * [About Me](#aboutme)
 
-## <a name="technologies"></a>Technologies
+## <a name="technologies"></a>🎮Technologies
 Backend: Python, Flask, PostgreSQL, SQLAlchemy <br/>
 Frontend: JavaScript, AJAX, jQUERY, Jinja2, Boostrap, HTML5, CSS3 <br/>
 APIs: IGDB <br/>
 
-## <a name="features"></a>Features
+## <a name="features"></a>🎮Features
 Discover: popular, recommended, anticipated and trending games. <br/>
 Create an account and login <br/>
 Search for games <br/>
 Rate games <br/>
 Review games <br/>
 
-## <a name="install"></a>Installation
+## <a name="install"></a>🎮Installation
 ##### To run GAME-ON: <br/>
 Clone or fork this repo: 
 ```
@@ -59,12 +59,12 @@ Run the app:
 ```
 In your web browser, type in `localhost:5000/` in the URL bar to access GAME-ON.
 
-## <a name="version"></a>Version 2.0
+## <a name="version"></a>🎮Version 2.0
 * Edit reviews
 * Allow users to add favorite games
 * Newsfeed for games
 
 
-## <a name="aboutme"></a>About Me
+## <a name="aboutme"></a>🎮About Me
 Grace Chung is an avid gamer and a software engineer. <br/>
 To learn more about me, check out my [LinkedIn](http://www.linkedin.com/in/chung-grace)!
