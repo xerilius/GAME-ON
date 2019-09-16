@@ -43,26 +43,28 @@ export IGDB_API_KEY = "PUT_YOUR_KEY_HERE"
 ```
 **Source your keys from <kbd>secrets.sh</kbd>:**
 ```
-(env)$ source secrets.sh
+$ source secrets.sh
 ```
 **Set up the database:**
 ```
-(env)$ createdb gameon
+$ createdb gameon
 ```
 **Seed data into database:**
 ```
-(env)$ python3 seed.py
+$ python3 seed.py
 ```
 **Run the app:**
 ```
-(env)$ python3 server.py
+$ python3 server.py
 ```
-**In your web browser, type in `localhost:5000/` in the URL bar to access GAME-ON.**
+**In your web browser, type in ``localhost:5000`` in the URL bar to access GAME-ON.**
 
 ## <a name="version"></a>🎮Version 2.0
 * Edit reviews
 * Allow users to add favorite games
 * Newsfeed for games
+* Videos of games on game details page
+* More info of games
 
 
 ## <a name="aboutme"></a>🎮About Me
