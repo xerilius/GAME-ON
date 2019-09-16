@@ -57,7 +57,7 @@ $ python3 seed.py
 ```
 $ python3 server.py
 ```
-**In your web browser, type in ``localhost:5000`` in the URL bar to access GAME-ON.**
+**In your web browser, type in `localhost:5000` in the URL bar to access GAME-ON.**
 
 ## <a name="version"></a>🎮Version 2.0
 * Edit reviews
