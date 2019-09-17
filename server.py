@@ -281,14 +281,14 @@ def delete_review(review_id):
         # (message, status code)
         return("Not logged in", 403)
 
-        username = session['Username']
-        user = User.query.filter_by(username=username).first()
-        user_id = user.user_id
-        # review_id is string atm so convert to int
-        db.session.delete(Review.query.get(int(review_id)))
-        db.session.commit()
-        # returning status code
-        return("", 204)
+    username = session['Username']
+    user = User.query.filter_by(username=username).first()
+    user_id = user.user_id
+    # review_id is string atm so convert to int
+    db.session.delete(Review.query.get(int(review_id)))
+    db.session.commit()
+    # returning status code
+    return("", 204)
 
 
 ################################### USERS
@@ -308,7 +308,7 @@ def show_terms_of_service():
 
 if __name__ == "__main__":
 
-    app.debug = True
+    app.debug = False
 
     connect_to_db(app)
 
