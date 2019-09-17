@@ -6,7 +6,6 @@
 /*
 font-family: 'Bad Script', cursive;
 font-family: 'Julius Sans One', sans-serif;
-font-family: 'Homemade Apple', cursive;
 font-family: 'Covered By Your Grace', cursive;
 font-family: 'Rock Salt', cursive;
 font-family: 'Didact Gothic', sans-serif;
@@ -121,12 +120,12 @@ font-family: 'Didact Gothic', sans-serif;
 }
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #0045ff36;
+  background-color: #9181ef33;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #ffc107;
+    color:#ffc107;
 }
 /* Style the tab content */
 .tabcontent {
@@ -211,10 +210,16 @@ form.form-horizontal {
     animation-iteration-count: infinite;
 }
 @keyframes navbar {
-0%   {background-color: #ffffff1c}
+/* 0%   {background-color: #ffffff1c}
 35%  {background-color:#00000000;}
 55%  {background-color: #ffffff1c;}
-100% {background-color: #00000000;}
+100% {background-color: #00000000;} */
+
+0%   {background-color: #9181ef33}
+25%  {background-color::#ffe2c033}
+50%  {background-color: #00aefd36;}
+75%  {background-color: #fd5aa733;}
+100% {background-color: #9181ef33;}
 }
 /* Change color of links on hover */
 .navbar a:hover{
