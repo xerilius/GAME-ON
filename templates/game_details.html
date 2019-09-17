@@ -2,7 +2,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
-<h1>{{ game_object.title }}</h1>
+<h1><a href="/games/{{ game_object.slug }}">{{ game_object.title }}</a></h1>
 
 <script>
 	const ssArtworks = {{ ss_artworks | tojson }};
