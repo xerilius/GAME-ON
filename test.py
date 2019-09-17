@@ -21,3 +21,7 @@ class FlaskTests(unittest.TestCase):
                                             "password": "abc"},
                                             follow_redirects=True)
         self.assertIn("Welcome back", result.data)
+
+
+if __name__ == "__main__":
+    unittest.main()
