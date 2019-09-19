@@ -1,5 +1,6 @@
-# GAME-ON 
-GAME-ON is a web app that allows users to discover, rate and review games. Users are able to register and log into their account, modify ratings and delete their game reviews. All data on games are from IGDB's API. 
+![Banner](static/img/GAMEON-banner.png)
+# GAME-ON
+GAME-ON is a web app that allows users to discover, rate and review games. Users are able to register and log into their account, modify ratings and delete their game reviews. All data on games are from IGDB's API.
 
 ## Contents
 * [Tech Stack](#technologies)
@@ -22,7 +23,7 @@ Review games <br/>
 
 ## <a name="install"></a>🎮Installation
 ##### To run GAME-ON: <br/>
-**Clone or fork this repo**: 
+**Clone or fork this repo**:
 ```
 $ git clone https://github.com/xerilius/GAME-ON.git
 ```
