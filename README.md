@@ -21,6 +21,8 @@ GAME-ON is a web app that allows users to discover, rate and review games. Users
 ![Games](static/img/discover.gif)
 <br>
 ### Create an account and login <br>
+![Login](static/img/login.gif)
+<br>
 ### Search for games <br>
 ### Rate games <br>
 ### Review games <br>
