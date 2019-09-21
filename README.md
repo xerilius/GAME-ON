@@ -3,11 +3,11 @@
 GAME-ON is a web app that allows users to discover, rate and review games. Users are able to register and log into their account, modify ratings and delete their game reviews. All data on games are from IGDB's API.
 
 ## C O N T E N T S
-➤ [Technologies](#technologies)<br>
-➤ [Features](#features)<br>
-➤ [Installation](#install)<br>
-➤ [Version 2.0](#version)<br>
-➤ [About Me](#aboutme)<br>
+░ [Technologies](#technologies)<br>
+░ [Features](#features)<br>
+░ [Installation](#install)<br>
+░ [Version 2.0](#version)<br>
+░ [About Me](#aboutme)<br>
 
 ## <a name="technologies"></a>⫸ T E C H N O L O G I E S ⫷
 **BACKEND ⋯** 🐍 Python , Flask, PostgreSQL, SQLAlchemy <br>
