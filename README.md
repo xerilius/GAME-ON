@@ -10,9 +10,9 @@ GAME-ON is a web app that allows users to discover, rate and review games. Users
 ➤ [About Me](#aboutme)<br>
 
 ## <a name="technologies"></a>⫸ T E C H N O L O G I E S ⫷
-**BACKEND ▒** 🐍 Python , Flask, PostgreSQL, SQLAlchemy <br>
-**FRONTEND ▒** JavaScript, AJAX, jQUERY, Jinja2, Boostrap, HTML5, CSS3 <br>
-**API ▒** IGDB <br>
+**BACKEND ⋯** 🐍 Python , Flask, PostgreSQL, SQLAlchemy <br>
+**FRONTEND ⋯** JavaScript, AJAX, jQUERY, Jinja2, Boostrap, HTML5, CSS3 <br>
+**API ⋯** IGDB <br>
 
 ## <a name="features"></a> ⫸ F E A T U R E S ⫷
 ### Discover: popular, recommended, anticipated and trending games. <br/>
