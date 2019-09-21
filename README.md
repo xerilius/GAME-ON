@@ -2,19 +2,19 @@
 <br/>
 GAME-ON is a web app that allows users to discover, rate and review games. Users are able to register and log into their account, modify ratings and delete their game reviews. All data on games are from IGDB's API.
 
-## C O N T E N T S
-* [Tech Stack](#technologies)
-* [Features](#features)
-* [Installation](#install)
-* [Version 2.0](#version)
-* [About Me](#aboutme)
+# C O N T E N T S
+➤ [Technologies](#technologies)br
+➤ [Features](#features)
+➤ [Installation](#install)
+➤ [Version 2.0](#version)
+➤ [About Me](#aboutme)
 
-## <a name="technologies"></a>🎮 T E C H N O L O G I E S
-**BACKEND ➤** 🐍 Python , Flask, PostgreSQL, SQLAlchemy <br>
-**FRONTEND ➤** JavaScript, AJAX, jQUERY, Jinja2, Boostrap, HTML5, CSS3 <br>
-**API ➤** IGDB <br>
+## <a name="technologies"></a>⫸ T E C H N O L O G I E S ⫷
+**BACKEND ▒** 🐍 Python , Flask, PostgreSQL, SQLAlchemy <br>
+**FRONTEND ▒** JavaScript, AJAX, jQUERY, Jinja2, Boostrap, HTML5, CSS3 <br>
+**API ▒** IGDB <br>
 
-## <a name="features"></a>🎮 F E A T U R E S
+## <a name="features"></a> ⫸ F E A T U R E S ⫷
 ### Discover: popular, recommended, anticipated and trending games. <br/>
 ![Homepage](static/img/GAME-ON_Homepage.gif)
 <br>
@@ -25,7 +25,7 @@ GAME-ON is a web app that allows users to discover, rate and review games. Users
 **Rate games**<br>
 **Review games** <br>
 
-## <a name="install"></a>🎮 I N S T A L L A T I O N
+## <a name="install"></a>⫸ I N S T A L L A T I O N ⫷
 ##### To run GAME-ON: <br/>
 **Clone or fork this repo**:
 ```
@@ -64,7 +64,7 @@ $ python3 server.py
 ```
 **In your web browser, type in `localhost:5000` in the URL bar to access GAME-ON.**
 
-## <a name="version"></a>🎮 V E R S I O N  2.0
+## <a name="version"></a>⫸ V E R S I O N  2 . 0 ⫷
 * Edit reviews
 * Allow users to add favorite games
 * Newsfeed for games
@@ -72,6 +72,6 @@ $ python3 server.py
 * More info of games
 
 
-## <a name="aboutme"></a>🎮 A B O U T  M E
+## <a name="aboutme"></a> ⫸ A B O U T  M E ⫷
 Grace Chung is an avid gamer and a software engineer. <br>
 To learn more about me, check out my [LinkedIn](http://www.linkedin.com/in/chung-grace)!
