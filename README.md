@@ -29,7 +29,6 @@ GAME-ON is a web app that allows users to discover, rate and review games. Users
 
 
 ## <a name="install"></a>⫸ I N S T A L L A T I O N ⫷
-### To run GAME-ON: <br/>
 **Clone or fork this repo**:
 ```
 $ git clone https://github.com/xerilius/GAME-ON.git
