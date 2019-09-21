@@ -15,15 +15,15 @@ GAME-ON is a web app that allows users to discover, rate and review games. Users
 **API ⋯** IGDB <br>
 
 ## <a name="features"></a> ⫸ F E A T U R E S ⫷
-### Discover: Anticipated, Top 10, Recommended & Trending Games. <br>
+### ≡ Discover: Anticipated, Top 10, Recommended & Trending Games ≡ <br>
 ![Homepage](static/img/GAME-ON_Homepage.gif)
 <br>
 ![Games](static/img/discover.gif)
 <br>
-### Registration & Login. <br>
+### ≡ Registration & Login ≡ <br>
 ![Login](static/img/login.gif)
 <br>
-### Search. <br>
+### ≡ Search ≡ <br>
 ![Search](static/img/search.gif)
 ### Rate & Review.  <br>
 
