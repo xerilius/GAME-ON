@@ -15,6 +15,7 @@ font-family: 'Didact Gothic', sans-serif;
   position: relative;
 }
 
+
 .background-video video {
     position: fixed;
     right: 0;
@@ -426,4 +427,26 @@ padding: .5rem 0.5rem;
 
 [type=button]:hover{
     background-color:#ffc107;
+}
+
+div#star-ratings-grp {
+    margin: 0 30%;
+}
+form#rating {
+    margin: 0 7%;
+}
+form#review {
+    margin: 0 7%;
+}
+
+button#revbtn {
+    margin: 0 101%;
+}
+
+.review-post {
+    margin: 0 4%;
+}
+
+.modal-footer {
+    padding: 24px;
 }

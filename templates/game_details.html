@@ -176,7 +176,7 @@
 	<div class="review-post">
 	<br><br>
 <!-- User Reviews -->
-	Review by {{review.user_id}} on {{ review.review_date }}<br>
+	Review by User #{{review.user_id}} on {{ review.review_date }}<br>
 	{{ review.review }}<br><br>
 	{% if user_id == review.user_id %}
 	<!--Displaying delete button on the DOM-->
@@ -192,13 +192,14 @@
 <!-- user must be signed in to write review-->
 {% if session.get("Username") %}
 <div class="container">
-<h5>REVIEWS</h5>
+	<h5 style="margin:0 5%">REVIEWS</h5>
   <div class="row">
   	<div class="column">
 	  <form id="review" action="/games/{{game_object.slug}}" method="POST">
+
 	    <label for="review"></label>
 	   	<textarea id="ureview" name="ureview" placeholder="Write something..."></textarea><br>
-    	<button type="submit" class="btn">Submit</button>
+    	<button type="submit" class="btn" id="revbtn">Submit</button>
       </form>
     </div>
   </div>
