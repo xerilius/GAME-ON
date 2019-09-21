@@ -40,7 +40,7 @@ $ source env/bin/activate
 ```
 **Install the dependencies:**
 ```
-$ pip install -r requirements.txt
+$ pip3 install -r requirements.txt
 ```
 **Sign-up to use [IGDB's API](https://api.igdb.com/signup). <br>
 Save your API key :key: in a file <kbd>secrets.sh</kbd> with this format:**
