@@ -1,5 +1,5 @@
 ![Banner](static/img/gbanner.PNG)
-<br/>
+<br>
 GAME-ON is a web app that allows users to discover, rate and review games. Users are able to register and log into their account, modify ratings and delete their game reviews. All data on games are from IGDB's API.
 
 ## C O N T E N T S
@@ -64,12 +64,12 @@ $ python3 server.py
 ```
 **In your web browser, type in `localhost:5000` in the URL bar to access GAME-ON.**
 
-## <a name="version"></a>⫸ V E R S I O N  2.0 ⫷
+## <a name="version"></a>⫸ V E R S I O N - 2.0 ⫷
 * Edit reviews
-* Allow users to add favorite games
-* Newsfeed for games
-* Videos of games on game details page
-* More info of games
+* Favorite games
+* Newsfeed
+* Videos
+* Chat
 
 
 ## <a name="aboutme"></a> ⫸ A B O U T - M E ⫷
