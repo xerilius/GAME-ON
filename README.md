@@ -10,17 +10,19 @@ GAME-ON is a web app that allows users to discover, rate and review games. Users
 * [About Me](#aboutme)
 
 ## <a name="technologies"></a>🎮Technologies
-**Backend:** 🐍 Python , Flask, PostgreSQL, SQLAlchemy <br/>
-**Frontend:** JavaScript, AJAX, jQUERY, Jinja2, Boostrap, HTML5, CSS3 <br/>
-**APIs:** IGDB <br/>
+**Backend:** 🐍 Python , Flask, PostgreSQL, SQLAlchemy <br>
+**Frontend:** JavaScript, AJAX, jQUERY, Jinja2, Boostrap, HTML5, CSS3 <br>
+**APIs:** IGDB <br>
 
 ## <a name="features"></a>🎮Features
 **Discover: popular, recommended, anticipated and trending games. <br/>**
-![Homepage](static/img/GAME-ON_Homepage.gif)
-**Create an account and login <br/>**
-**Search for games <br/>**
-**Rate games <br/>**
-**Review games <br/>**
+◾ Homepage
+![Homepage](static/img/GAME-ON_Homepage.gif)<br>
+![Games](static/img/discover.gif)<br>
+**Create an account and login** <br>
+**Search for games** <br>
+**Rate games**<br>
+**Review games** <br>
 
 ## <a name="install"></a>🎮Installation
 ##### To run GAME-ON: <br/>
@@ -37,7 +39,7 @@ $ source env/bin/activate
 ```
 $ pip install -r requirements.txt
 ```
-**Sign-up to use [IGDB's API](https://api.igdb.com/signup). <br/>
+**Sign-up to use [IGDB's API](https://api.igdb.com/signup). <br>
 Save your API key :key: in a file <kbd>secrets.sh</kbd> with this format:**
 ```
 export SECRET_KEY = "PUT_YOUR_KEY_HERE"
@@ -70,5 +72,5 @@ $ python3 server.py
 
 
 ## <a name="aboutme"></a>🎮About Me
-Grace Chung is an avid gamer and a software engineer. <br/>
+Grace Chung is an avid gamer and a software engineer. <br>
 To learn more about me, check out my [LinkedIn](http://www.linkedin.com/in/chung-grace)!
