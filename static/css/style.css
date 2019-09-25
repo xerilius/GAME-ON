@@ -210,11 +210,6 @@ form.form-horizontal {
     animation-iteration-count: infinite;
 }
 @keyframes navbar {
-/* 0%   {background-color: #ffffff1c}
-35%  {background-color:#00000000;}
-55%  {background-color: #ffffff1c;}
-100% {background-color: #00000000;} */
-
 0%   {background-color: #9181ef33}
 25%  {background-color::#ffe2c033}
 50%  {background-color: #00aefd36;}
