@@ -127,7 +127,10 @@ def load_games(api_data, game_modes):
         db.session.commit()
         print(f'Created {game}!')
 
+
+
 if __name__ == '__main__':
+    from server import app
     # connect and create db
     connect_to_db(app)
     db.create_all()
@@ -157,7 +160,7 @@ if __name__ == '__main__':
         'Split screen': split_screen
     }
 
-    load_games(data1)
-    load_games(data2)
-    load_games(data3)
-    load_games(data4)
+    load_games(data1, game_modes)
+    load_games(data2, game_modes)
+    load_games(data3, game_modes)
+    load_games(data4, game_modes)
