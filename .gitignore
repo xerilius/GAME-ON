@@ -2,3 +2,5 @@ env/
 __pycache__/
 secrets.sh
 
+flask.service
+nginx.conf
