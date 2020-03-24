@@ -1,4 +1,3 @@
-
 """Utility file to seed gaming database DIRECTLY from IGDB API requests"""
 
 from pprint import pprint
@@ -30,6 +29,7 @@ def create_game_json(json_dict):
         # 'rating': None,
         # 'rating_count': None,
     }
+
     # game = whole jsonfile
     igdb_id = json_dict['id']
     game_info['game_id'] = igdb_id
