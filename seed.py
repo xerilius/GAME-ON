@@ -1,4 +1,5 @@
-"""Utility file to seed gaming database DIRECTLY from IGDB API requests"""
+"""Utility file to seed data DIRECTLY from IGDB API requests to database"""
+# 4) python3 seed.py
 
 from pprint import pprint
 from datetime import datetime

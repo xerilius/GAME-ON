@@ -1,4 +1,5 @@
 """Game Reviews and Ratings"""
+# 5) $ python3 server.py to run server
 
 from jinja2 import StrictUndefined
 import os

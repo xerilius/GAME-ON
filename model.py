@@ -1,4 +1,7 @@
 """Models and database functions for GameOn Review Site"""
+# 1) createdb
+# 2) python -i model.py
+# 3) >>> db.create_all()
 
 from flask_sqlalchemy import SQLAlchemy
 
