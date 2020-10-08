@@ -19,15 +19,17 @@ headers = {
 }
 
 def get_game_data_w_offset0():
-    payload = ("f  artworks.url, game_modes.name, genres.name, name, popularity,"
-        "rating, rating_count, release_dates.human, screenshots.url,"
+    payload = ("f cover.url,artworks.url, game_modes.name, genres.name, name, total_rating_count,"
+        "rating,total_rating, total_rating_count, rating_count, keywords.name, platforms.name, multiplayer_modes, involved_companies.company.name, themes.name, platforms.platform_logo.url, hypes, release_dates.human, screenshots.url,"
         "similar_games.name, slug, summary, themes.name;"
-        "limit 5; s popularity desc; w (platforms = [6]);"
+        "where hypes != null & rating != null; sort hypes asc; limit 20;"
            "w themes != (42); offset {};".format(0))
-           
+
+    # "where cover != null & rating != null; sort rating desc; sort total_rating_count desc; limit 20;"
+    #        "w themes != (42); offset {};".format(0))
     r1 = requests.post(URL, headers=headers, data=payload)
     game_data = json.loads(r1.text)
-    print(game_data)
+    pprint(game_data)
     return game_data
 
 get_game_data_w_offset0()
