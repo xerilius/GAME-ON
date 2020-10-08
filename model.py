@@ -20,7 +20,7 @@ class Game(db.Model):
     igdb_id = db.Column(db.Integer, unique=True)
     title = db.Column(db.String, nullable=False, unique=True)
     slug = db.Column(db.String, nullable=False, unique=True)
-
+    hypes = db.Column(db.String, nullable=True)
     summary = db.Column(db.String, nullable=True)
     release_date = db.Column(db.Date, nullable=True)
     popularity = db.Column(db.Float, nullable=True)

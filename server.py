@@ -12,7 +12,7 @@ from flask_debugtoolbar import DebugToolbarExtension
 
 from model import connect_to_db, db, Game, User, Review, Rating, GameMode, Mode
 from seed import create_game_json
-from api_data import search_game_by_name
+from igdb_api import search_game_by_name
 from sqlalchemy import func
 
 app = Flask(__name__)
@@ -100,11 +100,11 @@ def show_games_list():
     return render_template("games_list.html", games=games)
 
 
-@app.route('/games/by-popularity')
-def show_games_by_popularity():
+@app.route('/games/by-hypes')
+def show_games_by_hypes():
     """Games list by popularity"""
 
-    games = Game.query.order_by(Game.popularity.desc()).all()
+    games = Game.query.order_by(Game.hypes.desc()).all()
     return render_template("games_list_by_popularity.html", games=games)
 
 
@@ -250,7 +250,7 @@ def search_games():
                 title=game_info['name'],
                 slug=game_info['slug'],
                 artwork_urls=game_info['artworks'],
-                popularity=game_info['popularity'],
+                hypes=game_info['hypes'],
                 screenshot_urls=game_info['screenshots'],
                 release_date=game_info['release_date'],
                 summary=game_info['summary'])

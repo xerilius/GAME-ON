@@ -32,7 +32,6 @@ def get_game_data_w_offset0():
     pprint(game_data)
     return game_data
 
-get_game_data_w_offset0()
 
 
 
@@ -96,8 +95,8 @@ def search_game_by_name(game_name):
 
 
 
-def search_game_by_id(game_ids):
-    pass
+# def search_game_by_id(game_ids):
+#     pass
     # for game in game_ids:
     #     ",".join(game)
 

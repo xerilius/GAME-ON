@@ -6,8 +6,8 @@ from datetime import datetime
 from sqlalchemy import func
 from model import connect_to_db, db, Game , Mode
 
-from api_data import get_game_data_w_offset0, get_game_data_w_offset50
-from api_data import get_game_data_w_offset100, get_game_data_w_offset150
+from igdb_api import get_game_data_w_offset0
+
 
 import json
 
@@ -20,7 +20,7 @@ def create_game_json(json_dict):
         'name': None,
         'game_modes': [],
         # 'genres': [],
-        'popularity': None,
+        'hypes': None,
         'release_date': None,
         'screenshots': [],
         # 'similar_games': [],
@@ -41,9 +41,9 @@ def create_game_json(json_dict):
     slug = json_dict['slug']
     game_info['slug'] = slug.strip()
 
-    # Add popularity of the game to dictionary
-    popularity = json_dict['popularity']
-    game_info['popularity'] = popularity
+    # Add hypes of the game to dictionary
+    hypes = json_dict['hypes']
+    game_info['hypes'] = hypes
 
     # Add release date of game to dictionary
     if 'release_dates' in json_dict:
@@ -51,12 +51,13 @@ def create_game_json(json_dict):
         game_info['release_date'] = release_date
      # Add release date of game to dictionary
     if game_info['release_date']:
+        print(game_info['release_date'])
         if len(game_info['release_date']) == 3:
             game_info['release_date'] = None
         elif len(game_info['release_date']) <= 7:
             game_info['release_date'] = datetime.strptime(game_info['release_date'][0:4], '%Y')
         elif len(game_info['release_date']) >=10:
-            game_info['release_date'] = datetime.strptime(game_info['release_date'], '%Y-%b-%d')
+            game_info['release_date'] = datetime.strptime(game_info['release_date'], '%b %d, %Y')
         elif len(game_info['release_date']) == 8:
             game_info['release_date'] = datetime.strptime(game_info['release_date'], '%Y-%b')
         else:
@@ -96,12 +97,12 @@ def create_game_json(json_dict):
     return game_info
 
 
-def load_games(api_data, game_modes):
+def load_games(igdb_api, game_modes):
     """Transferring game data into database"""
     print("Games")
 
     # store json values into temporary dictionary before transferring into DB
-    for game_data in api_data:
+    for game_data in igdb_api:
         game_info = create_game_json(game_data)
         # variables to add to game table
         game = Game(
@@ -109,7 +110,7 @@ def load_games(api_data, game_modes):
             title=game_info['name'],
             slug=game_info['slug'],
             artwork_urls=game_info['artworks'],
-            popularity=game_info['popularity'],
+            hypes=game_info['hypes'],
             screenshot_urls=game_info['screenshots'],
             release_date=game_info['release_date'],
             summary=game_info['summary'])
@@ -138,9 +139,9 @@ if __name__ == '__main__':
 
     # API request
     data1 = get_game_data_w_offset0()
-    data2 = get_game_data_w_offset50()
-    data3 = get_game_data_w_offset100()
-    data4 = get_game_data_w_offset150()
+    # data2 = get_game_data_w_offset50()
+    # data3 = get_game_data_w_offset100()
+    # data4 = get_game_data_w_offset150()
     # pprint(data)
 
     # manually adding modes and adding it to Mode table under game_mode field
@@ -162,6 +163,6 @@ if __name__ == '__main__':
     }
 
     load_games(data1, game_modes)
-    load_games(data2, game_modes)
-    load_games(data3, game_modes)
-    load_games(data4, game_modes)
+    # load_games(data2, game_modes)
+    # load_games(data3, game_modes)
+    # load_games(data4, game_modes)
