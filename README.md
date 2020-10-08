@@ -36,7 +36,7 @@ $ git clone https://github.com/xerilius/GAME-ON.git
 ```
 **Create and  activate a virtual environment inside the GAME-ON directory:**
 ```
-$ virtualenv env
+$ virtualenv env --always-copy
 $ source env/bin/activate
 ```
 **Install the dependencies:**
@@ -46,8 +46,8 @@ $ pip3 install -r requirements.txt
 **Sign-up to use [IGDB's API](https://api.igdb.com/signup). <br>
 Save your API key :key: in a file <kbd>secrets.sh</kbd> with this format:**
 ```
-export SECRET_KEY = "PUT_YOUR_KEY_HERE"
-export IGDB_API_KEY = "PUT_YOUR_KEY_HERE"
+export SECRET_KEY="PUT_YOUR_KEY_HERE"
+export IGDB_API_KEY="PUT_YOUR_KEY_HERE"
 ```
 **Source your keys from <kbd>secrets.sh</kbd>:**
 ```
